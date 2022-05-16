@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit;
  * Fields
  */
 $field         = get_query_var( 'home_field' );
-$badge         = $field['mini_title'];
+$badge         = $field['badge'];
 $title         = $field['title'];
 $tags_repeater = $field['tags_repeater'];
 //print_r( $tags_repeater );

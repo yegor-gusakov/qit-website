@@ -1,0 +1,174 @@
+
+.section {
+  &__candidates {
+    &-row {
+      &-badge {
+        background: #363636;
+        border-radius: 6px;
+        font-weight: 600;
+        padding: 6px 10px;
+      }
+
+      &-title {
+        font-weight: 400;
+        color: $color-black;
+      }
+
+      .timeline {
+        position: relative;
+        padding: 40px 0;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .timeline:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 2px;
+        height: 80%;
+        background: #c5c5c5;
+      }
+
+      .timeline ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      .timeline ul li {
+        list-style: none;
+        position: relative;
+        width: 50%;
+        padding: 0px 80px;
+        box-sizing: border-box;
+      }
+
+      .timeline ul li:nth-child(odd) {
+        float: right;
+        padding-right:0;
+
+        text-align: left;
+        clear: both;
+      }
+
+      .timeline ul li:nth-child(even) {
+        float: left;
+        text-align: right;
+        padding-left:0;
+        clear: both;
+      }
+
+      .content {
+        padding-bottom: 20px;
+      }
+
+      .timeline ul li:nth-child(odd):before {
+        content: attr(data-candidate-num);
+        position: absolute;
+        width: 49px;
+        height: 49px;
+        top: 0px;
+        left: -5%;
+        z-index: 6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:$color-white;
+        background: rgba($color-primary, 1);
+        border-radius: 50%;
+        box-shadow: 0 0 0 11px rgba($color-primary, 0.2);
+      }
+
+      .timeline ul li:nth-child(even):before {
+        content: attr(data-candidate-num);
+        position: absolute;
+        width: 49px;
+        height: 49px;
+        top: 0px;
+        right: -5%;
+        z-index: 6;
+        color:$color-white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba($color-primary, 1);
+        border-radius: 50%;
+        box-shadow: 0 0 0 11px rgba($color-primary, 0.2);
+      }
+
+      .timeline ul li:nth-child(odd):after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 60%;
+        top: -15%;
+        left: 0;
+        z-index: 5;
+
+        background-color: white;
+        transform: translate(-50%, 0);
+      }
+
+      .timeline ul li:nth-child(even):after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 60%;
+        top: -15%;
+        right: 0;
+        z-index: 5;
+
+        background-color: white;
+        transform: translate(50%, 0);
+      }
+
+      .timeline ul li h3 {
+        padding: 0;
+        margin: 0;
+        font-weight: 600;
+        color: rgba($color-primary, 1);
+        font-weight: 600;
+      }
+
+      .timeline ul li p {
+        margin: 10px 0 0;
+        color:rgba($color-primary,.8);
+        padding: 0;
+      }
+
+      @media(max-width: 1000px) {
+        .timeline {
+          width: 100%;
+        }
+      }
+      @media(max-width: 767px) {
+        .timeline {
+          width: 100%;
+          padding-bottom: 0;
+        }
+        h1 {
+          font-size: 40px;
+          text-align: center;
+        }
+        .timeline:before {
+          left: 20px;
+          height: 100%;
+        }
+        .timeline ul li:nth-child(odd),
+        .timeline ul li:nth-child(even) {
+          width: 100%;
+          text-align: left;
+          padding-left: 50px;
+          padding-bottom: 50px;
+        }
+        .timeline ul li:nth-child(odd):before,
+        .timeline ul li:nth-child(even):before {
+          top: -18px;
+          left: 16px;
+        }
+      }
+    }
+  }
+}
+
