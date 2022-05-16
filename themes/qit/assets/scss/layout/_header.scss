@@ -1,6 +1,10 @@
 .header {
   background: $background-primary;
   backdrop-filter: blur(55px);
+
+  button{
+    padding: 5px 12px;
+  }
 }
 
 

@@ -1,0 +1,67 @@
+.section {
+  &__hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &-row {
+
+      &-subtitle {
+        margin-bottom: 10px;
+
+        span {
+          color: $color-primary;
+          background: $color-white;
+          padding: 6px 10px;
+          border-radius: 6px;
+          font-weight: 700;
+
+        }
+      }
+
+
+      &-title {
+        h1 {
+          color: $color-white;
+          margin-bottom: 16px;
+          font-weight: 400;
+
+        }
+      }
+
+      &-text {
+        color: $color-white;
+        font-weight: 300;
+        margin-bottom: 30px;
+
+      }
+
+      &-button {
+
+      }
+    }
+
+    &-mousescroller {
+      bottom: 5%;
+
+      a {
+        height: 100%;
+        width: 100%;
+        display: block;
+        max-width: 32px;
+        max-height: 66px;
+        margin: 0 auto;
+
+        svg {
+          width: 100%;
+          height: auto;
+          display: block;
+
+          path {
+            stroke: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
