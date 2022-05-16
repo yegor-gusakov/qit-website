@@ -1,0 +1,42 @@
+/**
+ * Classes Buttons
+ *
+ * btn
+ *
+ */
+
+.btn, .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0px 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  height: 50px;
+  letter-spacing: -0.02em;
+  transition: all 0.12s linear;
+  text-align: center;
+  background-color: $color-black;
+  color: $color-white;
+&:hover{
+  color: rgba($color-white,.8);
+}
+  span {
+    position: relative;
+    top: 2px;
+  }
+
+
+  svg {
+    margin: 0 0 0 8px;
+  }
+
+}
+
+
