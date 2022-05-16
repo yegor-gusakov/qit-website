@@ -1,0 +1,31 @@
+.section {
+  &__models {
+    &-row {
+      &-badge {
+        background: #363636;
+        border-radius: 6px;
+        font-weight: 600;
+        padding: 6px 10px;
+      }
+
+      .card {
+        &-title {
+          color: $color-white;
+          font-weight: 600;
+          font-size: 1em;
+
+        }
+
+        &-text {
+          color: $color-white;
+          font-size: 0.8em;
+        }
+
+        &-img-overlay {
+          height: fit-content;
+          top: unset;
+        }
+      }
+    }
+  }
+}

@@ -7,10 +7,12 @@
         font-weight: 600;
         padding: 6px 10px;
       }
-&-title{
-  color: $color-black;
-  font-weight: 400;
-}
+
+      &-title {
+        color: $color-black;
+        font-weight: 400;
+      }
+
       &-advantage {
         .card {
           box-shadow: 0px 10px 39px rgba(0, 0, 0, 0.08);
@@ -34,6 +36,7 @@
         .card {
           background: linear-gradient(180deg, #E0E9EA 0%, #EDF5F6 46.65%, #E0E9EA 100%);
         }
+
         img {
           width: 80%;
           margin: 0 auto;

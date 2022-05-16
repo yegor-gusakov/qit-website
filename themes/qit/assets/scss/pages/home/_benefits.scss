@@ -1,6 +1,13 @@
 .section {
   &__benefits {
     &-row {
+      &-badge {
+        background: #363636;
+        border-radius: 6px;
+        font-weight: 600;
+        padding: 6px 10px;
+      }
+
       &-title {
         font-weight: 400;
         color: $color-black;
