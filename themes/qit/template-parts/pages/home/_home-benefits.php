@@ -47,7 +47,8 @@ $benefits_repeater = $field['benefit_repeater'];
                                                     alt="<?= $benefit_icon['alt'] ?>">
                                         </div>
                                         <div class="col-md-9">
-                                            <h5 class="m-0"><?= $benefit_title ?></h5></div>
+                                            <h5 class="m-0"><?= $benefit_title ?></h5>
+                                        </div>
                                     </div>
                                     <div class="col-md-12 ">
                                         <div class="card-body">

@@ -38,8 +38,8 @@ $coop_model_repeater = $field['coop_model_repeater'];
 						$model_text = $model['text'];
 						?>
                         <div class="col-md-4">
-                            <div class="card bg-dark text-white">
-                                <img src="<?=$model_bg_model['url']?>" class="card-img" alt="<?=$model_bg_model['alt']?>">
+                            <div class="card bg-dark text-white border-0">
+                                <img src="<?=$model_bg_model['url']?>" class="card-img border-0" alt="<?=$model_bg_model['alt']?>">
                                 <div class="card-img-overlay bottom-0 top-unset">
                                     <h5 class="card-title"><?=$model_title?></h5>
                                     <p class="card-text"><?=$model_text?></p>

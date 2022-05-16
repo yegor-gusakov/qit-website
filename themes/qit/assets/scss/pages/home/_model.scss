@@ -7,8 +7,17 @@
         font-weight: 600;
         padding: 6px 10px;
       }
-
+      &-title {
+        font-weight: 400;
+        color: $color-black;
+      }
       .card {
+        border-radius: 15px;
+
+        img{
+          border-radius: 15px;
+
+        }
         &-title {
           color: $color-white;
           font-weight: 600;
@@ -19,6 +28,8 @@
         &-text {
           color: $color-white;
           font-size: 0.8em;
+          line-height: 20px;
+
         }
 
         &-img-overlay {
