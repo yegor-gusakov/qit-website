@@ -2,8 +2,9 @@
   background: $background-primary;
   backdrop-filter: blur(55px);
 
-  button{
+  button.btn.button{
     padding: 5px 12px;
+    height: 100%;
   }
 }
 
