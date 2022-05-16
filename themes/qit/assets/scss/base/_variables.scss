@@ -12,9 +12,9 @@ $breakpoints: (
 /**
  * Body
  */
-$font-body                      :   'Gotham Pro', sans-serif;
+$font-body                      :   'Inter', sans-serif;
 $color-body                     :   #1C3360;
-$color-h                        :   #000;
+$color-h                        :   #1A1818;
 $textSize-body                  :   16px;
 $textLineHeight-body            :   27px;
 $backgroundColor-body           :   #fff;
@@ -34,15 +34,13 @@ $color-link                     :   #fff;
 /**
  * Background
  */
-$background-grey-f6                :   #F6F6F6;
-$background-grey-e9                :   #E9E9E9;
-$background-red                    :   #F14C26;
-
+$background-primary                :   #363636;
+$background-gray:#F1F1F1;
+$background-yellow:#FEF200;
 
 
 /**
  * Colors
  */
-$color-black: #1a1a1a;
-$color-white: #fff;
-$color-red:   #F14C26;
+$color-primary                :   #363636;
+$color-black:#1A1818;

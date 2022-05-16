@@ -10,23 +10,25 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 0px 30px;
+  padding: 5px 12px;
   font-weight: 400;
   font-size: 16px;
   line-height: 14px;
-  border-radius: 4px;
+  border-radius: 100px;
   text-decoration: none;
-  border: 2px solid transparent;
+  border: 1px solid $background-yellow;
   text-transform: uppercase;
   height: 50px;
   letter-spacing: -0.02em;
   transition: all 0.12s linear;
   text-align: center;
-  background-color: $color-black;
-  color: $color-white;
-&:hover{
-  color: rgba($color-white,.8);
-}
+  background-color: $background-yellow;
+  color: $color-primary;
+
+  &:hover {
+    color: rgba($color-primary, .8);
+  }
+
   span {
     position: relative;
     top: 2px;

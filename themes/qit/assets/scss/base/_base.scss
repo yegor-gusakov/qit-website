@@ -80,15 +80,6 @@ img {
 
 }
 
-.wrapper {
-  flex: 1 0 auto;
-
-  @include media(sm) {
-
-    background: unset;
-    padding-bottom: unset;
-  }
-}
 
 header,
 footer,
@@ -191,16 +182,12 @@ h6, .h6 {
 }
 
 .container {
-  $gutter: 15px;
+  $gutter: 30px;
 
   margin-right: auto;
   margin-left: auto;
   padding-left: $gutter;
   padding-right: $gutter;
   width: 100%;
-    position: relative;
-}
-
-.section:not(.no-p) {
-  padding: 55px 0;
+  position: relative;
 }
