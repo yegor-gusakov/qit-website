@@ -1,6 +1,11 @@
 .section {
   &__portfolio {
     &-row {
+      &-more{
+        a{
+          color:$color-primary;
+        }
+      }
       &-badge {
         background: #363636;
         border-radius: 6px;

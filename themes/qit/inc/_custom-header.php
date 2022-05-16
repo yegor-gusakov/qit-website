@@ -25,7 +25,7 @@ function qit_header_TagHeaderInner() {
     <div class="container">
         <div class="header__row row flex-wrap justify-content-center align-items-center py-1">
             <div class="header__row-left col-md-1">
-                <a href="/"
+                <a href="<?=get_home_url()?>"
                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none header-logo">
 					<?= file_get_contents( $logo_icon['url'] ); ?>
                 </a>

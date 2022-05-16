@@ -16,7 +16,6 @@ $coop_model_repeater = $field['coop_model_repeater'];
 
 <section class="section__models section ">
     <div class="container ">
-        <div class="section__models-row row ">
             <div class="section__models-row row justify-content-center"><h6
                         class="section__models-row-badge  w-auto text-white text-uppercase"><?= $badge ?></h6>
             </div>
@@ -52,6 +51,7 @@ $coop_model_repeater = $field['coop_model_repeater'];
 
                 </div>
 			<?php endif; ?>
+        </div>
         </div>
 
     </div>

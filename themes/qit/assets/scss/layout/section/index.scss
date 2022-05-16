@@ -49,5 +49,18 @@
         }
       }
     }
+    &-contact{
+      &-row{
+        &-left{
+          background: $color-white;
+          box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.05);
+          border-radius: 15px;
+        }
+        &-right{
+          background-color: $background-gray;
+
+        }
+      }
+    }
   }
 }

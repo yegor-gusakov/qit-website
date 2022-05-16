@@ -95,8 +95,8 @@ function qit_register_post_types() {
 		'supports'      => [ 'title', 'editor', 'thumbnail','excerpt' ],
 		// 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
 		'taxonomies'    => [],
-		'has_archive'   => false,
-		'rewrite'       => true,
+		'has_archive'   => true,
+		'rewrite' => array('slug' => 'cases'),
 		'query_var'     => true,
 	] );
 }

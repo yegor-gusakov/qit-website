@@ -16,7 +16,6 @@ $benefits_repeater = $field['benefit_repeater'];
 
 <section class="section__benefits section ">
     <div class="container ">
-        <div class="section__benefits-row row ">
             <div class="section__benefits-row row justify-content-center"><h6
                         class="section__benefits-row-badge  w-auto text-white text-uppercase"><?= $badge ?></h6>
             </div>
@@ -63,7 +62,6 @@ $benefits_repeater = $field['benefit_repeater'];
 
                 </div>
 			<?php endif; ?>
-        </div>
 
     </div>
 </section>
