@@ -47,4 +47,15 @@ if (function_exists('acf_add_options_page')) {
         'redirect'      => false
     ));
 
+
+	acf_add_options_page(array(
+		'page_title'    => __('Banners', 'qit'),
+		'menu_title'    => __('Banners', 'qit'),
+		'menu_slug'     => 'qit_banners',
+		'capability'    => 'edit_posts',
+		'position'      => '15.54',
+		'post_id'       => 'qit_banners',
+		'icon_url'      => 'dashicons-schedule',
+		'redirect'      => false
+	));
 }
