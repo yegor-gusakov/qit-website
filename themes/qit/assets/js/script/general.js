@@ -51,9 +51,6 @@ const AllPage = function () {
 
 
     }
-const Modal = function (){
-    
-}
     /**
      * Init
      */
@@ -61,7 +58,6 @@ const Modal = function (){
         init: function () {
             Header();
             Slider()
-            Modal();
         }
     };
 

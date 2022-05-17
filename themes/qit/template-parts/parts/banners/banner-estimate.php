@@ -10,8 +10,7 @@ $link  = get_field( 'estimate_button', 'qit_banners' );
 
 <section class="section section__banner-estimate">
 
-    <div class="container">
-        <div class="section__banner-estimate-row row align-items-center">
+    <div class="container py-5 ">
             <div class="section__banner-estimate-row row justify-content-center p-0">
                 <h6
                         class="section__banner-estimate-row-badge  w-auto text-white text-uppercase"><?= $badge ?></h6>
@@ -27,5 +26,4 @@ $link  = get_field( 'estimate_button', 'qit_banners' );
                         type="button"><?= $link['title'] ?></button>
             </div>
         </div>
-    </div>
 </section>

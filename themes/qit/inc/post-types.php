@@ -2,8 +2,8 @@
 
 function qit_register_post_types() {
 	register_taxonomy( 'qit_cases_technologies', [ 'qit_cases' ], [
-		'label'        => 'Languages',
-		'labels'       => [
+		'label'             => 'Languages',
+		'labels'            => [
 			'name'              => 'Technologies',
 			'singular_name'     => 'Technology',
 			'search_items'      => 'Search Technologies',
@@ -18,23 +18,19 @@ function qit_register_post_types() {
 			'menu_name'         => 'Technologies',
 			'back_to_items'     => '← Back to Technologies',
 		],
-		'description'  => '',
-		'public'       => true,
-		'hierarchical' => true,
-
+		'description'       => '',
+		'public'            => true,
+		'hierarchical'      => true,
 		'rewrite'           => true,
 		'capabilities'      => array(),
 		'meta_box_cb'       => null,
 		'show_admin_column' => false,
-
 		'show_in_rest'      => null,
-
 		'rest_base'         => null,
-
-
-	] );register_taxonomy( 'qit_cases_tags', [ 'qit_cases' ], [
-		'label'        => 'Tags',
-		'labels'       => [
+	] );
+	register_taxonomy( 'qit_cases_tags', [ 'qit_cases' ], [
+		'label'             => 'Tags',
+		'labels'            => [
 			'name'              => 'Tags',
 			'singular_name'     => 'Tag',
 			'search_items'      => 'Search Tags',
@@ -49,20 +45,15 @@ function qit_register_post_types() {
 			'menu_name'         => 'Tags',
 			'back_to_items'     => '← Back to Tags',
 		],
-		'description'  => '',
-		'public'       => true,
-		'hierarchical' => true,
-
+		'description'       => '',
+		'public'            => true,
+		'hierarchical'      => true,
 		'rewrite'           => true,
 		'capabilities'      => array(),
 		'meta_box_cb'       => null,
 		'show_admin_column' => false,
-
 		'show_in_rest'      => null,
-
 		'rest_base'         => null,
-
-
 	] );
 	register_post_type( 'qit_cases', [
 		'label'         => null,
@@ -83,25 +74,21 @@ function qit_register_post_types() {
 		'description'   => '',
 		'public'        => true,
 		'show_in_menu'  => null,
-		// показывать ли в меню адмнки
 		'show_in_rest'  => null,
-		// добавить в REST API. C WP 4.7
 		'rest_base'     => null,
-		// $post_type. C WP 4.7
 		'menu_position' => null,
 		'menu_icon'     => null,
-		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
 		'hierarchical'  => false,
-		'supports'      => [ 'title', 'editor', 'thumbnail','excerpt' ],
+		'supports'      => [ 'title', 'editor', 'thumbnail', 'excerpt' ],
 		// 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-		'taxonomies'    => [],
+		'taxonomies'    => [ 'qit_cases_technologies', 'qit_cases_tags' ],
 		'has_archive'   => true,
-		'rewrite' => array('slug' => 'cases'),
+		'rewrite'       => array( 'slug' => 'cases' ),
 		'query_var'     => true,
 	] );
 	register_taxonomy( 'qit_review_tags', [ 'qit_reviews' ], [
-		'label'        => 'Tags',
-		'labels'       => [
+		'label'             => 'Tags',
+		'labels'            => [
 			'name'              => 'Tags',
 			'singular_name'     => 'Tag',
 			'search_items'      => 'Search Tags',
@@ -116,24 +103,19 @@ function qit_register_post_types() {
 			'menu_name'         => 'Tags',
 			'back_to_items'     => '← Back to Tags',
 		],
-		'description'  => '',
-		'public'       => true,
-		'hierarchical' => true,
-
+		'description'       => '',
+		'public'            => true,
+		'hierarchical'      => true,
 		'rewrite'           => true,
 		'capabilities'      => array(),
 		'meta_box_cb'       => null,
 		'show_admin_column' => false,
-
 		'show_in_rest'      => null,
-
 		'rest_base'         => null,
-
-
 	] );
 	register_taxonomy( 'qit_review_cat', [ 'qit_reviews' ], [
-		'label'        => 'Review categories',
-		'labels'       => [
+		'label'             => 'Review categories',
+		'labels'            => [
 			'name'              => 'Review categories',
 			'singular_name'     => 'Review categories',
 			'search_items'      => 'Search Review categories',
@@ -148,20 +130,15 @@ function qit_register_post_types() {
 			'menu_name'         => 'Review categories',
 			'back_to_items'     => '← Back to Review categories',
 		],
-		'description'  => '',
-		'public'       => true,
-		'hierarchical' => true,
-
+		'description'       => '',
+		'public'            => true,
+		'hierarchical'      => true,
 		'rewrite'           => true,
 		'capabilities'      => array(),
 		'meta_box_cb'       => null,
 		'show_admin_column' => false,
-
 		'show_in_rest'      => null,
-
 		'rest_base'         => null,
-
-
 	] );
 	register_post_type( 'qit_reviews', [
 		'label'         => null,
@@ -182,20 +159,75 @@ function qit_register_post_types() {
 		'description'   => '',
 		'public'        => true,
 		'show_in_menu'  => null,
-		// показывать ли в меню адмнки
 		'show_in_rest'  => null,
-		// добавить в REST API. C WP 4.7
 		'rest_base'     => null,
-		// $post_type. C WP 4.7
 		'menu_position' => null,
 		'menu_icon'     => null,
-		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
 		'hierarchical'  => false,
 		'supports'      => [ 'title', 'excerpt', 'thumbnail' ],
 		// 'title','editor','author','thumbnail','','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-		'taxonomies'    => [],
+		'taxonomies'    => [ 'qit_review_tags', 'qit_review_cat' ],
 		'has_archive'   => true,
-		'rewrite' => array('slug' => 'reviews'),
+		'rewrite'       => array( 'slug' => 'reviews' ),
+		'query_var'     => true,
+	] );
+	register_taxonomy( 'qit_technologies_direction', [ 'qit_technologies' ], [
+		'label'             => 'Technology direction',
+		'labels'            => [
+			'name'              => 'Technology direction',
+			'singular_name'     => 'Technology direction',
+			'search_items'      => 'Search Technology direction',
+			'all_items'         => 'All Technology direction',
+			'view_item '        => 'View Technology direction',
+			'parent_item'       => 'Parent Technology direction',
+			'parent_item_colon' => 'Parent Technology direction:',
+			'edit_item'         => 'Edit Technology direction',
+			'update_item'       => 'Update Technology direction',
+			'add_new_item'      => 'Add New Technology direction',
+			'new_item_name'     => 'New Technology direction Name',
+			'menu_name'         => 'Technology direction',
+			'back_to_items'     => '← Back to Technology direction',
+		],
+		'description'       => '',
+		'public'            => true,
+		'hierarchical'      => true,
+		'rewrite'           => true,
+		'capabilities'      => array(),
+		'meta_box_cb'       => null,
+		'show_admin_column' => false,
+		'show_in_rest'      => null,
+		'rest_base'         => null,
+
+
+	] );
+	register_post_type( 'qit_technologies', [
+		'label'         => null,
+		'labels'        => [
+			'name'               => 'Technologies',
+			'singular_name'      => 'Technology',
+			'add_new'            => 'Add Technology',
+			'add_new_item'       => 'Adding Technology',
+			'edit_item'          => 'Edit Technology',
+			'new_item'           => 'New Technology',
+			'view_item'          => 'Watch Technology',
+			'search_items'       => 'Search Technology',
+			'not_found'          => 'Not found',
+			'not_found_in_trash' => 'Not found',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Technologies',
+		],
+		'description'   => '',
+		'public'        => true,
+		'show_in_menu'  => null,
+		'show_in_rest'  => null,
+		'rest_base'     => null,
+		'menu_position' => null,
+		'menu_icon'     => null,
+		'hierarchical'  => false,
+		'supports'      => [ 'title', 'excerpt', 'thumbnail' ],
+		'taxonomies'    => [ 'qit_technologies_direction' ],
+		'has_archive'   => false,
+		'rewrite'       => array( 'slug' => 'technologies' ),
 		'query_var'     => true,
 	] );
 }

@@ -17,7 +17,7 @@ $tags_repeater = $field['tags_repeater'];
 
     <div class="container">
         <div class="section__advantages-row row justify-content-center"><h6
-                    class="section__advantages-row-badge  w-auto text-white text-uppercase"><?= $badge ?></h6>
+                    class="section__advantages-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
         </div>
         <div class="section__advantages-row row text-center">
             <h2 class="section__advantages-row-title"><?= $title ?></h2>

@@ -49,7 +49,7 @@ if ( $query->have_posts() || $query2->have_posts() ) :
     <section class="section section__reviews">
         <div class="container">
             <div class="section__reviews-row row justify-content-center p-0">
-                <h6 class="section__reviews-row-badge  w-auto text-white text-uppercase"><?= $badge ?></h6>
+                <h6 class="section__reviews-row-badge  m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
             </div>
             <div class="section__reviews-row row text-center p-0">
                 <h2 class="section__reviews-row-title"><?= $title ?></h2>
@@ -81,8 +81,8 @@ if ( $query->have_posts() || $query2->have_posts() ) :
                         <div class="col-md-5 d-flex justify-content-center gap-5">
                             <div class="swiper-button-prev"><?= file_get_contents( $arrow_left ) ?></div>
 
-                        <div class="swiper-button-next"><?= file_get_contents( $arrow_right ) ?></div>
-                    </div>
+                            <div class="swiper-button-next"><?= file_get_contents( $arrow_right ) ?></div>
+                        </div>
                     </div>
 					<?php
 
@@ -99,7 +99,8 @@ if ( $query->have_posts() || $query2->have_posts() ) :
 			<?php endif; ?>
             <div class="section__reviews-row row justify-content-center">
                 <div class="col-md-4">
-                    <button class="btn button"><?=__('GET A QUOTE FOR YOUR PROJECT','qit')?></button>
+                    <button class="btn button"><?= __( 'GET A QUOTE FOR YOUR PROJECT',
+							'qit' ) ?></button>
 
                 </div>
             </div>

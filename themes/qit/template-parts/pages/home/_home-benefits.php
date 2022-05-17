@@ -1,6 +1,6 @@
 <?php
 /*
- * Home: benefits
+ * Home: Benefits
  */
 defined( 'ABSPATH' ) || exit;
 
@@ -17,7 +17,7 @@ $benefits_repeater = $field['benefit_repeater'];
 <section class="section__benefits section ">
     <div class="container ">
             <div class="section__benefits-row row justify-content-center"><h6
-                        class="section__benefits-row-badge  w-auto text-white text-uppercase"><?= $badge ?></h6>
+                        class="section__benefits-row-badge m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
             </div>
             <div class="section__benefits-row row text-center">
                 <h2 class="section__benefits-row-title"><?= $title ?></h2>

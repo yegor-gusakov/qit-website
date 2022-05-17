@@ -1,6 +1,6 @@
 <?php
 /*
- * Home: Coop Model
+ * Home: Portfolio
  */
 defined( 'ABSPATH' ) || exit;
 
@@ -17,7 +17,7 @@ $angle = get_stylesheet_directory() . '/assets/userfiles/icons/angle.svg';
 <section class="section__portfolio section " id="timeline">
     <div class="container ">
         <div class="section__portfolio-row row justify-content-center"><h6
-                    class="section__portfolio-row-badge  w-auto text-white text-uppercase"><?= $badge ?></h6>
+                    class="section__portfolio-row-badge m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
         </div>
         <div class="section__portfolio-row row text-center">
             <h2 class="section__portfolio-row-title"><?= $title ?></h2>
