@@ -9,3 +9,35 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'qit-software-icon';
+    src:  url('./fonts/qit-icons/qit-software-icon.eot?o6zzm3');
+    src:  url('./fonts/qit-icons/qit-software-icon.eot?o6zzm3#iefix') format('embedded-opentype'),
+    url('./fonts/qit-icons/qit-software-icon.ttf?o6zzm3') format('truetype'),
+    url('./fonts/qit-icons/qit-software-icon.woff?o6zzm3') format('woff'),
+    url('./fonts/qit-icons/qit-software-icon.svg?o6zzm3#qit-software-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+[class^="qit-software-icon-"], [class*=" qit-software-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'qit-software-icon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.qit-software-icon-mail:before {
+    content: "\e900";
+}
+.qit-software-icon-phone:before {
+    content: "\e901";
+}

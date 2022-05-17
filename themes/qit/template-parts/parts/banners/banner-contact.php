@@ -46,25 +46,28 @@ $reviews_repeater = $right['reviews_repeater'];
                     </div>
 
 				<?php endif; ?>
-                <div class="row">
-					<?php if ( $reviews_repeater ): ?>
-                    <ul class="list-group list-group-horizontal">
-						<?php foreach (
-							$reviews_repeater
+				<?php if ( $reviews_repeater ): ?>
 
-							as $review
-						) :
-							$review_image = $review['image']
-							?>
+                    <div class="row">
+                        <ul class="list-group list-group-horizontal">
+							<?php foreach (
+								$reviews_repeater
 
-                            <li class="list-group-item border-0 bg-transparent"><img
-                                        src="<?= $review_image['url'] ?>"
-                                        alt="<?= $review_image['alt'] ?>"></li>
-						<?php endforeach; ?>
-                    </ul>
+								as $review
+							) :
+								$review_image = $review['image']
+								?>
 
-                </div>
-			<?php endif; ?>
+                                <li class="list-group-item border-0 bg-transparent">
+                                    <img
+                                            src="<?= $review_image['url'] ?>"
+                                            alt="<?= $review_image['alt'] ?>">
+                                </li>
+							<?php endforeach; ?>
+                        </ul>
+
+                    </div>
+				<?php endif; ?>
 
             </div>
         </div>

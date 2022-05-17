@@ -3,12 +3,12 @@
     &__user-name, &__user-email, &__user-phone, &__user-hear, .wpforms-field.wpforms-field-phone.form-contact__user-phone .iti.iti--allow-dropdown {
       input, select, .wpforms-field-large.wpforms-field-required.wpforms-smart-phone-field.wpforms-input-temp-name {
         border: 0 !important;
-        color: $color-primary !important;
         border-bottom: 1px solid rgba($color-primary, 0.15) !important;
         padding-left: 10px !important;
+        color: rgba($color-primary, 0.6)!important;
 
         &::placeholder {
-          color: $color-primary !important;
+          color: rgba($color-primary, 0.6)!important;
 
         }
       }
