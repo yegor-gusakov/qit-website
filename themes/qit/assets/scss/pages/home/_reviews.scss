@@ -16,9 +16,27 @@
         color: $color-black;
       }
 
+      .review-person-photo {
+        position: relative;
+
+        .country {
+          position: absolute;
+          bottom: 0;
+          width: auto;
+          display: block;
+          height: fit-content;
+          padding-right: calc(var(--bs-gutter-x) * .5);
+          right:10%;
+          svg{display: block}
+        }
+      }
+
       &-with {
+        position: relative;
+
         &-modal {
           cursor: pointer;
+
           svg {
             position: absolute;
             display: block;
@@ -27,8 +45,36 @@
             transform: translate(-50%, -50%);
           }
         }
-        .card{
-          &-img{
+
+        .swiper {
+          &-button {
+
+            &-next, &-prev {
+              //position: absolute;
+              z-index: 9;
+              bottom: 0;
+              display: flex;
+              align-items: center;
+
+              svg {
+                z-index: 9;
+
+                path {
+                  stroke: $color-black;
+                }
+              }
+            }
+          }
+        }
+
+        .card {
+          &-text {
+            .tags {
+              color: rgba($color-primary, .5);
+            }
+          }
+
+          &-img {
             max-width: 70px;
             max-height: 70px;
           }
