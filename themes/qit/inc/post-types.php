@@ -99,4 +99,103 @@ function qit_register_post_types() {
 		'rewrite' => array('slug' => 'cases'),
 		'query_var'     => true,
 	] );
+	register_taxonomy( 'qit_review_tags', [ 'qit_reviews' ], [
+		'label'        => 'Tags',
+		'labels'       => [
+			'name'              => 'Tags',
+			'singular_name'     => 'Tag',
+			'search_items'      => 'Search Tags',
+			'all_items'         => 'All Tags',
+			'view_item '        => 'View Tags',
+			'parent_item'       => 'Parent Tags',
+			'parent_item_colon' => 'Parent Tags:',
+			'edit_item'         => 'Edit Tags',
+			'update_item'       => 'Update Tags',
+			'add_new_item'      => 'Add New Tag',
+			'new_item_name'     => 'New Tag Name',
+			'menu_name'         => 'Tags',
+			'back_to_items'     => '← Back to Tags',
+		],
+		'description'  => '',
+		'public'       => true,
+		'hierarchical' => true,
+
+		'rewrite'           => true,
+		'capabilities'      => array(),
+		'meta_box_cb'       => null,
+		'show_admin_column' => false,
+
+		'show_in_rest'      => null,
+
+		'rest_base'         => null,
+
+
+	] );
+	register_taxonomy( 'qit_review_cat', [ 'qit_reviews' ], [
+		'label'        => 'Review categories',
+		'labels'       => [
+			'name'              => 'Review categories',
+			'singular_name'     => 'Review categories',
+			'search_items'      => 'Search Review categories',
+			'all_items'         => 'All Review categories',
+			'view_item '        => 'View Review categories',
+			'parent_item'       => 'Parent Review categories',
+			'parent_item_colon' => 'Parent Review categories:',
+			'edit_item'         => 'Edit Review categories',
+			'update_item'       => 'Update Review categories',
+			'add_new_item'      => 'Add New Review categories',
+			'new_item_name'     => 'New Review categories Name',
+			'menu_name'         => 'Review categories',
+			'back_to_items'     => '← Back to Review categories',
+		],
+		'description'  => '',
+		'public'       => true,
+		'hierarchical' => true,
+
+		'rewrite'           => true,
+		'capabilities'      => array(),
+		'meta_box_cb'       => null,
+		'show_admin_column' => false,
+
+		'show_in_rest'      => null,
+
+		'rest_base'         => null,
+
+
+	] );
+	register_post_type( 'qit_reviews', [
+		'label'         => null,
+		'labels'        => [
+			'name'               => 'Reviews',
+			'singular_name'      => 'Review',
+			'add_new'            => 'Add Review',
+			'add_new_item'       => 'Adding Review',
+			'edit_item'          => 'Edit Review',
+			'new_item'           => 'New Review',
+			'view_item'          => 'Watch Review',
+			'search_items'       => 'Search Review',
+			'not_found'          => 'Not found',
+			'not_found_in_trash' => 'Not found',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Reviews',
+		],
+		'description'   => '',
+		'public'        => true,
+		'show_in_menu'  => null,
+		// показывать ли в меню адмнки
+		'show_in_rest'  => null,
+		// добавить в REST API. C WP 4.7
+		'rest_base'     => null,
+		// $post_type. C WP 4.7
+		'menu_position' => null,
+		'menu_icon'     => null,
+		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+		'hierarchical'  => false,
+		'supports'      => [ 'title', 'excerpt', 'thumbnail' ],
+		// 'title','editor','author','thumbnail','','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		'taxonomies'    => [],
+		'has_archive'   => true,
+		'rewrite' => array('slug' => 'reviews'),
+		'query_var'     => true,
+	] );
 }
