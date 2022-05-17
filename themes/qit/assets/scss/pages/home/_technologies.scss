@@ -2,7 +2,7 @@
   &__technologies {
     &-row{
       &-badge {
-        background: #363636;
+        background: $background-primary;
         border-radius: 6px;
         font-weight: 600;
         padding: 6px 10px;
@@ -74,7 +74,7 @@
         overflow: hidden;
 
         &-body {
-          background: #F1F1F1;
+          background: $background-gray;
           padding: 6px;
           max-height: 30px;
         }

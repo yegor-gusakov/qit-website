@@ -13,7 +13,7 @@ $link  = get_field( 'estimate_button', 'qit_banners' );
     <div class="container py-5 ">
             <div class="section__banner-estimate-row row justify-content-center p-0">
                 <h6
-                        class="section__banner-estimate-row-badge  w-auto text-white text-uppercase"><?= $badge ?></h6>
+                        class="section__banner-estimate-row-badge  m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
             </div>
             <div class="section__banner-estimate-row row text-center p-0">
                 <h2 class="section__banner-estimate-row-title"><?= $title ?></h2>

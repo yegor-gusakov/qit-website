@@ -3,7 +3,7 @@
   &__candidates {
     &-row {
       &-badge {
-        background: #363636;
+        background: $background-primary;
         border-radius: 6px;
         font-weight: 600;
         padding: 6px 10px;
@@ -34,7 +34,7 @@
         left: 50%;
         width: 2px;
         height: 80%;
-        background: #c5c5c5;
+        background: rgba($background-primary,.15);
       }
 
       .timeline ul {

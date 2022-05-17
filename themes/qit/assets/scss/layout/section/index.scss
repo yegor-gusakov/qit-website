@@ -38,10 +38,14 @@
         padding: 65px 0;
 
         &-badge {
-          background: #363636;
+          background: $background-primary;
           border-radius: 6px;
           font-weight: 600;
           padding: 6px 10px;
+          font-size: 10px;
+          line-height: 16px;
+          margin-bottom: 10px;
+
         }
 
         &-title {
