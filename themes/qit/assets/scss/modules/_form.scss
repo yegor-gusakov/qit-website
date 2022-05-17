@@ -1,4 +1,48 @@
 .form {
+  &-contact {
+    &__user-name, &__user-email, &__user-phone, &__user-hear, .wpforms-field.wpforms-field-phone.form-contact__user-phone .iti.iti--allow-dropdown {
+      input, select, .wpforms-field-large.wpforms-field-required.wpforms-smart-phone-field.wpforms-input-temp-name {
+        border: 0 !important;
+        color: $color-primary !important;
+        border-bottom: 1px solid rgba($color-primary, 0.15) !important;
+        padding-left: 10px !important;
 
+        &::placeholder {
+          color: $color-primary !important;
 
+        }
+      }
+
+      .iti__flag-container {
+        display: none;
+      }
+    }
+
+    .btn {
+      padding: 15px 30px !important;
+      gap: 10px !important;
+      background: #FEF200 !important;
+      border-radius: 59px !important;
+      border:none!important;
+    }
+
+    &__privacy-policy {
+      p {
+        color: rgba($color-primary, 0.5)!important;
+        font-weight: 400!important;
+        font-size: 12px!important;
+
+        line-height: 18px!important;
+
+      }
+      a{
+        font-weight: 400!important;
+
+        font-size: 12px!important;
+        line-height: 18px!important;
+        color: $color-primary!important;
+      }
+    }
+
+  }
 }

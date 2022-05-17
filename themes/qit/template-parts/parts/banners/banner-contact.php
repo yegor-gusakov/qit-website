@@ -1,10 +1,12 @@
 <?php
-$left           = get_field( 'left', 'theme_settings' );
-$right          = get_field( 'right', 'theme_settings' );
-$contact_title  = $left['contact_title'];
-$contact_form   = $left['shortcode_contact_form'];
-$fact_title     = $right['facts_title'];
-$facts_repeater = $right['facts_repeater'];
+$left             = get_field( 'left', 'theme_settings' );
+$right            = get_field( 'right', 'theme_settings' );
+$contact_title    = $left['contact_title'];
+$contact_form     = $left['shortcode_contact_form'];
+$fact_title       = $right['facts_title'];
+$facts_repeater   = $right['facts_repeater'];
+$reviews_repeater = $right['reviews_repeater'];
+
 ?>
 
 
@@ -13,13 +15,14 @@ $facts_repeater = $right['facts_repeater'];
     <div class="container">
         <div class="section__banner-contact-row row align-items-stretch">
             <div class="section__banner-contact-row-left col-md-6 p-5">
-                <h4><?= $fact_title ?></h4>
 
-                <?= do_shortcode(   $contact_form ) ?>
+                <h4><?= $contact_title ?></h4>
+
+				<?= do_shortcode( $contact_form ) ?>
 
             </div>
             <div class="section__banner-contact-row-right col-md-6 p-5">
-                <h6><?= $fact_title ?></h6>
+                <h5><?= $fact_title ?></h5>
 				<?php if ( $facts_repeater ): ?>
                     <div class="row">
 
@@ -44,12 +47,25 @@ $facts_repeater = $right['facts_repeater'];
 
 				<?php endif; ?>
                 <div class="row">
+					<?php if ( $reviews_repeater ): ?>
                     <ul class="list-group list-group-horizontal">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
+						<?php foreach (
+							$reviews_repeater
+
+							as $review
+						) :
+							$review_image = $review['image']
+							?>
+
+                            <li class="list-group-item border-0 bg-transparent"><img
+                                        src="<?= $review_image['url'] ?>"
+                                        alt="<?= $review_image['alt'] ?>"></li>
+						<?php endforeach; ?>
                     </ul>
+
                 </div>
+			<?php endif; ?>
+
             </div>
         </div>
     </div>
