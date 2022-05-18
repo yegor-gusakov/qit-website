@@ -71,7 +71,14 @@
 
         &-title {
           font-weight: 400;
+          /* Desktop/H2 */
+          font-size: 38px;
+          line-height: 44px;
           color: $color-black;
+          @include media(sm) {
+            font-size: 30px;
+
+          }
         }
 
         .btn {

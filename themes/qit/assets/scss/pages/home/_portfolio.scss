@@ -1,15 +1,16 @@
 .section {
   &__portfolio {
     &-row {
-      &-more{
-        a{
-          color:$color-primary;
+      &-more {
+        a {
+          color: $color-primary;
           font-weight: 600;
           font-size: 16px;
           line-height: 24px;
           text-transform: uppercase;
         }
       }
+
       &-badge {
         background: $background-primary;
         border-radius: 6px;
@@ -32,6 +33,7 @@
       .card {
         box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.06);
         border-radius: 15px;
+
         &-title {
           font-style: normal;
           font-weight: 600;
@@ -39,6 +41,7 @@
           line-height: 26px;
           color: $color-black;
         }
+
         &-text {
           color: $color-primary;
 
@@ -52,22 +55,24 @@
             @include media(sm) {
               font-size: 26px;
 
-          }
+            }
           }
 
           &.detail {
             text-align: right;
             font-weight: 600;
-            svg{
-              path{
-                stroke:$color-primary;
+
+            svg {
+              path {
+                stroke: $color-primary;
               }
             }
           }
-          .tags{
-           color:rgba($color-black,.5);
+
+          .tags {
+            color: rgba($color-black, .5);
             font-weight: 500;
-            font-size:16px;
+            font-size: 16px;
             line-height: 138%;
           }
         }
