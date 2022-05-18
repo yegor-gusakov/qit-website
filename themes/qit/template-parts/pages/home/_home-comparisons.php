@@ -71,10 +71,10 @@ $closemark = get_stylesheet_directory() . '/assets/userfiles/icons/Close.svg';
 
 
             <ul class="row">
-                <li class="legend"><p>Payment method</p></li>
-                <li><p>Hourly (rate includes platfrom fees)</p></li>
-                <li><p>Monthly invoicing</p></li>
-                <li><p>Monthly salary + taxes, backoffice overhead</p></li>
+                <li class="legend"><p class="h-100">Payment method</p></li>
+                <li><p class="h-100">Hourly (rate includes platfrom fees)</p></li>
+                <li><p class="h-100">Monthly invoicing</p></li>
+                <li><p class="h-100">Monthly salary + taxes, backoffice overhead</p></li>
             </ul>
 
 
@@ -105,7 +105,7 @@ $closemark = get_stylesheet_directory() . '/assets/userfiles/icons/Close.svg';
                 <li></li>
             </ul>
             <ul class="row row-after-gap">
-                <li class="legend"><p>Focus on your task only</p>
+                <li class="legend"><p class="h-100">Focus on your task only</p>
                 </li>
                 <li><p><?= file_get_contents( $closemark ) ?></p></li>
                 <li><p><?= file_get_contents( $checkmark ) ?></p></li>
@@ -119,11 +119,11 @@ $closemark = get_stylesheet_directory() . '/assets/userfiles/icons/Close.svg';
                 <li><p>Average</p></li>
             </ul>
             <ul class="row">
-                <li class="legend"><p>Cooperation termination risks</p>
+                <li class="legend"><p class="h-100">Cooperation termination risks</p>
                 </li>
-                <li><p>Low</p></li>
-                <li><p>Low</p></li>
-                <li><p>High (notice period > 3 months)</p></li>
+                <li><p class="h-100">Low</p></li>
+                <li><p class="h-100">Low</p></li>
+                <li><p class="h-100">High (notice period > 3 months)</p></li>
             </ul>
             <ul class="row row-before-gap">
                 <li class="legend"><p>Security level (Data Protection)</p>
@@ -132,8 +132,6 @@ $closemark = get_stylesheet_directory() . '/assets/userfiles/icons/Close.svg';
                 <li><p>Safe</p></li>
                 <li><p>Very safe</p></li>
             </ul>
-
-
         </div>
     </div>
 </section>

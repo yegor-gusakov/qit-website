@@ -14,7 +14,6 @@ $tags_repeater = $field['tags_repeater'];
 //print_r( $tags_repeater );
 ?>
 <section class="section section__advantages">
-
     <div class="container">
         <div class="section__advantages-row row justify-content-center"><h6
                     class="section__advantages-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
@@ -39,7 +38,7 @@ $tags_repeater = $field['tags_repeater'];
                     <div class="section__advantages-row-advantage col">
                         <div class="card border-0">
                             <div class="card-body text-center pt-5">
-                                <h5 class="card-title"><?= $tag_title ?></h5>
+                                <h3 class="card-title"><?= $tag_title ?></h3>
                                 <p class="card-text"><?= $tag_text ?></p>
                             </div>
                             <img src="<?= $tag_image['url'] ?>"
@@ -48,9 +47,7 @@ $tags_repeater = $field['tags_repeater'];
                         </div>
                     </div>
 				<?php endforeach; ?>
-
             </div>
 		<?php endif; ?>
-
     </div>
 </section>

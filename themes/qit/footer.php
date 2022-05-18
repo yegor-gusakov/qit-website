@@ -10,8 +10,8 @@
  */
 
 ?>
-
-
+</main>
+<!-- END CONTENT -->
 <?php
 /**
  * footer_parts hook
@@ -24,8 +24,6 @@
  */
 do_action('footer_parts');
 ?>
-
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

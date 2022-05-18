@@ -169,7 +169,7 @@ add_filter('wp_nav_menu', '_namespace_modify_menuclass');
 
 function submenu_class($menu) {
 
-	$menu = preg_replace('/ class="sub-menu"/','/ class="sub-menu dropdown-menu border-0 rounded-0" /',$menu);
+	$menu = preg_replace('/ class="sub-menu"/','/ class="sub-menu dropdown-menu border-0 " /',$menu);
 
 	return $menu;
 

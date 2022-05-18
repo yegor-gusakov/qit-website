@@ -54,9 +54,10 @@ $angle = get_stylesheet_directory() . '/assets/userfiles/icons/angle.svg';
 
         <div class="section__portfolio-row-more row justify-content-end">
             <div class="col-md-2 text-end">
-                <a href="<?php echo get_post_type_archive_link( 'qit_cases' ); ?>" class="d-inline-block ml-auto"><?= __( 'All cases',
+                <a href="<?php echo get_post_type_archive_link( 'qit_cases' ); ?>"
+                   class="d-inline-block ml-auto"><?= __( 'All cases',
 						'qit' ) . ' &nbsp;' . file_get_contents( $angle ) ?></a>
             </div>
         </div>
-
+    </div>
 </section>

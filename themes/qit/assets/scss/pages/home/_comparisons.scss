@@ -1,12 +1,34 @@
 .section {
 
   &__comparisons {
+    &-row{
+      &-badge {
+        background: $background-primary;
+        border-radius: 6px;
+        font-weight: 600;
+        padding: 6px 10px;
+        font-size: 10px;
+        line-height: 16px;
+        margin-bottom: 10px;
+
+      }
+
+      &-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 44px;
+        color: $color-black;
+      }
     ul {
       &.row {
         list-style: none;
         display: flex; /* turn children li elements into flex children */
         flex: 1;
         flex-wrap: wrap;
+        padding: 0;
+
+
 
         &:first-of-type {
 
@@ -33,7 +55,7 @@
 
             &:first-of-type {
               text-align: start;
-              align-self: end;
+              align-self: flex-end;
 
             }
 
@@ -47,27 +69,35 @@
               background-color: #F1F1F1;
               border-radius: 15px 15px 0px 0px;
               border-right: 1px solid rgba(54, 54, 54, 0.15);
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 26px;
+              color: #1A1818;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
           }
         }
-
 
 
         li {
           background-color: #fff;
           flex: 1;
           text-align: center;
-          padding: 16px 32px;
+          padding: 8px 32px;
 
           &:first-of-type {
+            padding: 9px 32px;
+
             p {
-              height: 100%;
               font-style: normal;
               font-weight: 600;
               font-size: 16px;
-              line-height: 22px;
+              line-height: initial;
               color: $color-black;
-
+              margin-bottom: 0;
             }
           }
 
@@ -92,15 +122,15 @@
           }
 
           p {
-            height: 100%;
 
             border-bottom: 1px solid rgba($background-primary, .15);
             padding-bottom: 16px;
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
-            line-height: 26px;
+            line-height: initial;
             color: $color-black;
+            margin-bottom: 0;
 
           }
         }
@@ -114,6 +144,8 @@
               line-height: 18px;
               text-transform: uppercase;
               color: rgba($color-primary, .6);
+              padding-top: 32px;
+
             }
           }
         }
@@ -128,6 +160,8 @@
 
             p {
               border-bottom: 0;
+              line-height: initial;
+
             }
           }
         }
@@ -136,16 +170,19 @@
           .legend {
             background: #F1F1F1;
             border-radius: 15px 0px 0px 0px;
+            padding-top: 18px !important;
           }
         }
+
         &:last-of-type {
 
           align-self: flex-start;
 
           li {
             padding-bottom: 30px;
+
             p {
-              height: 100%;
+              line-height: initial;
 
               border: none;
               padding: 0;
@@ -156,6 +193,7 @@
               border: none;
               border-radius: 0px 0px 0 15px;
               padding-bottom: 16px;
+              align-self: flex-start;
             }
 
             border-bottom: 1px solid rgba(54, 54, 54, 0.15);
@@ -170,7 +208,8 @@
             }
           }
         }
-      }
+      }    }
+
     }
   }
 }

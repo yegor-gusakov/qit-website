@@ -30,7 +30,7 @@ $country_flag_svg = get_stylesheet_directory()
         </div>
         <div class="row">
             <div class="col-md-12 text-start">
-		        <?= get_the_excerpt() ?>
+				<?= get_the_excerpt() ?>
             </div>
         </div>
     </div>

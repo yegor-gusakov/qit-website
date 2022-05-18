@@ -3,11 +3,22 @@
 
   &__subfooter {
     border-top: 1px solid rgba($color-white, .15);
-    p{
+
+    .text-copyright {
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
       color: rgba($color-white, .5);
+
+      a {
+
+        transition: .3s ease-in-out all;
+        color: rgba($color-white, .7);
+&:hover{
+  color: rgba($color-white, .9);
+  transition: .3s ease-in-out all;
+}
+      }
     }
   }
 
@@ -46,6 +57,20 @@
       }
 
       .list-group {
+        svg {
+          transition: all ease-in-out .3s;
+
+          &:hover {
+            transition: all ease-in-out .3s;
+
+            path {
+              fill: rgba($color-white, .7);
+              transition: all ease-in-out .3s;
+
+            }
+          }
+        }
+
         &-item:first-child {
           padding-left: 0;
         }
@@ -86,6 +111,12 @@
         align-items: center;
         justify-content: space-between;
         width: 85%;
+
+        &:hover {
+          color: rgba($color-white, 1);
+
+        }
+
 
         i {
           font-size: 17px;

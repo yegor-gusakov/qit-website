@@ -47,12 +47,15 @@
 
         }
 
-        &:hover {
+        &:not(.active):hover {
           color: $color-primary;
           border: none;
           margin: 0;
+          border-radius: 100px;
 
+          background: rgba($background-yellow, 0.2);
         }
+        border-radius: 100px;
 
         border: none;
         color: $color-primary;

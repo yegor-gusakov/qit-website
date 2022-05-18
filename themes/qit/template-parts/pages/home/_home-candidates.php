@@ -49,9 +49,6 @@ $candidates_repeater = $field['candidates_repeater'];
                     </ul>
                 </div>
             </div>
-
 		<?php endif; ?>
-
-
     </div>
 </section>

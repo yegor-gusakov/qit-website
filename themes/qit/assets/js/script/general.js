@@ -14,9 +14,13 @@ const AllPage = function () {
         /**
          * Navbar Menu
          */
+        $('.navbar-toggler').on('click', function () {
+            $('#menu-main-menu').toggleClass('d-block');
+        });
 
 
     }
+
 
     /**
      * Slider
@@ -30,7 +34,9 @@ const AllPage = function () {
             // centeredSlides: true,
             loop: true,
             slidesPerView: 1,
-            // centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+            },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -42,8 +48,9 @@ const AllPage = function () {
             centeredSlides: true,
             loop: true,
             slidesPerView: "auto",
-            // centeredSlides: true,
-            navigation: {
+            autoplay: {
+                delay: 5000,
+            }, navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },

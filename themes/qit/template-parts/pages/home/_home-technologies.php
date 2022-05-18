@@ -24,13 +24,15 @@ $directions = $field['directions'];
         </div>
         <div class="section__technologies-row row">
 
-            <ul class="section__technologies-nav nav nav-tabs border-0" id="technologiesDirection" role="tablist">
+            <ul class="section__technologies-nav nav nav-tabs border-0"
+                id="technologiesDirection" role="tablist">
 				<?php
 				foreach ( $directions as $key => $direction ):
 					switch ( $key ):
 						case "front-end":
 							?>
-                            <li class="section__technologies-nav-item nav-item" role="presentation">
+                            <li class="section__technologies-nav-item nav-item"
+                                role="presentation">
                                 <button class="section__technologies-nav-link nav-link active text-uppercase"
                                         id="<?= $key ?>-tab"
                                         data-bs-toggle="tab"
@@ -43,7 +45,8 @@ $directions = $field['directions'];
 							break;
 						case "mobile":
 							?>
-                            <li class="section__technologies-nav-item nav-item" role="presentation">
+                            <li class="section__technologies-nav-item nav-item"
+                                role="presentation">
                                 <button class="section__technologies-nav-link nav-link text-uppercase"
                                         id="<?= $key ?>-tab"
                                         data-bs-toggle="tab"
@@ -55,7 +58,8 @@ $directions = $field['directions'];
 							<?php break;
 						case "back-end":
 							?>
-                            <li class="section__technologies-nav-item nav-item" role="presentation">
+                            <li class="section__technologies-nav-item nav-item"
+                                role="presentation">
                                 <button class="section__technologies-nav-link nav-link text-uppercase"
                                         id="<?= $key ?>-tab"
                                         data-bs-toggle="tab"
@@ -67,7 +71,8 @@ $directions = $field['directions'];
 							<?php break;
 						case "infrastructure":
 							?>
-                            <li class="section__technologies-nav-item nav-item" role="presentation">
+                            <li class="section__technologies-nav-item nav-item"
+                                role="presentation">
                                 <button class="section__technologies-nav-link nav-link text-uppercase"
                                         id="<?= $key ?>-tab"
                                         data-bs-toggle="tab"
@@ -83,7 +88,8 @@ $directions = $field['directions'];
 				?>
             </ul>
 
-            <div class="section__technologies-tab tab-content p-0" id="technologiesDirectionContent">
+            <div class="section__technologies-tab tab-content p-0"
+                 id="technologiesDirectionContent">
 				<?php
 				foreach ( $directions as $key => $direction ):
 					switch ( $key ):

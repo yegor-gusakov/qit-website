@@ -6,7 +6,8 @@ $title     = get_the_title( $args['id'] );
     <div class="card mb-3 h-100 justify-content-between">
         <div class="card-img w-100 h-100">
 
-            <img src="<?= $thumbnail ?>" class="card-img-top w-50 h-100 mx-auto my-0"
+            <img src="<?= $thumbnail ?>"
+                 class="card-img-top w-50 h-100 mx-auto my-0"
                  alt="<?= $title ?>"></div>
 
         <div class="card-body">

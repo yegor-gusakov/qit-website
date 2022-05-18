@@ -20,13 +20,26 @@
       }
 
       .card {
+        &-title {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+        }
+
         &-body {
           padding: 0;
         }
 
-        small {
-          color: rgba($color-white, .8);
+        &-text {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+
+            color: rgba($color-white, .8);
         }
+
       }
 
     }
@@ -36,6 +49,14 @@
 
       &-row {
         padding: 65px 0;
+
+        &-text {
+          color: rgba($color-primary, .8);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+        }
 
         &-badge {
           background: $background-primary;
@@ -52,6 +73,13 @@
           font-weight: 400;
           color: $color-black;
         }
+        .btn{
+          border: none;
+
+          &:hover{
+            border: none;
+          }
+        }
       }
     }
 
@@ -60,11 +88,12 @@
         box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.05);
         border-radius: 15px;
         overflow: hidden;
+
         &-left {
           background: $color-white;
           border-radius: 15px;
 
-          h4{
+          h4 {
             color: $color-primary;
             font-weight: 400;
             font-size: 38px;
@@ -79,7 +108,7 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 26px;
-            margin-bottom:15% ;
+            margin-bottom: 15%;
           }
 
           .card {

@@ -5,11 +5,20 @@
         border: 0 !important;
         border-bottom: 1px solid rgba($color-primary, 0.15) !important;
         padding-left: 10px !important;
-        color: rgba($color-primary, 0.6)!important;
-
+        color: rgba($color-primary, 0.6) !important;
+        transition: .3s;
+border-radius: 0!important;
         &::placeholder {
-          color: rgba($color-primary, 0.6)!important;
+          color: rgba($color-primary, 0.6) !important;
 
+        }
+
+        &:hover {
+          border-bottom: 1px solid rgba($color-primary, 0.25) !important;;
+        }
+
+        &:focus {
+          border-bottom: 1px solid rgba($color-primary, 1) !important;;
         }
       }
 
@@ -23,24 +32,31 @@
       gap: 10px !important;
       background: $background-yellow !important;
       border-radius: 59px !important;
-      border:none!important;
+      border: none !important;
+
+      &:hover {
+        color: rgba($color-primary, .8) !important;
+        background-color: $background-yellow-2 !important;
+
+      }
     }
 
     &__privacy-policy {
       p {
-        color: rgba($color-primary, 0.5)!important;
-        font-weight: 400!important;
-        font-size: 12px!important;
+        color: rgba($color-primary, 0.5) !important;
+        font-weight: 400 !important;
+        font-size: 12px !important;
 
-        line-height: 18px!important;
+        line-height: 18px !important;
 
       }
-      a{
-        font-weight: 400!important;
 
-        font-size: 12px!important;
-        line-height: 18px!important;
-        color: $color-primary!important;
+      a {
+        font-weight: 400 !important;
+
+        font-size: 12px !important;
+        line-height: 18px !important;
+        color: $color-primary !important;
       }
     }
 

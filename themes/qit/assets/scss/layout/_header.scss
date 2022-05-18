@@ -2,9 +2,70 @@
   background: $background-primary;
   backdrop-filter: blur(55px);
 
-  button.btn.button{
+  z-index: 100;
+
+  button.btn.button {
     padding: 5px 12px;
     height: 100%;
+  }
+
+  &__menu {
+    .nav {
+
+      &-item {
+        .dropdown-menu {
+          background: rgba($color-primary, 0.8);
+          backdrop-filter: blur(45px);
+          width: 200%;
+          border-radius: 0px 0px 15px 15px;
+          position: absolute;
+          .nav-item{
+            position: relative;
+            padding-left: 16px;
+
+            &:before{
+              width: 7px;
+              height: 7px;
+
+              background: rgba(255, 255, 255, 0.3);
+              border-radius: 0.5px;
+              position: absolute;
+              content: " ";
+              top: 50%;
+              transform: rotate(45deg) translate(0%, -100%);
+            }
+          }
+         .nav-link{
+           font-weight: 400;
+           font-size: 14px;
+           line-height: 20px;
+           color: #FFFFFF;
+           padding-left: 33px;
+
+           &:hover {
+             color: rgba($color-white, 0.7);
+
+           }
+         }
+        }
+
+        &:hover {
+          .dropdown-menu {
+            display: block;
+          }
+        }
+      }
+
+      &-link {
+        color: $color-white;
+        padding: 8px 16px;
+
+        &:hover {
+          color: rgba($color-white, 0.7);
+
+        }
+      }
+    }
   }
 }
 

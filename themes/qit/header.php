@@ -24,9 +24,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- wrapper -->
-<div class="wrapper">
-
 	<?php
 	/**
 	 * header_parts hook

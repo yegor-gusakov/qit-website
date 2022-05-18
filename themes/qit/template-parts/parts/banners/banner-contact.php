@@ -65,10 +65,8 @@ $reviews_repeater = $right['reviews_repeater'];
                                 </li>
 							<?php endforeach; ?>
                         </ul>
-
                     </div>
 				<?php endif; ?>
-
             </div>
         </div>
     </div>

@@ -35,14 +35,11 @@ $mousescroll = get_stylesheet_directory()
                 <div class="section__hero-row-button">
                     <button class="button btn-outline"
                             type="button"><?= $button['title'] ?></button>
-
                 </div>
-
             </div>
             <div class="section__hero-mousescroller position-absolute bottom-25">
                 <a href="">            <?= file_get_contents( $mousescroll ) ?></a>
             </div>
         </div>
-
     </div>
 </section>

@@ -51,14 +51,14 @@ if ( $query->have_posts() || $query2->have_posts() ) :
             <div class="section__reviews-row row justify-content-center p-0">
                 <h6 class="section__reviews-row-badge  m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
             </div>
-            <div class="section__reviews-row row text-center p-0">
+            <div class="section__reviews-row row text-center p-0 mb-5">
                 <h2 class="section__reviews-row-title"><?= $title ?></h2>
             </div>
 
 
 			<?php if ( $query->have_posts() ): ?>
                 <!-- Trigger the modal with a button -->
-                <div class="section__reviews-row row">
+                <div class="section__reviews-row row pt-0">
 
                     <div class="section__reviews-row-with swiper swiper-with">
                         <div class="swiper-wrapper">
@@ -131,8 +131,6 @@ if ( $query->have_posts() || $query2->have_posts() ) :
                 </div>
 
 			<?php endif; ?>
-
-
         </div>
     </section>
 <?php endif; ?>

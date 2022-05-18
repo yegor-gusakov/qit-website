@@ -49,7 +49,6 @@ $country_flag_svg = get_stylesheet_directory()
 
                 </div>
             </div>
-
         </div>
     </div>
 </div>

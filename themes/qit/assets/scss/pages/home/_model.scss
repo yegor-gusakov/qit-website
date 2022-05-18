@@ -28,15 +28,18 @@
         &-title {
           color: $color-white;
           font-weight: 600;
-          font-size: 1em;
-
+          font-size: 20px;
+          line-height: 26px;
+          text-align: left;
         }
 
         &-text {
           color: $color-white;
-          font-size: 0.8em;
           line-height: 20px;
-
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          /* or 143% */
         }
 
         &-img-overlay {
