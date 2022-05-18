@@ -33,24 +33,48 @@ function qit_footer_TagFooterInner() {
 		'theme_settings' )
 	?>
     <div class="footer__row row">
-        <div class="footer__row-left col-4">
+        <div class="footer__row-left col-12 col-sm-6 col-md-4 mb-5 mb-sm-0">
             <div class="footer__row-left-logo ">
                 <a href="<?= get_home_url() ?>"
-                   class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none header-logo">
+                   class="d-flex align-items-center mb-3 mb-md-0 me-md-auto mx-auto mx-sm-0 text-dark text-decoration-none header-logo">
 					<?= file_get_contents( $logo_icon['url'] ); ?>
                 </a>
-
             </div>
             <div class="footer__row-left-text">
                 <p><?= get_bloginfo( 'description' ) ?></p>
             </div>
         </div>
-        <div class="footer__row-right col d-flex offset-md-1">
+	    <?php if ( $reviews_repeater_footer ): ?>
+            <div class="footer__row footer__row-reviewsmy-4 d-block d-sm-none mb-5">
+                <div class="footer__row">
+                    <div class="col-sm-12">
+                        <ul class="list-group list-group-horizontal justify-content-between">
+						    <?php foreach (
+							    $reviews_repeater_footer
+
+							    as $review
+						    ) :
+							    $review_image = $review['image']
+							    ?>
+
+                                <li class="list-group-item border-0 bg-transparent p-0 ">
+                                    <img
+                                            src="<?= $review_image['url'] ?>"
+                                            alt="<?= $review_image['alt'] ?>">
+                                </li>
+						    <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+	    <?php endif; ?>
+        <div class="footer__row-right col col-sm-5 d-flex flex-wrap offset-sm-1">
 			<?php
 
 			if ( function_exists( 'dynamic_sidebar' )
 			) : ?>
-                <div class="footer__row-right-menu col-md-3 col-6">
+                <div class="footer__row-right-menu col-md-3 col-sm-4 col-6 mb-5 mb-sm-0">
 
 					<?php
 					dynamic_sidebar( 'footer-col-1' );
@@ -62,7 +86,7 @@ function qit_footer_TagFooterInner() {
 			if ( function_exists( 'dynamic_sidebar' )
 
 			) : ?>
-                <div class="footer__row-right-menu col-md-3 col-6">
+                <div class="footer__row-right-menu col-md-3 col-sm-5 col-6 mb-5 mb-sm-0">
 
 					<?php
 					dynamic_sidebar( 'footer-col-2' );
@@ -73,7 +97,7 @@ function qit_footer_TagFooterInner() {
 
 			if ( function_exists( 'dynamic_sidebar' )
 			) : ?>
-                <div class="footer__row-right-menu col-md-3 col-6">
+                <div class="footer__row-right-menu col-md-3 col-sm-3 col-6 mb-5 mb-sm-0">
 
 					<?php
 					dynamic_sidebar( 'footer-col-3' );
@@ -84,7 +108,7 @@ function qit_footer_TagFooterInner() {
 			if ( function_exists( 'dynamic_sidebar' )
 			) :
 				?>
-                <div class="footer__row-right-menu col-md-3 col-6">
+                <div class="footer__row-right-menu col-md-3 col-sm-6 col-6 mb-5 mb-sm-0">
 
 					<?php
 					dynamic_sidebar( 'footer-col-4' );
@@ -97,28 +121,31 @@ function qit_footer_TagFooterInner() {
     </div>
 
 	<?php if ( $reviews_repeater_footer ): ?>
-        <div class="footer__row row my-4">
+        <div class="footer__row footer__row-reviews row d-none d-sm-block my-4">
+            <div class="footer__row-left">
+                <div class="col-sm-6">
+                    <ul class="list-group list-group-horizontal">
+						<?php foreach (
+							$reviews_repeater_footer
 
-        <ul class="list-group list-group-horizontal">
-			<?php foreach (
-				$reviews_repeater_footer
+							as $review
+						) :
+							$review_image = $review['image']
+							?>
 
-				as $review
-			) :
-				$review_image = $review['image']
-				?>
-
-                <li class="list-group-item border-0 bg-transparent">
-                    <img
-                            src="<?= $review_image['url'] ?>"
-                            alt="<?= $review_image['alt'] ?>">
-                </li>
-			<?php endforeach; ?>
-        </ul>
+                            <li class="list-group-item border-0 bg-transparent">
+                                <img
+                                        src="<?= $review_image['url'] ?>"
+                                        alt="<?= $review_image['alt'] ?>">
+                            </li>
+						<?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
 	<?php endif; ?>
-    </div>
-    <div class="footer__row row">
+    <div class="footer__row footer__row-info row">
 		<?php
 		if ( have_rows( 'social_icons', 'theme_settings' ) ):
 
@@ -145,7 +172,7 @@ function qit_footer_TagFooterInner() {
 
 		endif;
 		?>
-        <div class="footer__row-right col-md-4 text-end">
+        <div class="footer__row-right col-md-4 col-sm-6">
             <p class="text-office"><?= __( 'Office' ) ?></p>
             <p class="text-address">            <?= file_get_contents( $flag_estonia )
 			                                        . $address ?>

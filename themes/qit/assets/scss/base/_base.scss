@@ -190,6 +190,11 @@ h6, .h6 {
   padding-right: $gutter;
   width: 100%;
   position: relative;
+
+  @include media(xs) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .section {

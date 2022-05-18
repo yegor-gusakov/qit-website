@@ -14,16 +14,22 @@
 
         transition: .3s ease-in-out all;
         color: rgba($color-white, .7);
-&:hover{
-  color: rgba($color-white, .9);
-  transition: .3s ease-in-out all;
-}
+
+        &:hover {
+          color: rgba($color-white, .9);
+          transition: .3s ease-in-out all;
+        }
       }
     }
   }
 
   &__row {
+    &-reviews {
+      @include media(sm) {
 
+        margin-top: -5% !important;
+      }
+    }
 
     &-left {
       &-logo {
@@ -85,6 +91,10 @@
           font-size: 16px;
           line-height: 20px;
           color: $color-white;
+
+          @include media(xs) {
+            text-align: center;
+          }
         }
 
         &-address {
@@ -94,6 +104,10 @@
           line-height: 20px;
 
           color: rgba($color-white, .7);
+
+          @include media(xs) {
+            text-align: center;
+          }
 
           svg {
             border-radius: 100%;
@@ -137,6 +151,36 @@
           margin-bottom: 10px;
         }
       }
+    }
+
+    &-info {
+
+      .footer__row {
+        &-right {
+          @include media(xs) {
+            order: 3;
+            text-align: center;
+
+          }
+        }
+
+        &-left {
+          @include media(xs) {
+            order: 4;
+            text-align: center;
+          }
+
+          .list-group {
+            @include media(xs) {
+
+              justify-content: center;
+
+            }
+          }
+
+        }
+      }
+
     }
   }
 
