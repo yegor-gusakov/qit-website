@@ -27,7 +27,7 @@ $coop_model_repeater = $field['coop_model_repeater'];
 		if ( $coop_model_repeater ):
 
 			?>
-            <div class="section__models-row row card-deck">
+            <div class="section__models-row row card-deck justify-content-center g-4 mb-4 ">
 				<?php
 				// Loop through rows.
 				foreach ( $coop_model_repeater as $model ):
@@ -35,7 +35,7 @@ $coop_model_repeater = $field['coop_model_repeater'];
 					$model_title = $model['title'];
 					$model_text = $model['text'];
 					?>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                         <div class="card bg-dark text-white border-0">
                             <img src="<?= $model_bg_model['url'] ?>"
                                  class="card-img border-0"

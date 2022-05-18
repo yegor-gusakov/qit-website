@@ -11,20 +11,27 @@
         margin-bottom: 10px;
 
       }
+
       &-title {
         font-style: normal;
         font-weight: 400;
         font-size: 38px;
         line-height: 44px;
         color: $color-black;
+        @include media(xs) {
+          font-size: 30px;
+          line-height: 36px;
+        }
       }
+
       .card {
         border-radius: 15px;
 
-        img{
+        img {
           border-radius: 15px;
 
         }
+
         &-title {
           color: $color-white;
           font-weight: 600;
