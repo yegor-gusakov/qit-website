@@ -19,7 +19,11 @@
         font-size: 38px;
         line-height: 44px;
         color: $color-black;
-      }
+        @include media(xs) {
+          font-size: 30px;
+
+        }
+        }
 
       .timeline {
         position: relative;
@@ -34,7 +38,7 @@
         left: 50%;
         width: 2px;
         height: 80%;
-        background: rgba($background-primary,.15);
+        background: rgba($background-primary, .15);
       }
 
       .timeline ul {
@@ -52,7 +56,7 @@
 
       .timeline ul li:nth-child(odd) {
         float: right;
-        padding-right:0;
+        padding-right: 0;
 
         text-align: left;
         clear: both;
@@ -61,7 +65,7 @@
       .timeline ul li:nth-child(even) {
         float: left;
         text-align: right;
-        padding-left:0;
+        padding-left: 0;
         clear: both;
       }
 
@@ -80,7 +84,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color:$color-white;
+        color: $color-white;
         background: rgba($color-primary, 1);
         border-radius: 50%;
         box-shadow: 0 0 0 11px rgba($color-primary, 0.2);
@@ -94,7 +98,7 @@
         top: 0px;
         right: -5%;
         z-index: 6;
-        color:$color-white;
+        color: $color-white;
 
         display: flex;
         align-items: center;
@@ -112,9 +116,14 @@
         top: -15%;
         left: 0;
         z-index: 5;
-
         background-color: white;
         transform: translate(-50%, 0);
+        @include media(sm) {
+          right: unset;
+          left:40px;
+          bottom: 70%;
+          top: unset;
+        }
       }
 
       .timeline ul li:nth-child(even):after {
@@ -128,6 +137,12 @@
 
         background-color: white;
         transform: translate(50%, 0);
+        @include media(sm) {
+          right: unset;
+          left: 5%;
+          bottom: 70%;
+          top: unset;
+        }
       }
 
       .timeline ul li h3 {
@@ -139,16 +154,16 @@
 
       .timeline ul li p {
         margin: 10px 0 0;
-        color:rgba($color-primary,.8);
+        color: rgba($color-primary, .8);
         padding: 0;
       }
 
-      @media(max-width: 1000px) {
+      @include media(md) {
         .timeline {
           width: 100%;
         }
       }
-      @media(max-width: 767px) {
+      @include media(sm) {
         .timeline {
           width: 100%;
           padding-bottom: 0;
@@ -158,14 +173,15 @@
           text-align: center;
         }
         .timeline:before {
-          left: 20px;
-          height: 100%;
+          left: 40px;
+          height: 80%;
         }
         .timeline ul li:nth-child(odd),
         .timeline ul li:nth-child(even) {
           width: 100%;
           text-align: left;
-          padding-left: 50px;
+          padding-left: 100px;
+          padding-right: 0;
           padding-bottom: 50px;
         }
         .timeline ul li:nth-child(odd):before,
