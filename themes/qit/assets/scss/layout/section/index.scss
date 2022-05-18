@@ -70,6 +70,16 @@
       }
 
       .btn {
+        background-color: $background-yellow;
+
+        &:hover{
+          background-color: $background-yellow-2;
+          color:$color-primary;
+        }
+        &:focus{
+          background-color: $background-yellow-2;
+          color:$color-primary;
+        }
         @include media(xs) {
           display: block;
           margin: 0 auto;
@@ -115,7 +125,10 @@
 
         .btn {
           border: none;
-
+          &:focus{
+            background: $background-yellow-2;
+            color:$color-primary;
+          }
           &:hover {
             border: none;
           }

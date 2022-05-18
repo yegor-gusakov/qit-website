@@ -14,10 +14,10 @@ const AllPage = function () {
         /**
          * Navbar Menu
          */
-        $('.navbar-toggler').on('click', function () {
+        $('.rekki-toggler').on('click', function () {
             $('#menu-main-menu').toggleClass('d-block');
+            $('.animated-icon').toggleClass('open');
         });
-
 
     }
 

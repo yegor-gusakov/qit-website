@@ -40,6 +40,10 @@
         background-color: $background-yellow-2 !important;
 
       }
+      &:focus{
+        background: $background-yellow-2!important;
+        color:$color-primary!important;
+      }
     }
     &__privacy-policy {
       p {

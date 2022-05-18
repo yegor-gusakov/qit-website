@@ -34,10 +34,14 @@
         @include media(md) {
 
           justify-content: center;
-      }
+        }
       }
 
       button.btn {
+        &:focus{
+          background: $background-yellow-2;
+          color:$color-primary;
+        }
         border: none;
         @include media(xs) {
           width: 100%;
@@ -110,18 +114,21 @@
         .card {
           &-text {
             @include media(xs) {
-            display: flex;
+              display: flex;
               justify-content: space-between;
             }
-              .tags {
+
+            .tags {
               color: rgba($color-primary, .5);
             }
           }
-h3{
-  @include media(xs) {
-text-align: center;
-  }
-}
+
+          h3 {
+            @include media(xs) {
+              text-align: center;
+            }
+          }
+
           &-img {
             max-width: 70px;
             max-height: 70px;
