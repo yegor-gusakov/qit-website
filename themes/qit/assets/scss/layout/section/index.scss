@@ -69,6 +69,12 @@
 
       }
 
+      .btn {
+        @include media(xs) {
+          display: block;
+          margin: 0 auto;
+        }
+      }
     }
 
     &-estimate {
@@ -110,10 +116,6 @@
         .btn {
           border: none;
 
-          @include media(xs) {
-display: block;
-            margin: 0 auto;
-          }
           &:hover {
             border: none;
           }

@@ -36,7 +36,7 @@ $benefits_repeater = $field['benefit_repeater'];
 					$benefit_title = $benefit['title'];
 					$benefit_text = $benefit['text'];
 					?>
-                    <div class="col-lg-4 mb-5 col-md-6 col-sm-4">
+                    <div class="col-lg-4 mb-5 col-md-4 col-sm-6">
                         <div class="card border-0">
                             <div class="row">
                                 <div class="card-header border-0 bg-transparent row align-items-center">
