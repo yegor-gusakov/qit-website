@@ -8,7 +8,17 @@
 
       h3 {
         color: $color-white;
+        font-style: normal;
         font-weight: 500;
+        font-size: 38px;
+        line-height: 46px;
+        @include media(xs) {
+
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 36px;
+          text-align: center;
+        }
       }
 
       &-comment-img {
@@ -20,6 +30,23 @@
       }
 
       .card {
+        @include media(xs) {
+
+          text-align: center;
+        }
+
+        .row {
+
+          @include media(sm) {
+            justify-content: center;
+          }
+          @include media(xs) {
+
+            text-align: left;
+            justify-content: center;
+          }
+        }
+
         &-title {
           font-style: normal;
           font-weight: 600;
@@ -77,13 +104,16 @@
           color: $color-black;
           @include media(sm) {
             font-size: 30px;
-
           }
         }
 
         .btn {
           border: none;
 
+          @include media(xs) {
+display: block;
+            margin: 0 auto;
+          }
           &:hover {
             border: none;
           }
