@@ -14,14 +14,14 @@ $reviews_repeater = $right['reviews_repeater'];
 
     <div class="container">
         <div class="section__banner-contact-row row align-items-stretch">
-            <div class="section__banner-contact-row-left col-md-6 p-5">
+            <div class="section__banner-contact-row-left col-lg-6 p-5">
 
                 <h4><?= $contact_title ?></h4>
 
 				<?= do_shortcode( $contact_form ) ?>
 
             </div>
-            <div class="section__banner-contact-row-right col-md-6 p-5">
+            <div class="section__banner-contact-row-right col-lg-6 p-sm-5 d-none d-lg-block">
                 <h5><?= $fact_title ?></h5>
 				<?php if ( $facts_repeater ): ?>
                     <div class="row">
@@ -31,7 +31,7 @@ $reviews_repeater = $right['reviews_repeater'];
 							$fact_number = $fact['title'];
 							$fact_text   = $fact['text'];
 							?>
-                            <div class="col-md-6 align-items-stretch mb-5 ">
+                            <div class="col-lg-6 align-items-stretch mb-5 ">
                             <div class="card  mb-3 border-0 border-bottom bg-transparent h-100"
                                  style="max-width: 18rem;">
                                 <div class="card-header p-0 border-0 bg-transparent">

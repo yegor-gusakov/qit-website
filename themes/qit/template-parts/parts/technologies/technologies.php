@@ -2,7 +2,7 @@
 $thumbnail = get_the_post_thumbnail_url( $args['id'] );
 $title     = get_the_title( $args['id'] );
 ?>
-<div class="col-md-2 mb-5 technology-col">
+<div class="col-lg-2 mb-5 technology-col">
     <div class="card mb-3 h-100 justify-content-between">
         <div class="card-img w-100 h-100">
 

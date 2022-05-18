@@ -33,7 +33,7 @@ function qit_footer_TagFooterInner() {
 		'theme_settings' )
 	?>
     <div class="footer__row row">
-        <div class="footer__row-left col-12 col-sm-6 col-md-4 mb-5 mb-sm-0">
+        <div class="footer__row-left col-12 col-sm-6 col-md-6 mb-5 mb-sm-0 col-lg-4">
             <div class="footer__row-left-logo ">
                 <a href="<?= get_home_url() ?>"
                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto mx-auto mx-sm-0 text-dark text-decoration-none header-logo">
@@ -69,12 +69,12 @@ function qit_footer_TagFooterInner() {
             </div>
 
 	    <?php endif; ?>
-        <div class="footer__row-right col col-sm-5 d-flex flex-wrap offset-sm-1">
+        <div class="footer__row-right col col-sm-5 col-md-5 col-lg-7 d-flex flex-wrap offset-sm-1">
 			<?php
 
 			if ( function_exists( 'dynamic_sidebar' )
 			) : ?>
-                <div class="footer__row-right-menu col-md-3 col-sm-4 col-6 mb-5 mb-sm-0">
+                <div class="footer__row-right-menu col-md-4 col-sm-4 col-6 col-lg-3 mb-5 mb-sm-0">
 
 					<?php
 					dynamic_sidebar( 'footer-col-1' );
@@ -86,7 +86,7 @@ function qit_footer_TagFooterInner() {
 			if ( function_exists( 'dynamic_sidebar' )
 
 			) : ?>
-                <div class="footer__row-right-menu col-md-3 col-sm-5 col-6 mb-5 mb-sm-0">
+                <div class="footer__row-right-menu col-md-5 col-sm-5 col-6 mb-5  col-lg-3 mb-sm-0">
 
 					<?php
 					dynamic_sidebar( 'footer-col-2' );
@@ -97,7 +97,7 @@ function qit_footer_TagFooterInner() {
 
 			if ( function_exists( 'dynamic_sidebar' )
 			) : ?>
-                <div class="footer__row-right-menu col-md-3 col-sm-3 col-6 mb-5 mb-sm-0">
+                <div class="footer__row-right-menu col-md-3 col-sm-3 col-6 mb-5  col-lg-3 mb-sm-0">
 
 					<?php
 					dynamic_sidebar( 'footer-col-3' );
@@ -108,7 +108,7 @@ function qit_footer_TagFooterInner() {
 			if ( function_exists( 'dynamic_sidebar' )
 			) :
 				?>
-                <div class="footer__row-right-menu col-md-3 col-sm-6 col-6 mb-5 mb-sm-0">
+                <div class="footer__row-right-menu col-md-6 col-sm-6 col-6 mb-5  col-lg-3 mb-sm-0">
 
 					<?php
 					dynamic_sidebar( 'footer-col-4' );

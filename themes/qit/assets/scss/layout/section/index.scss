@@ -37,7 +37,7 @@
           font-size: 14px;
           line-height: 20px;
 
-            color: rgba($color-white, .8);
+          color: rgba($color-white, .8);
         }
 
       }
@@ -73,10 +73,11 @@
           font-weight: 400;
           color: $color-black;
         }
-        .btn{
+
+        .btn {
           border: none;
 
-          &:hover{
+          &:hover {
             border: none;
           }
         }
@@ -98,6 +99,12 @@
             font-weight: 400;
             font-size: 38px;
             line-height: 45px;
+            @include media(md) {
+              text-align: center;
+            }
+            @include media(xs) {
+              text-align: left;
+            }
           }
         }
 

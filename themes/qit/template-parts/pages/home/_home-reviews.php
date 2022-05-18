@@ -78,7 +78,7 @@ if ( $query->have_posts() || $query2->have_posts() ) :
 							wp_reset_postdata();
 							?>
                         </div>
-                        <div class="col-md-5 d-flex justify-content-center gap-5">
+                        <div class="col-lg-5 d-flex justify-content-center gap-5">
                             <div class="swiper-button-prev"><?= file_get_contents( $arrow_left ) ?></div>
 
                             <div class="swiper-button-next"><?= file_get_contents( $arrow_right ) ?></div>
@@ -98,7 +98,7 @@ if ( $query->have_posts() || $query2->have_posts() ) :
 
 			<?php endif; ?>
             <div class="section__reviews-row row justify-content-center">
-                <div class="col-md-4">
+                <div class="col-lg-4">
                     <button class="btn button"><?= __( 'GET A QUOTE FOR YOUR PROJECT',
 							'qit' ) ?></button>
 

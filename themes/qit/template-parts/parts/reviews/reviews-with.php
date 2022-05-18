@@ -16,14 +16,14 @@ $country_flag_svg = get_stylesheet_directory()
 <div class="swiper-slide">
     <div class="card mb-3 border-0 bg-transparent align-items-center">
         <div class="row align-items-center mb-3 w-100">
-            <div class="col-md-5 section__reviews-row-with-modal rounded-circle bg-white position-relative">
+            <div class="col-lg-5 section__reviews-row-with-modal rounded-circle bg-white position-relative">
                 <img src="<?= get_the_post_thumbnail_url() ?>"
                      class="img-fluid rounded-circle"
                      alt="<?= get_the_title() ?>" data-bs-toggle="modal"
                      data-bs-target="#<?= $slug ?>-<?= get_the_id() ?>">
 				<?= file_get_contents( $icon_play ) ?>
             </div>
-            <div class="col-md-7 text-start p-4">
+            <div class="col-lg-7 text-start p-4">
                 <div class="card-body px-3">
                     <p class="card-text mb-4">
 						<?php foreach ( $terms_tags as $term ) : ?>
@@ -32,7 +32,7 @@ $country_flag_svg = get_stylesheet_directory()
                     </p>
                     <h3><?= get_the_excerpt() ?></h3>
                     <div class="row">
-                        <div class="col-md-2 review-person-photo">
+                        <div class="col-lg-2 review-person-photo">
                             <img src="<?= get_the_post_thumbnail_url() ?>"
                                  alt="<?= get_the_title() ?>"
                                  class="card-img rounded-circle">

@@ -21,7 +21,7 @@ $mousescroll = get_stylesheet_directory()
          style="background-image:url(<?= $bgimage ?>) ">
     <div class="container h-100">
         <div class="section__hero-row row align-items-center h-100">
-            <div class="col-md-7">
+            <div class="col-lg-7">
                 <div class="section__hero-row-subtitle">
                     <span><?= $subtitle ?></span>
                 </div>
