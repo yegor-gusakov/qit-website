@@ -98,7 +98,7 @@ if ( $query->have_posts() || $query2->have_posts() ) :
 
 			<?php endif; ?>
             <div class="section__reviews-row row justify-content-center">
-                <div class="col-lg-4">
+                <div class="col-12 col-md-5 text-center">
                     <button class="btn button"><?= __( 'GET A QUOTE FOR YOUR PROJECT',
 							'qit' ) ?></button>
 

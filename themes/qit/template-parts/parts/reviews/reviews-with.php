@@ -23,22 +23,22 @@ $country_flag_svg = get_stylesheet_directory()
                      data-bs-target="#<?= $slug ?>-<?= get_the_id() ?>">
 				<?= file_get_contents( $icon_play ) ?>
             </div>
-            <div class="col-lg-7 text-start p-4">
-                <div class="card-body px-3">
+            <div class="col-lg-7 text-start p-4 px-0 px-sm-4">
+                <div class="card-body px-sm-3 px-0">
                     <p class="card-text mb-4">
 						<?php foreach ( $terms_tags as $term ) : ?>
                             <span class="tags tags-<?= $term->slug ?>"><?= $term->name ?></span>
 						<?php endforeach; ?>
                     </p>
                     <h3><?= get_the_excerpt() ?></h3>
-                    <div class="row">
-                        <div class="col-lg-2 review-person-photo">
+                    <div class="row section__reviews-row-comment">
+                        <div class="col-lg-2 col-3 col-md-2 col-sm-2 review-person-photo">
                             <img src="<?= get_the_post_thumbnail_url() ?>"
                                  alt="<?= get_the_title() ?>"
                                  class="card-img rounded-circle">
                             <span class="country">                            <?= file_get_contents( $country_flag_svg ); ?></span>
                         </div>
-                        <div class="col">
+                        <div class="col col-md-auto col-sm-4">
                             <h6 class="card-title m-0"><?= get_the_title() ?></h6>
                             <p class="card-text">
                                 <small><?= the_field( 'position',

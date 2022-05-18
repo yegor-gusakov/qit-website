@@ -34,16 +34,15 @@ const AllPage = function () {
             // centeredSlides: true,
             loop: true,
             slidesPerView: 1,
-            autoplay: {
-                delay: 5000,
-            },
+            // autoplay: {
+            //     delay: 5000,
+            // },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
         });
         const swiperwithout = new Swiper(".swiper-without", {
-            // slidesPerView: 3,
             spaceBetween: 60,
             centeredSlides: true,
             loop: true,
@@ -54,6 +53,23 @@ const AllPage = function () {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+            breakpoints: {
+                // when window width is >= 320px
+                0: {
+                    centeredSlides: false,
+                    slidesPerView: 1,
+                    spaceBetween: 48,
+
+                },
+
+                // when window width is >= 640px
+                576: {
+                    centeredSlides: true,
+                    slidesPerView: "auto",
+
+                }
+            }
+
         });
 
 

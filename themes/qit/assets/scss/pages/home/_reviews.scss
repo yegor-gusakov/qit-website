@@ -3,6 +3,9 @@
     &-row {
       overflow: hidden;
       padding-top: 10%;
+      @include media(xs) {
+        padding-bottom: 10%;
+      }
 
       &-badge {
         background: $background-primary;
@@ -21,17 +24,37 @@
         font-size: 38px;
         line-height: 44px;
         color: $color-black;
+        @include media(xs) {
+          font-size: 30px;
+          line-height: 36px;
+        }
       }
-button.btn{
-  border:none;
-  &:hover {
-    color: rgba($color-primary, .8);
-    background-color: $background-yellow-2;
 
-  }
-}
+      &-comment {
+        @include media(md) {
+
+          justify-content: center;
+      }
+      }
+
+      button.btn {
+        border: none;
+        @include media(xs) {
+          width: 100%;
+        }
+
+        &:hover {
+          color: rgba($color-primary, .8);
+          background-color: $background-yellow-2;
+
+        }
+      }
+
       .review-person-photo {
         position: relative;
+        @include media(xs) {
+          height: fit-content;
+        }
 
         .country {
           position: absolute;
@@ -40,8 +63,11 @@ button.btn{
           display: block;
           height: fit-content;
           padding-right: calc(var(--bs-gutter-x) * .5);
-          right:10%;
-          svg{display: block}
+          right: 10%;
+
+          svg {
+            display: block
+          }
         }
       }
 
@@ -91,6 +117,10 @@ button.btn{
           &-img {
             max-width: 70px;
             max-height: 70px;
+            @include media(sm) {
+              max-width: unset;
+              max-height: unset;
+            }
           }
         }
       }
@@ -117,6 +147,13 @@ button.btn{
           }
 
           &-next {
+            @include media(xs) {
+              height: fit-content;
+              bottom: 0;
+              top: 100%;
+              right: 35%;
+            }
+
             &:before {
               width: 1000%;
               content: '';
@@ -126,12 +163,22 @@ button.btn{
               right: 0;
               background: linear-gradient(to left, #fff 0, rgba(255, 255, 255, 0) 100%);
               height: 100%;
+              @include media(xs) {
+                content: unset;
+              }
             }
 
             right: 0;
           }
 
           &-prev {
+            @include media(xs) {
+              height: fit-content;
+              bottom: 0;
+              top: 100%;
+              left: 35%;
+            }
+
             &:before {
               width: 1000%;
               content: '';
@@ -141,6 +188,9 @@ button.btn{
               left: 0;
               background: linear-gradient(to right, #fff 0, rgba(255, 255, 255, 0) 100%);
               height: 100%;
+              @include media(xs) {
+                content: unset;
+              }
             }
 
             left: 0;
@@ -152,23 +202,38 @@ button.btn{
 
           &-prev, &-next {
             transform: translateY(0%);
-            transition: all .5s ease-in-out;
+            transition: all .3s ease-in-out;
             opacity: .6;
+            @include media(xs) {
+
+              transform: unset;
+
+            }
           }
 
           &-active {
             transform: translateY(-20%);
-            transition: all .5s ease-in-out;
+            transition: all .3s ease-in-out;
             opacity: 1;
+            @include media(xs) {
+
+              transform: unset;
+
+            }
           }
         }
 
-        &-comment-img {
+        &-img {
           max-width: 52px;
           max-height: 52px;
           width: 100%;
           height: 100%;
-          overflow: hidden;
+          @include media(xs) {
+
+            max-width: 80px;
+            max-height: 80px;
+            margin: 0 auto;
+          }
         }
 
         .card {
@@ -179,10 +244,16 @@ button.btn{
             font-weight: 600;
             font-size: 20px;
             line-height: 26px;
+            @include media(xs) {
+              text-align: center;
+            }
           }
 
           &-body {
             padding: 0;
+            @include media(xs) {
+              text-align: center;
+            }
           }
 
           small {
@@ -190,6 +261,14 @@ button.btn{
           }
         }
 
+      }
+
+      .comment-text {
+        text-align: start;
+
+        @include media(xs) {
+          text-align: center;
+        }
       }
     }
 
