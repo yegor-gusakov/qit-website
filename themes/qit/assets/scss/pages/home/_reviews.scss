@@ -109,11 +109,19 @@
 
         .card {
           &-text {
-            .tags {
+            @include media(xs) {
+            display: flex;
+              justify-content: space-between;
+            }
+              .tags {
               color: rgba($color-primary, .5);
             }
           }
-
+h3{
+  @include media(xs) {
+text-align: center;
+  }
+}
           &-img {
             max-width: 70px;
             max-height: 70px;
