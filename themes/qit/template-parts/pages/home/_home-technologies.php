@@ -24,7 +24,7 @@ $directions = $field['directions'];
         </div>
         <div class="section__technologies-row row">
 
-            <ul class="section__technologies-nav nav nav-tabs border-0"
+            <ul class="section__technologies-nav nav nav-tabs border-0 flex-nowrap"
                 id="technologiesDirection" role="tablist">
 				<?php
 				foreach ( $directions as $key => $direction ):
@@ -88,7 +88,7 @@ $directions = $field['directions'];
 				?>
             </ul>
 
-            <div class="section__technologies-tab tab-content p-0"
+            <div class="section__technologies-tab tab-content p-sm-0"
                  id="technologiesDirectionContent">
 				<?php
 				foreach ( $directions as $key => $direction ):
