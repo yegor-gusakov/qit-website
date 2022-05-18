@@ -21,8 +21,8 @@ $mousescroll = get_stylesheet_directory()
          style="background-image:url(<?= $bgimage ?>) ">
     <div class="container h-100">
         <div class="section__hero-row row align-items-center h-100">
-            <div class="col-lg-7">
-                <div class="section__hero-row-subtitle">
+            <div class="col-lg-7 col-sm-11">
+                <div class="section__hero-row-subtitle d-none d-sm-block">
                     <span><?= $subtitle ?></span>
                 </div>
                 <div class="section__hero-row-title">
@@ -37,9 +37,12 @@ $mousescroll = get_stylesheet_directory()
                             type="button"><?= $button['title'] ?></button>
                 </div>
             </div>
+        </div>
+        <div class="section__hero-row row justify-content-center">
+            <div class="col-auto">
             <div class="section__hero-mousescroller position-absolute bottom-25">
-                <a href="">            <?= file_get_contents( $mousescroll ) ?></a>
-            </div>
+                <a href="#">            <?= file_get_contents( $mousescroll ) ?></a>
+            </div></div>
         </div>
     </div>
 </section>

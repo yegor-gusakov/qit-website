@@ -5,6 +5,7 @@
     background-size: cover;
 
     &-row {
+      text-align: start;
 
       &-subtitle {
         font-style: normal;
@@ -14,6 +15,7 @@
         text-transform: uppercase;
         color: $color-primary;
         margin-bottom: 16px;
+
         span {
           color: $color-primary;
           background: $color-white;
@@ -36,6 +38,12 @@
           font-style: normal;
           font-size: 55px;
           line-height: 65px;
+          @include media(xs) {
+            font-size: 44px;
+            line-height: 55px;
+            text-align: center;
+
+          }
         }
       }
 
@@ -46,9 +54,20 @@
         font-style: normal;
         font-size: 18px;
         line-height: 24px;
+        @include media(xs) {
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 22px;
+          text-align: center;
+
+        }
       }
 
       &-button {
+        @include media(xs) {
+          text-align: center
+        }
+
         button {
           &:hover {
             background: $background-yellow-2;
@@ -61,6 +80,11 @@
 
     &-mousescroller {
       bottom: 10%;
+
+      @include media(xs) {
+        bottom: 5%;
+
+      }
 
       a {
         height: 100%;
