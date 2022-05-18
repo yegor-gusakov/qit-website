@@ -7,7 +7,7 @@ $arrow_right        = get_stylesheet_directory()
                       . '/assets/userfiles/icons/arrow-right-small.svg';
 ?>
 
-<div class="col">
+<div class="col-lg-4 col-sm-6 col-md-6 col-12">
     <div class="card text-center p-4 border-0">
         <a href="<?= get_permalink() ?>">
             <img src="<?= get_the_post_thumbnail_url() ?>"

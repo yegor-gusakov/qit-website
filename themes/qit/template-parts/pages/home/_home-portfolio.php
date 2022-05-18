@@ -23,7 +23,7 @@ $angle = get_stylesheet_directory() . '/assets/userfiles/icons/angle.svg';
             <h2 class="section__portfolio-row-title"><?= $title ?></h2>
         </div>
 
-        <div class="section__portfolio-row row row-cols-1 row-cols-md-3 g-4 mb-4">
+        <div class="section__portfolio-row row row-cols-1 row-cols-md-3 g-4 mb-4 justify-content-center">
 			<?php
 
 			// задаем нужные нам критерии выборки данных из БД
