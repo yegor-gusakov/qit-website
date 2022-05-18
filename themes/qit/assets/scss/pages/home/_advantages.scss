@@ -18,6 +18,11 @@
         font-size: 38px;
         line-height: 44px;
         color: $color-black;
+        @include media(xs) {
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 36px;
+        }
       }
 
       &-advantage {
@@ -25,7 +30,10 @@
           box-shadow: 0px 10px 39px rgba(0, 0, 0, 0.08);
           border-radius: 15px;
           overflow: hidden;
+          @include media(md) {
 
+            height: 100%;
+          }
           &-title {
             font-style: normal;
             font-weight: 600;
@@ -45,7 +53,13 @@
       }
 
       &-advantage:first-child {
+
         margin-top: 10%;
+        @include media(md) {
+          margin-top: 0;          margin-bottom: 30px;
+
+
+        }
 
         .card {
           background: $background-skin;
@@ -55,7 +69,11 @@
 
       &-advantage:nth-child(2) {
         margin-top: 20%;
+        @include media(md) {
+          margin-top: 0;
+          margin-bottom: 30px;
 
+        }
         .card {
           background: linear-gradient(180deg, #E0E9EA 0%, #EDF5F6 46.65%, #E0E9EA 100%);
         }
@@ -68,7 +86,11 @@
 
       &-advantage:nth-child(3) {
         margin-top: 5%;
+        @include media(md) {
+          margin-top: 0;
+          margin-bottom: 30px;
 
+        }
         .card {
           background: $background-lime;
         }
@@ -82,7 +104,10 @@
 
       &-advantage:nth-child(4) {
         margin-top: 15%;
-
+        @include media(md) {
+          margin-top: 0;
+          margin-bottom: 30px;
+        }
         .card {
           background: $background-primary;
 

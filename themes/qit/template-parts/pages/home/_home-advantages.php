@@ -18,7 +18,7 @@ $tags_repeater = $field['tags_repeater'];
         <div class="section__advantages-row row justify-content-center"><h6
                     class="section__advantages-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
         </div>
-        <div class="section__advantages-row row text-center">
+        <div class="section__advantages-row row text-center mb-5 mb-sm-5">
             <h2 class="section__advantages-row-title"><?= $title ?></h2>
         </div>
 		<?php
@@ -26,7 +26,7 @@ $tags_repeater = $field['tags_repeater'];
 		if ( $tags_repeater ):
 
 			?>
-            <div class="section__advantages-row row row-cols-1 row-cols-md-4 g-4">
+            <div class="section__advantages-row row row-cols-1 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-1 g-4">
 
 				<?php
 				// Loop through rows.
