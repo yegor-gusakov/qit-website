@@ -22,27 +22,43 @@ $mousescroll = get_stylesheet_directory()
     <div class="container h-100">
         <div class="section__hero-row row align-items-center h-100">
             <div class="col-lg-7 col-sm-11">
-                <div class="section__hero-row-subtitle d-none d-sm-block">
-                    <span><?= $subtitle ?></span>
-                </div>
-                <div class="section__hero-row-title">
-                    <h1><?= $title ?></h1>
-                </div>
-                <div class="section__hero-row-text">
-                    <p><?= $text ?></p>
-                </div>
+				<?php if ( $subtitle ): ?>
 
-                <div class="section__hero-row-button">
-                    <button class="button btn-outline"
-                            type="button"><?= $button['title'] ?></button>
-                </div>
+                    <div class="section__hero-row-subtitle d-none d-sm-block">
+                        <span><?= $subtitle ?></span>
+                    </div>
+				<?php endif ?>
+				<?php if ( $title ): ?>
+
+                    <div class="section__hero-row-title">
+                        <h1><?= $title ?></h1>
+                    </div>
+				<?php endif ?>
+
+				<?php if ( $text ): ?>
+
+                    <div class="section__hero-row-text">
+                        <p><?= $text ?></p>
+                    </div>
+				<?php endif ?>
+
+				<?php if ( $button ): ?>
+
+                    <div class="section__hero-row-button">
+                        <button class="button btn-outline"
+                                type="button" data-bs-toggle="modal"
+                                data-bs-target="#globalModalQuote"><?= $button['title'] ?></button>
+                    </div>
+				<?php endif ?>
+
             </div>
         </div>
         <div class="section__hero-row row justify-content-center">
             <div class="col-auto">
-            <div class="section__hero-mousescroller position-absolute bottom-25">
-                <a href="#">            <?= file_get_contents( $mousescroll ) ?></a>
-            </div></div>
+                <div class="section__hero-mousescroller position-absolute bottom-25">
+                    <a href="#">            <?= file_get_contents( $mousescroll ) ?></a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

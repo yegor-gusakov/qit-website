@@ -28,9 +28,9 @@
 	/**
 	 * header_parts hook
 	 *
-	 * @hooked spg_header_TagHeaderOpen - 10
-	 * @hooked spg_header_TagHeaderInner - 20
-	 * @hooked spg_header_TagHeaderClose - 30
+	 * @hooked qit_header_TagHeaderOpen - 10
+	 * @hooked qit_header_TagHeaderInner - 20
+	 * @hooked qit_header_TagHeaderClose - 30
 	 *
 	 */
 	do_action('header_parts');

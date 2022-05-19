@@ -15,13 +15,19 @@ $tags_repeater = $field['tags_repeater'];
 ?>
 <section class="section section__advantages">
     <div class="container">
+        <?php if($badge):?>
         <div class="section__advantages-row row justify-content-center"><h6
                     class="section__advantages-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
         </div>
+        <?php endif;?>
+	    <?php if($title):?>
+
         <div class="section__advantages-row row text-center mb-5 mb-sm-5">
             <h2 class="section__advantages-row-title"><?= $title ?></h2>
         </div>
-		<?php
+	    <?php endif;?>
+
+        <?php
 		// Check rows exists.
 		if ( $tags_repeater ):
 

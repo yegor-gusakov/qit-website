@@ -16,12 +16,19 @@ $coop_model_repeater = $field['coop_model_repeater'];
 
 <section class="section__models section ">
     <div class="container ">
-        <div class="section__models-row row justify-content-center"><h6
-                    class="section__models-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
-        </div>
-        <div class="section__models-row row text-center">
-            <h2 class="section__models-row-title"><?= $title ?></h2>
-        </div>
+		<?php if ( $badge ): ?>
+
+            <div class="section__models-row row justify-content-center"><h6
+                        class="section__models-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
+            </div>
+		<?php endif; ?>
+		<?php if ( $title ): ?>
+
+            <div class="section__models-row row text-center">
+                <h2 class="section__models-row-title"><?= $title ?></h2>
+            </div>
+		<?php endif; ?>
+
 		<?php
 		// Check rows exists.
 		if ( $coop_model_repeater ):

@@ -18,12 +18,19 @@ $closemark = get_stylesheet_directory() . '/assets/userfiles/icons/Close.svg';
 
 <section class="section__comparisons section">
     <div class="container">
-        <div class="section__comparisons-row row justify-content-center"><h6
-                    class="section__comparisons-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
-        </div>
-        <div class="section__comparisons-row row text-center">
-            <h2 class="section__comparisons-row-title"><?= $title ?></h2>
-        </div>
+		<?php if ( $badge ): ?>
+
+            <div class="section__comparisons-row row justify-content-center"><h6
+                        class="section__comparisons-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
+            </div>
+		<?php endif; ?>
+		<?php if ( $title ): ?>
+
+            <div class="section__comparisons-row row text-center">
+                <h2 class="section__comparisons-row-title"><?= $title ?></h2>
+            </div>
+		<?php endif; ?>
+
         <div class="section__comparisons-row d-none d-sm-none d-md-flex row flex-column">
             <ul class="row">
                 <li class="legend">Getting started</li>
@@ -206,10 +213,10 @@ $closemark = get_stylesheet_directory() . '/assets/userfiles/icons/Close.svg';
                 <li><p>High</p></li>
             </ul>
             <ul class="row">
-                <li><p >Cooperation termination
+                <li><p>Cooperation termination
                         risks</p>
                 </li>
-                <li><p >Low</p></li>
+                <li><p>Low</p></li>
             </ul>
             <ul class="row row-before-gap">
                 <li><p>Security level (Data Protection)</p>

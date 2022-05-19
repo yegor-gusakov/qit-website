@@ -1,5 +1,75 @@
-.modal{
-  iframe{
+.modal {
+  iframe {
     width: 100%;
+  }
+
+  &__quote {
+    .container-fluid {
+      //padding: 0;
+      @include media(sm) {
+        padding-left:  0;
+        padding-right:  0;
+      }
+    }
+
+    .modal-close {
+      fill: $color-white;
+      @include media(md) {
+        fill: $color-black;
+
+      }
+    }
+
+    .modal-body {
+      //padding: 0;
+
+      @include media(sm) {
+        //padding: 16px;
+
+      }
+
+      h4 {
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 45px;
+
+        color: $color-black;
+      }
+
+    }
+
+    .modal-img {
+      //padding: 0;
+
+      @include media(sm) {
+        //padding: 12px;
+
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .modal-header {
+      z-index: 999;
+      right: 5%;
+      position: absolute;
+    }
+
+    .modal-form {
+
+      @include media(sm) {
+        padding-left:  0;
+        padding-right:  0;
+      }
+        .wpforms-submit-container {
+        @include media(sm) {
+          text-align: center;
+
+        }
+      }
+
+    }
   }
 }

@@ -5,7 +5,7 @@ $slug = $post->post_name; ?>
      id="<?= $slug ?>-<?= get_the_id() ?>" tabindex="-1"
      aria-labelledby="<?= $slug ?>-Label"
      aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
 

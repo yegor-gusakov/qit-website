@@ -16,12 +16,19 @@ $benefits_repeater = $field['benefit_repeater'];
 
 <section class="section__benefits section ">
     <div class="container ">
-        <div class="section__benefits-row row justify-content-center"><h6
-                    class="section__benefits-row-badge m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
-        </div>
-        <div class="section__benefits-row row text-center">
-            <h2 class="section__benefits-row-title"><?= $title ?></h2>
-        </div>
+		<?php if ( $badge ): ?>
+
+            <div class="section__benefits-row row justify-content-center"><h6
+                        class="section__benefits-row-badge m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
+            </div>
+		<?php endif; ?>
+		<?php if ( $title ): ?>
+
+            <div class="section__benefits-row row text-center">
+                <h2 class="section__benefits-row-title"><?= $title ?></h2>
+            </div>
+		<?php endif; ?>
+
 		<?php
 		// Check rows exists.
 		if ( $benefits_repeater ):
@@ -40,7 +47,8 @@ $benefits_repeater = $field['benefit_repeater'];
                         <div class="card border-0">
                             <div class="row">
                                 <div class="card-header border-0 bg-transparent row align-items-center">
-                                    <div class="col-lg-3 col-md-3 col-3 card-icon"><img
+                                    <div class="col-lg-3 col-md-3 col-3 card-icon">
+                                        <img
                                                 src="<?= $benefit_icon['url'] ?>"
                                                 class="card-img-top"
                                                 alt="<?= $benefit_icon['alt'] ?>">

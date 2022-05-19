@@ -10,6 +10,7 @@
  */
 
 ?>
+<?php get_template_part('template-parts/parts/modals/modal','quote')?>
 </main>
 <!-- END CONTENT -->
 <?php

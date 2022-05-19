@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package spg
+ * @package qit
  */
 get_header();
 

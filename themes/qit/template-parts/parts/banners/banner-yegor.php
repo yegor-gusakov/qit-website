@@ -18,7 +18,10 @@ $yegor_right_image = $right['yegor_right_image'];
     <div class="container">
         <div class="section__banner-yegor-row row align-items-center">
             <div class="col-sm-7 my-5">
-                <h3><?= $title ?></h3>
+				<?php if ( $title ): ?>
+
+                    <h3><?= $title ?></h3>
+				<?php endif; ?>
                 <div class="card mb-3 border-0 bg-transparent"
                      style="max-width: 540px;">
                     <div class="row g-0 align-items-center mb-3">
@@ -31,14 +34,15 @@ $yegor_right_image = $right['yegor_right_image'];
                             <div class="card-body px-3">
                                 <h6 class="card-title m-0 text-white"><?= $comment_name ?></h6>
                                 <p class="card-text">
-                                    <?= $comment_position ?>
+									<?= $comment_position ?>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <button class="button btn"
-                        type="button"><?= $link['title'] ?></button>
+                        type="button" data-bs-toggle="modal"
+                        data-bs-target="#globalModalQuote"><?= $link['title'] ?></button>
             </div>
             <div class="col-sm-4 co  align-self-end">
                 <img src="<?= $yegor_right_image['url'] ?>"

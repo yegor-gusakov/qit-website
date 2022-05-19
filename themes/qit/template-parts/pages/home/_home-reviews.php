@@ -48,14 +48,16 @@ if ( $query->have_posts() || $query2->have_posts() ) :
 	?>
     <section class="section section__reviews">
         <div class="container">
-            <div class="section__reviews-row row justify-content-center p-0">
-                <h6 class="section__reviews-row-badge  m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
-            </div>
-            <div class="section__reviews-row row text-center p-0 mb-5">
-                <h2 class="section__reviews-row-title"><?= $title ?></h2>
-            </div>
-
-
+			<?php if ( $badge ): ?>
+                <div class="section__reviews-row row justify-content-center p-0">
+                    <h6 class="section__reviews-row-badge  m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
+                </div>
+			<?php endif; ?>
+			<?php if ( $title ): ?>
+                <div class="section__reviews-row row text-center p-0 mb-5">
+                    <h2 class="section__reviews-row-title"><?= $title ?></h2>
+                </div>
+			<?php endif; ?>
 			<?php if ( $query->have_posts() ): ?>
                 <!-- Trigger the modal with a button -->
                 <div class="section__reviews-row row pt-0">
@@ -89,7 +91,8 @@ if ( $query->have_posts() || $query2->have_posts() ) :
 					while ( $query->have_posts() ) :
 						$query->the_post();
 
-						get_template_part( 'template-parts/parts/modals/modals' );
+						get_template_part( 'template-parts/parts/modals/modal',
+							'review' );
 						?>
 
 
@@ -99,7 +102,8 @@ if ( $query->have_posts() || $query2->have_posts() ) :
 			<?php endif; ?>
             <div class="section__reviews-row row justify-content-center">
                 <div class="col-12 col-md-5 text-center">
-                    <button class="btn button"><?= __( 'GET A QUOTE FOR YOUR PROJECT',
+                    <button class="btn button" data-bs-toggle="modal"
+                            data-bs-target="#globalModalQuote"><?= __( 'GET A QUOTE FOR YOUR PROJECT',
 							'qit' ) ?></button>
 
                 </div>

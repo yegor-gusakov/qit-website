@@ -16,12 +16,19 @@ $candidates_repeater = $field['candidates_repeater'];
 
 <section class="section section__candidates" id="timeline">
     <div class="container ">
-        <div class="section__candidates-row row justify-content-center"><h6
-                    class="section__candidates-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
-        </div>
-        <div class="section__candidates-row row text-center">
-            <h2 class="section__candidates-row-title"><?= $title ?></h2>
-        </div>
+		<?php if ( $badge ): ?>
+
+            <div class="section__candidates-row row justify-content-center"><h6
+                        class="section__candidates-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
+            </div>
+		<?php endif; ?>
+		<?php if ( $title ): ?>
+
+            <div class="section__candidates-row row text-center">
+                <h2 class="section__candidates-row-title"><?= $title ?></h2>
+            </div>
+		<?php endif; ?>
+
 		<?php if ( $candidates_repeater ):
 			$i = 1;
 			?>

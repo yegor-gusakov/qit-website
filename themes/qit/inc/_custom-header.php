@@ -53,7 +53,7 @@ function qit_header_TagHeaderInner() {
 				?>
 
                 <button class="btn button d-none d-sm-block"
-                        type="button"><?= __( 'get a quote' ) ?></button>
+                        type="button" data-bs-toggle="modal" data-bs-target="#globalModalQuote"><?= __( 'get a quote' ) ?></button>
                 <button class="navbar-toggler rekki-toggler border-0 d-sm-none d-block col-2" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button>
                 <!-- end menu -->
             </div>

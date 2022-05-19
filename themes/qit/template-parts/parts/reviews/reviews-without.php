@@ -22,8 +22,13 @@ $country_flag_svg = get_stylesheet_directory()
             <div class="col-lg-10 text-start">
                 <div class="card-body px-3">
                     <h6 class="card-title m-0 "><?= get_the_title() ?></h6>
-                    <p class="card-text"><small><?= $review_position ?></small>
-                    </p>
+					<?php if ( $review_position ): ?>
+
+                        <p class="card-text">
+                            <small><?= $review_position ?></small>
+
+                        </p>
+					<?php endif; ?>
                 </div>
             </div>
 

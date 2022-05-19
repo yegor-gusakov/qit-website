@@ -44,31 +44,31 @@ function qit_footer_TagFooterInner() {
                 <p><?= get_bloginfo( 'description' ) ?></p>
             </div>
         </div>
-	    <?php if ( $reviews_repeater_footer ): ?>
+		<?php if ( $reviews_repeater_footer ): ?>
             <div class="footer__row footer__row-reviewsmy-4 d-block d-sm-none mb-5">
                 <div class="footer__row">
                     <div class="col-sm-12">
                         <ul class="list-group list-group-horizontal justify-content-between">
-						    <?php foreach (
-							    $reviews_repeater_footer
+							<?php foreach (
+								$reviews_repeater_footer
 
-							    as $review
-						    ) :
-							    $review_image = $review['image']
-							    ?>
+								as $review
+							) :
+								$review_image = $review['image']
+								?>
 
                                 <li class="list-group-item border-0 bg-transparent p-0 ">
                                     <img
                                             src="<?= $review_image['url'] ?>"
                                             alt="<?= $review_image['alt'] ?>">
                                 </li>
-						    <?php endforeach; ?>
+							<?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
             </div>
 
-	    <?php endif; ?>
+		<?php endif; ?>
         <div class="footer__row-right col col-sm-5 col-md-5 col-lg-7 d-flex flex-wrap offset-sm-1">
 			<?php
 
@@ -197,5 +197,3 @@ function qit_footer_TagFooterClose() {
     <!-- END FOOTER -->
 	<?php
 }
-
-;
