@@ -1,6 +1,6 @@
 <?php
 /*
- * About us: Counter
+ * About us: Worldwide
  */
 defined( 'ABSPATH' ) || exit;
 
