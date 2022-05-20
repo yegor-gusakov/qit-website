@@ -15,7 +15,7 @@ $contact_image_of_text = $args['contact_image_of_text'];
 
     <div class="container">
         <div class="section__banner-contact-row row align-items-stretch">
-            <div class="section__banner-contact-row-left col-lg-6 p-5">
+            <div class="section__banner-contact-row-left col-lg-6 p-sm-5">
 
                 <h4><?= $contact_title ?></h4>
 
@@ -78,7 +78,7 @@ $contact_image_of_text = $args['contact_image_of_text'];
 					?>
                     <div class="section__banner-contact-row-right col-lg-6 p-0 d-none d-lg-block">
                         <img src="<?= $right_image['url'] ?>"
-                             alt="<?= $right_image['alt'] ?>">
+                             alt="<?= $right_image['alt'] ?>" class="h-100">
                     </div>
 					<?php
 					break;

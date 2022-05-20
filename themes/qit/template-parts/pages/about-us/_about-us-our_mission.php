@@ -22,7 +22,7 @@ $wrapper = $field['wrapper'];
 				): ?>
                     <div class="col-lg-12 section__our_mission-row-row row">
 						<?php
-						$content = $item['content'];
+						$content           = $item['content'];
 						//						print_r($content);
 						foreach (
 							$content
@@ -30,20 +30,25 @@ $wrapper = $field['wrapper'];
 							as $el
 						):
 							?>
-                            <div class="col-lg-6 d-flex flex-column justify-content-center ">
-								<?php
-								switch ( $el['acf_fc_layout'] ):
-									case 'image':
-										$image = $el['image'];
-										?>
+							<?php
+							switch ( $el['acf_fc_layout'] ):
+								case 'image':
+									$image = $el['image'];
+									?>
+                                    <div class="col-lg-6 d-flex  col-img flex-column justify-content-center ">
+
                                         <img src="<?= $image['url'] ?>"
                                              alt="<?= $image['alt'] ?>">
+                                    </div>
+									<?php
+									break;
+								case 'text_group':
+									$badge = $el['badge'];
+									$title = $el['title'];;
+									$text = $el['text']; ?>
+
+                                    <div class="col-lg-6 d-flex col-text flex-column justify-content-center ">
 										<?php
-										break;
-									case 'text_group':
-										$badge = $el['badge'];
-										$title = $el['title'];;
-										$text = $el['text'];
 										if ( $badge ): ?>
                                             <div class="section__our_mission-row-el-badge  row justify-content-center">
                                                 <h6 class="section__worldwide-row-badge m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
@@ -59,11 +64,12 @@ $wrapper = $field['wrapper'];
                                                 <p class="section__our_mission-row-text"><?= $text ?></p>
                                             </div>
 										<?php endif;
-										break;
-								endswitch;
-								?>
+										?>                            </div>
+									<?php
+									break;
+							endswitch;
+							?>
 
-                            </div>
 
 						<?php endforeach; ?>
 
