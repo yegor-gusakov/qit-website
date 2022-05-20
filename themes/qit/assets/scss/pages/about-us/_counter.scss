@@ -1,0 +1,49 @@
+
+.section {
+  &__counter {
+    &-row {
+      &-badge {
+        background: $background-primary;
+        border-radius: 6px;
+        font-weight: 600;
+        padding: 6px 10px;
+        font-size: 10px;
+        line-height: 16px;
+        margin-bottom: 10px;
+
+      }
+
+      &-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 44px;
+        color: $color-black;
+        @include media(xs) {
+          font-size: 30px;
+
+        }
+      }
+      &-count{
+        &-number{
+          font-weight: 300;
+          font-size: 72px;
+          line-height: 78px;
+          color: $color-black;
+
+
+        }
+        &-text{
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 26px;
+
+          color: $color-black;
+
+        }
+      }
+
+    }
+  }
+}
+
