@@ -72,14 +72,16 @@
       .btn {
         background-color: $background-yellow;
 
-        &:hover{
+        &:hover {
           background-color: $background-yellow-2;
-          color:$color-primary;
+          color: $color-primary;
         }
-        &:focus{
+
+        &:focus {
           background-color: $background-yellow-2;
-          color:$color-primary;
+          color: $color-primary;
         }
+
         @include media(xs) {
           display: block;
           margin: 0 auto;
@@ -125,10 +127,12 @@
 
         .btn {
           border: none;
-          &:focus{
+
+          &:focus {
             background: $background-yellow-2;
-            color:$color-primary;
+            color: $color-primary;
           }
+
           &:hover {
             border: none;
           }
@@ -182,6 +186,20 @@
               font-size: 14px;
             }
           }
+        }
+      }
+    }
+
+    &-reviews {
+      background-color: $background-gray;
+      svg {
+        width: 100%;
+        display: block;
+        opacity: .3;
+
+        path {
+          fill: $color-primary !important;
+          stroke: $color-primary !important;
         }
       }
     }
