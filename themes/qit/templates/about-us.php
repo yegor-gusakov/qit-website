@@ -17,7 +17,7 @@ while ( have_posts() ) : // Start of the loop.
 		foreach ( $sections as $section ) :
 
 			// TODO Old Version WP
-			set_query_var( 'home_field', $section );
+			set_query_var( 'about_us_field', $section );
 			get_template_part(
 				'template-parts/pages/about-us/_about-us',
 				$section['acf_fc_layout']
