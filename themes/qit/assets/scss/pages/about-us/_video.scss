@@ -1,0 +1,27 @@
+.section {
+  &__video {
+    &-row {
+      background-size: 100% 100%;
+
+      iframe {
+        background-size: 100% 100%;
+
+        body {
+          background-size: 100% 100%!important;
+
+          .ytp {
+            &-chrome-top {
+              display: none;
+            }
+
+            &-cued-thumbnail-overlay-image {
+              background-size: 100% 100%;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}
