@@ -38,7 +38,7 @@ $iframe     = str_replace( '></iframe>', ' ' . $attributes . '></iframe>',
 <section class="section__video section vh-100 position-relative">
     <div class="container-fluid h-100 px-0">
         <div class="section__video-row  h-100 row justify-content-center">
-            <div class="col-12 col-sm-12  h-100">
+            <div class="col-12 col-sm-12  h-100 p-0">
 				<?= $iframe; ?>
 
             </div>
