@@ -71,6 +71,13 @@ const AllPage = function () {
             }
 
         });
+        const swiperComparisons = new Swiper(".swiperComparisons", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+
+        });
 
 
     }

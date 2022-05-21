@@ -263,7 +263,7 @@
               }
 
               &:first-of-type {
-                padding: 16px 0 16px 32px;
+                padding: 16px 32px;
 
                 @include media(sm) {
                   flex-basis: 30%;
@@ -273,7 +273,8 @@
                   flex-basis: 20%;
 
                 }
-                  p {
+
+                p {
                   text-align: start;
                   margin-right: auto;
                   font-style: normal;
@@ -335,7 +336,9 @@
 
                 &:first-of-type {
                   align-self: flex-end;
-                  background-color: #363636;
+                  background-color: #363636;color: $color-white;
+                  justify-content: center;
+
                 }
 
 
@@ -373,6 +376,29 @@
           }
         }
       }
+    }
+
+    .swiper-pagination {
+      display: flex;
+      justify-content: center;
+      gap: 5%;
+      margin-top: 10%;
+      pointer-events: all;
+      .swiper-pagination-bullet {
+        pointer-events: all;
+
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        display: block;
+        background: $background-primary;
+        opacity: 0.4;
+        &-active{
+          opacity: 1;
+        }
+      }
+
+
     }
   }
 }
