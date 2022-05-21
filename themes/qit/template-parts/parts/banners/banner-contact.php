@@ -1,13 +1,17 @@
 <?php
-$left                  = get_field( 'left', 'theme_settings' );
-$right                 = get_field( 'right', 'theme_settings' );
-$contact_title         = $left['contact_title'];
-$contact_form          = $left['shortcode_contact_form'];
-$fact_title            = $right['facts_title'];
-$facts_repeater        = $right['facts_repeater'];
-$reviews_repeater      = $right['reviews_repeater'];
-$right_image           = $right['reviews_full_img'];
-$contact_image_of_text = $args['contact_image_of_text'];
+$left             = get_field( 'left', 'theme_settings' );
+$right            = get_field( 'right', 'theme_settings' );
+$contact_title    = $left['contact_title'];
+$contact_form     = $left['shortcode_contact_form'];
+$fact_title       = $right['facts_title'];
+$facts_repeater   = $right['facts_repeater'];
+$reviews_repeater = $right['reviews_repeater'];
+$right_image      = $right['reviews_full_img'];
+if ( $args ):
+
+	$contact_image_of_text = $args['contact_image_of_text'];
+
+endif;
 ?>
 
 
@@ -82,7 +86,7 @@ $contact_image_of_text = $args['contact_image_of_text'];
                     </div>
 					<?php
 					break;
-                default:
+				default:
 					?>
                     <div class="section__banner-contact-row-right col-lg-6 p-sm-5 d-none d-lg-block">
                         <h5><?= $fact_title ?></h5>

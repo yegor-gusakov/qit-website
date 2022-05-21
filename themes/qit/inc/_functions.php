@@ -179,7 +179,7 @@ add_filter('wp_nav_menu','submenu_class');
 
 add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 function add_loginout_link( $items, $args ) {
-	if (is_user_logged_in() && $args->theme_location == 'main_menu') {
+	if ( $args->theme_location == 'main_menu') {
 		$items .= '<li><button class="btn mx-auto button d-block d-sm-none"
                         type="button" data-bs-toggle="modal" data-bs-target="#globalModalQuote">'. __( 'get a quote' ) .'</button></li>';
 	}
