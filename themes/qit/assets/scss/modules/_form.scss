@@ -26,6 +26,7 @@
       .iti__flag-container {
         display: none;
       }
+
     }
 
     .btn {
@@ -34,17 +35,40 @@
       background: $background-yellow !important;
       border-radius: 59px !important;
       border: none !important;
-
+      @include media(md) {
+        width: 100% !important;
+      }
       &:hover {
         color: rgba($color-primary, .8) !important;
         background-color: $background-yellow-2 !important;
 
       }
-      &:focus{
-        background: $background-yellow-2!important;
-        color:$color-primary!important;
+
+      &:focus {
+        background: $background-yellow-2 !important;
+        color: $color-primary !important;
       }
     }
+
+    .wpforms-uploader {
+      padding: 10px !important;
+      border: 0 !important;
+      border-bottom: 1px solid rgba($color-primary, 0.15) !important;
+      color: rgba($color-primary, 0.6) !important;
+      background: transparent!important;
+      .dz-message {
+        //padding: 0!important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        svg{
+          width: 5% !important;
+          height: auto!important;
+          margin-bottom: 0!important;
+        }
+      }
+    }
+
     &__privacy-policy {
       p {
         color: rgba($color-primary, 0.5) !important;
@@ -63,7 +87,8 @@
         color: $color-primary !important;
       }
     }
-    .wpforms-submit-container{
+
+    .wpforms-submit-container {
       @include media(md) {
         margin: 0 auto;
       }

@@ -94,29 +94,10 @@ const AllPage = function () {
 const AboutUsPage = function () {
 
     /**
-     * Iframe
-     * @constructor
-     */
-    // const Iframe = function () {
-    //     // const iFrame = document.getElementById('about-us-video');
-    //     // const ytpTopTitle = iFrame.contentWindow.document.getElementsByClassName('ytp-chrome-top');
-    //     // // console.log(ytpTopTitle);
-    //     // // iFrame.contentWindow.yourFunction();
-    //     // // $( iFrame + '.ytp-chrome-top').addClass( "d-none" );
-    //     // $("#about-us-video").contents().find('ytp-chrome-top').addClass('d-none')
-    //     // $("iframe").contents().find('body').addClass('foo');
-    //     var iframe = document.getElementById("about-us-video");
-    //     var elmnt = iframe.contentWindow.document.getElementsByTagName("body")[0];
-    //     elmnt.style.display = "none";
-    // }
-
-
-    /**
      * Init
      */
     return {
         init: function () {
-            Iframe();
         }
     };
 
