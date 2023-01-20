@@ -1,0 +1,42 @@
+.section {
+  &__models {
+    &-row {
+      &:first-of-type {
+        max-width: 78px;
+      }
+
+      &:nth-of-type(2) {
+        max-width: 671px;
+        margin: 0 auto 48px;
+      }
+
+      .card {
+        border-radius: 15px;
+
+        img {
+          border-radius: 15px;
+
+        }
+
+        &-title {
+          text-align: left;
+          margin-bottom: 10px;
+          @include fonts( 600, 20px, 26px, $color-white);
+
+        }
+
+        &-text {
+
+          @include fonts( 400, 14px, 20px, $color-white);
+
+        }
+
+        &-img-overlay {
+          height: fit-content;
+          top: unset;
+          padding: 22px 24px;
+        }
+      }
+    }
+  }
+}

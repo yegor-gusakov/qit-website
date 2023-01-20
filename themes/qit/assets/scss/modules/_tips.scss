@@ -1,0 +1,19 @@
+aside.blog-tip {
+  padding: 20px;
+  background: #FDF6E2;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+  svg {
+    margin-right: 10px;
+    width: 1.5em;
+    height: 1.5em;
+    flex-shrink: 0;
+  }
+
+  p {
+    @include fonts(400, 17px, 27px, $color-primary);
+    margin: 0;
+
+  }
+}

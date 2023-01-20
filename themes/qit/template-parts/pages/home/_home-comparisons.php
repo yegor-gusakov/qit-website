@@ -12,387 +12,288 @@ $badge     = $field['badge'];
 $title     = $field['title'];
 $logo_icon = get_field( 'logo', 'theme_settings' );
 
-$checkmark = get_stylesheet_directory() . '/assets/userfiles/icons/Check.svg';
-$closemark = get_stylesheet_directory() . '/assets/userfiles/icons/Close.svg';
+$checkmark = get_template_directory_uri() . '/assets/userfiles/icons/Check.svg';
+$closemark = get_template_directory_uri() . '/assets/userfiles/icons/Close.svg';
 ?>
 
-<section class="section__comparisons section">
+<section class="section section__comparisons">
     <div class="container">
 		<?php if ( $badge ): ?>
-
-            <div class="section__comparisons-row row justify-content-center"><h6
-                        class="section__comparisons-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
+            <div class="section__comparisons-row row justify-content-center">
+                <h6 class="section__comparisons-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
             </div>
 		<?php endif; ?>
 		<?php if ( $title ): ?>
-
             <div class="section__comparisons-row row text-center">
                 <h2 class="section__comparisons-row-title"><?= $title ?></h2>
             </div>
 		<?php endif; ?>
-
-        <div class="section__comparisons-row d-none d-sm-none d-md-flex row flex-column">
-            <ul class="row">
-                <li class="legend">Getting started</li>
-                <li>Freelance Platforms</li>
-                <li><?= file_get_contents( $logo_icon['url'] ) ?></li>
-                <li>In-house</li>
-            </ul>
-
-            <ul class="row row-after-gap">
-                <li class="legend"><p>Hiring time</p></li>
-                <li><p>2 - 4 weeks</p></li>
-                <li><p>1 - 3 weeks</p></li>
-                <li><p>3 - 8 weeks</p></li>
-            </ul>
-
-            <ul class="row">
-                <li class="legend"><p>Recruiting expenses</p></li>
-                <li><p>~$3000</p></li>
-                <li><p>0</p></li>
-                <li><p>$5000+</p></li>
-            </ul>
-
-            <ul class="row row-before-gap">
-                <li class="legend"><p>Retention</p></li>
-                <li><p>Low</p></li>
-                <li><p>High</p></li>
-                <li><p>Average</p></li>
-            </ul>
-
-
-            <ul class="row row-gap">
-                <li class="legend">Pricing</li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-
-
-            <ul class="row row-after-gap">
-                <li class="legend"><p>Average hourly rate</p></li>
-                <li><p>$35</p></li>
-                <li><p>$40</p></li>
-                <li><p>$70</p></li>
-            </ul>
-
-
-            <ul class="row">
-                <li class="legend"><p class="h-100">Payment method</p></li>
-                <li><p class="h-100">Hourly (rate includes platfrom fees)</p>
-                </li>
-                <li><p class="h-100">Monthly invoicing</p></li>
-                <li><p class="h-100">Monthly salary + taxes, backoffice
-                        overhead</p></li>
-            </ul>
-
-
-            <ul class="row">
-                <li class="legend"><p>Annual saving</p></li>
-                <li><p>At least $20,000</p></li>
-                <li><p>At least $40,000</p></li>
-                <li><p>At least $10,000</p></li>
-            </ul>
-
-
-            <ul class="row row-before-gap">
-                <li class="legend"><p>Additional costs included (office
-                        expenses,
-                        taxes, perks, etc.)</p>
-                </li>
-                <li><p><?= file_get_contents( $checkmark ) ?></p></li>
-
-                <li><p><?= file_get_contents( $checkmark ) ?></p></li>
-                <li><p><?= file_get_contents( $closemark ) ?></p></li>
-
-            </ul>
-            <ul class="row row-gap">
-                <li class="legend">what you get
-                </li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <ul class="row row-after-gap">
-                <li class="legend"><p class="h-100">Focus on your task only</p>
-                </li>
-                <li><p><?= file_get_contents( $closemark ) ?></p></li>
-                <li><p><?= file_get_contents( $checkmark ) ?></p></li>
-                <li><p><?= file_get_contents( $checkmark ) ?></p></li>
-            </ul>
-            <ul class="row">
-                <li class="legend"><p>Team scalability</p>
-                </li>
-                <li><p>Low</p></li>
-                <li><p>High</p></li>
-                <li><p>Average</p></li>
-            </ul>
-            <ul class="row">
-                <li class="legend"><p class="h-100">Cooperation termination
-                        risks</p>
-                </li>
-                <li><p class="h-100">Low</p></li>
-                <li><p class="h-100">Low</p></li>
-                <li><p class="h-100">High (notice period > 3 months)</p></li>
-            </ul>
-            <ul class="row row-before-gap">
-                <li class="legend"><p>Security level (Data Protection)</p>
-                </li>
-                <li><p>Relatively safe (if NDA is signed)</p></li>
-                <li><p>Safe</p></li>
-                <li><p>Very safe</p></li>
-            </ul>
+        <div class="section__comparisons-row row d-none d-sm-none d-md-flex row flex-column">
+            <div class="col">
+                <ul class="row">
+                    <li class="legend"><?=__('Getting started','qit')?></li>
+                    <li><?=__('Freelance Platforms','qit')?></li>
+                    <li><?= file_get_contents( $logo_icon['url'] ) ?></li>
+                    <li><?= __('In-house','qit')?></li>
+                </ul>
+                <ul class="row row-after-gap">
+                    <li class="legend"><p><?=__('Hiring time','qit')?></p></li>
+                    <li><p><?=__('1 - 3 weeks','qit')?></p></li>
+                    <li><p><?=__('1 - 3 weeks','qit')?></p></li>
+                    <li><p><?=__('3 - 8 weeks','qit')?></p></li>
+                </ul>
+                <ul class="row">
+                    <li class="legend"><p><?=__('Recruiting expenses','qit')?></p></li>
+                    <li><p><?=__('~$3000','qit')?></p></li>
+                    <li><p><?=__('0','qit')?></p></li>
+                    <li><p><?=__('$5000+','qit')?></p></li>
+                </ul>
+                <ul class="row row-before-gap">
+                    <li class="legend"><p><?=__('Retention','qit')?></p></li>
+                    <li><p><?=__('Low','qit')?></p></li>
+                    <li><p><?=__('High','qit')?></p></li>
+                    <li><p><?=__('Average','qit')?></p></li>
+                </ul>
+                <ul class="row row-gap">
+                    <li class="legend"><?=__('Pricing','qit')?></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="row row-after-gap">
+                    <li class="legend"><p><?=__('Average hourly rate','qit')?></p></li>
+                    <li><p><?=__('$35','qit')?></p></li>
+                    <li><p><?=__('$40','qit')?></p></li>
+                    <li><p><?=__('$70','qit')?></p></li>
+                </ul>
+                <ul class="row">
+                    <li class="legend"><p><?=__('Payment method','qit')?></p></li>
+                    <li><p><?=__('Hourly (rate includes platform fees)','qit')?></p></li>
+                    <li><p><?=__('Monthly invoicing','qit')?></p></li>
+                    <li><p><?=__('Monthly salary + taxes, backoffice overhead','qit')?></p></li>
+                </ul>
+                <ul class="row">
+                    <li class="legend"><p><?=__('Annual saving','qit')?></p></li>
+                    <li><p><?=__('At least $20,000','qit')?></p></li>
+                    <li><p><?=__('At least $40,000','qit')?></p></li>
+                    <li><p><?=__('At least $10,000','qit')?></p></li>
+                </ul>
+                <ul class="row row-before-gap">
+                    <li class="legend"><p><?=__('Additional costs included (office expenses, taxes, perks, etc.)','qit')?></p></li>
+                    <li><p><?= file_get_contents( $checkmark ) ?></p></li>
+                    <li><p><?= file_get_contents( $checkmark ) ?></p></li>
+                    <li><p><?= file_get_contents( $closemark ) ?></p></li>
+                </ul>
+                <ul class="row row-gap">
+                    <li class="legend"><?=__('what you get','qit')?></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="row row-after-gap">
+                    <li class="legend"><p><?=__('Focus on your task only','qit')?></p>
+                    </li>
+                    <li><p><?= file_get_contents( $closemark ) ?></p></li>
+                    <li><p><?= file_get_contents( $checkmark ) ?></p></li>
+                    <li><p><?= file_get_contents( $checkmark ) ?></p></li>
+                </ul>
+                <ul class="row">
+                    <li class="legend"><p><?=__('Team scalability','qit')?></p>
+                    </li>
+                    <li><p><?=__('Low','qit')?></p></li>
+                    <li><p><?=__('High','qit')?></p></li>
+                    <li><p><?=__('Average','qit')?></p></li>
+                </ul>
+                <ul class="row">
+                    <li class="legend"><p><?=__('Cooperation termination risks','qit')?></p></li>
+                    <li><p><?=__('Low','qit')?></p></li>
+                    <li><p><?=__('Low','qit')?></p></li>
+                    <li><p><?=__('High (notice period > 3 months)','qit')?></p></li>
+                </ul>
+                <ul class="row row-before-gap">
+                    <li class="legend"><p><?=__('Security level (Data Protection)','qit')?></p></li>
+                    <li><p><?=__('Relatively safe (if NDA is signed)','qit')?></p></li>
+                    <li><p><?=__('Safe','qit')?></p></li>
+                    <li><p><?=__('Very safe','qit')?></p></li>
+                </ul>
+            </div>
         </div>
-        <div class="section__comparisons-row-mobile swiperComparisons d-flex d-sm-flex d-md-none row flex-column">
+        <div class="section__comparisons-row-mobile row swiperComparisons d-flex d-sm-flex d-md-none row flex-column">
             <div class="swiper-wrapper p-0">
                 <div class="swiper-slide qit-software flex-column p-0">
                     <ul class="row">
                         <li><?= file_get_contents( $logo_icon['url'] ) ?></li>
-
-                        <li class="legend">Getting started</li>
+                        <li class="legend"><?=__('Getting started','qit')?></li>
                     </ul>
-
                     <ul class="row row-after-gap">
-                        <li><p>Hiring time</p></li>
-                        <li><p>1 - 3 weeks</p></li>
+                        <li><p><?=__('Hiring time','qit')?></p></li>
+                        <li><p><?=__('1 - 3 weeks','qit')?></p></li>
                     </ul>
-
                     <ul class="row">
-                        <li><p>Recruiting expenses</p></li>
-                        <li><p>0</p></li>
+                        <li><p><?=__('Recruiting expenses','qit')?></p></li>
+                        <li><p><?=__('0','qit')?></p></li>
                     </ul>
-
                     <ul class="row row-before-gap">
-                        <li><p>Retention</p></li>
-                        <li><p>High</p></li>
-                    </ul>
-
-
-                    <ul class="row row-gap">
-                        <li class="legend">Pricing</li>
-                    </ul>
-
-
-                    <ul class="row row-after-gap">
-                        <li><p>Average hourly rate</p></li>
-                        <li><p>$40</p></li>
-                    </ul>
-
-
-                    <ul class="row">
-                        <li><p class="h-100">Payment method</p></li>
-                        <li><p class="h-100">Monthly invoicing</p></li>
-                    </ul>
-
-
-                    <ul class="row">
-                        <li><p>Annual saving</p></li>
-                        <li><p>At least $40,000</p></li>
-                    </ul>
-
-
-                    <ul class="row row-before-gap">
-                        <li><p>Additional costs included (office
-                                expenses,
-                                taxes, perks, etc.)</p>
-                        </li>
-
-                        <li><p><?= file_get_contents( $checkmark ) ?></p></li>
-
+                        <li><p><?=__('Retention','qit')?></p></li>
+                        <li><p><?=__('High','qit')?></p></li>
                     </ul>
                     <ul class="row row-gap">
-                        <li class="legend">what you get
-                        </li>
+                        <li class="legend"><?=__('Pricing','qit')?></li>
                     </ul>
                     <ul class="row row-after-gap">
-                        <li><p>Focus on your task only</p>
-                        </li>
-                        <li><p><?= file_get_contents( $checkmark ) ?></p></li>
+                        <li><p><?=__('Average hourly rate','qit')?></p></li>
+                        <li><p><?=__('$40','qit')?></p></li>
                     </ul>
                     <ul class="row">
-                        <li><p>Team scalability</p>
-                        </li>
-                        <li><p>High</p></li>
+                        <li><p><?=__('Payment method','qit')?></p></li>
+                        <li><p><?=__('Monthly invoicing','qit')?></p></li>
                     </ul>
                     <ul class="row">
-                        <li><p>Cooperation termination
-                                risks</p>
-                        </li>
-                        <li><p>Low</p></li>
+                        <li><p><?=__('Annual saving','qit')?></p></li>
+                        <li><p><?=__('At least $40,000','qit')?></p></li>
                     </ul>
                     <ul class="row row-before-gap">
-                        <li><p>Security level (Data Protection)</p>
+                        <li><p><?=__('Additional costs included (office expenses, taxes, perks, etc.)','qit')?></p></li>
+                        <li><p><?= file_get_contents( $checkmark ) ?></p></li>
+                    </ul>
+                    <ul class="row row-gap">
+                        <li class="legend"><?=__('what you get')?></li>
+                    </ul>
+                    <ul class="row row-after-gap">
+                        <li><p><?=__('Focus on your task only','qit')?></p></li>
+                        <li><p><?= file_get_contents( $checkmark ) ?></p>
                         </li>
-                        <li><p>Safe</p></li>
+                    </ul>
+                    <ul class="row">
+                        <li><p><?=__('Team scalability','qit')?></p></li>
+                        <li><p><?=__('High','qit')?></p></li>
+                    </ul>
+                    <ul class="row">
+                        <li><p><?=__('Cooperation termination risks','qit')?></p></li>
+                        <li><p><?=__('Low','qit')?></p></li>
+                    </ul>
+                    <ul class="row row-before-gap">
+                        <li><p><?=__('Security level (Data Protection)','qit')?></p></li>
+                        <li><p><?=__('Safe','qit')?></p></li>
                     </ul>
                 </div>
                 <div class="swiper-slide flex-column p-0">
                     <ul class="row">
-                        <li>Freelance Platforms</li>
-
-                        <li class="legend">Getting started</li>
+                        <li><?=__('Freelance Platforms','qit')?></li>
+                        <li class="legend"><?=__('Getting started','qit')?></li>
                     </ul>
-
                     <ul class="row row-after-gap">
-                        <li><p>Hiring time</p></li>
-                        <li><p>2 - 4 weeks</p></li>
+                        <li><p><?=__('Hiring time','qit')?></p></li>
+                        <li><p><?=__('1 - 3 weeks','qit')?></p></li>
                     </ul>
-
                     <ul class="row">
-                        <li><p>Recruiting expenses</p></li>
-                        <li><p>~$3000</p></li>
+                        <li><p><?=__('Recruiting expenses','qit')?></p></li>
+                        <li><p><?=__('~$3000','qit')?></p></li>
                     </ul>
-
                     <ul class="row row-before-gap">
-                        <li><p>Retention</p></li>
-                        <li><p>Low</p></li>
+                        <li><p><?=__('Retention','qit')?></p></li>
+                        <li><p><?=__('Low','qit')?></p></li>
                     </ul>
-
-
                     <ul class="row row-gap">
-                        <li class="legend">Pricing</li>
+                        <li class="legend"><?=__('Pricing','qit')?></li>
                     </ul>
-
-
                     <ul class="row row-after-gap">
-                        <li><p>Average hourly rate</p></li>
-                        <li><p>$35</p></li>
+                        <li><p><?=__('Average hourly rate','qit')?></p></li>
+                        <li><p><?=__('$35','qit')?></p></li>
                     </ul>
-
-
                     <ul class="row">
-                        <li><p class="h-100">Payment method</p></li>
-                        <li><p class="h-100">Hourly (rate includes platfrom fees)</p></li>
+                        <li><p><?=__('Payment method','qit')?></p></li>
+                        <li><p><?=__('Hourly (rate includes platform fees)','qit')?></p></li>
                     </ul>
-
-
                     <ul class="row">
-                        <li><p>Annual saving</p></li>
-                        <li><p>At least $20,000</p></li>
+                        <li><p><?=__('Annual saving','qit')?></p></li>
+                        <li><p><?=__('At least $20,000','qit')?></p></li>
                     </ul>
-
-
                     <ul class="row row-before-gap">
-                        <li><p>Additional costs included (office
-                                expenses,
-                                taxes, perks, etc.)</p>
-                        </li>
-
+                        <li><p><?=__('Additional costs included (office expenses, taxes, perks, etc.)','qit')?></p></li>
                         <li><p><?= file_get_contents( $checkmark ) ?></p></li>
-
                     </ul>
                     <ul class="row row-gap">
-                        <li class="legend">what you get
+                        <li class="legend"><?=__('what you get','qit')?>
                         </li>
                     </ul>
                     <ul class="row row-after-gap">
-                        <li><p>Focus on your task only</p>
+                        <li><p><?=__('Focus on your task only','qit')?></p></li>
+                        <li><p><?= file_get_contents( $closemark ) ?></p>
                         </li>
-                        <li><p><?= file_get_contents( $closemark ) ?></p></li>
                     </ul>
                     <ul class="row">
-                        <li><p>Team scalability</p>
-                        </li>
-                        <li><p>Low</p></li>
+                        <li><p><?=__('Team scalability','qit')?></p></li>
+                        <li><p><?=__('Low','qit')?></p></li>
                     </ul>
                     <ul class="row">
-                        <li><p>Cooperation termination
-                                risks</p>
-                        </li>
-                        <li><p>Low</p></li>
+                        <li><p><?=__('Cooperation termination risks','qit')?></p></li>
+                        <li><p><?=__('Low','qit')?></p></li>
                     </ul>
                     <ul class="row row-before-gap">
-                        <li><p>Security level (Data Protection)</p>
-                        </li>
-                        <li><p>Relatively safe (if NDA is signed)</p></li>
+                        <li><p><?=__('Security level (Data Protection)','qit')?></p></li>
+                        <li><p><?=__('Relatively safe (if NDA is signed)','qit')?></p></li>
                     </ul>
                 </div>
                 <div class="swiper-slide flex-column p-0">
                     <ul class="row">
-                        <li>In-house</li>
-
-                        <li class="legend">Getting started</li>
+                        <li><?=__('In-house','qit')?></li>
+                        <li class="legend"><?=__('Getting started','qit')?></li>
                     </ul>
-
                     <ul class="row row-after-gap">
-                        <li><p>Hiring time</p></li>
-                        <li><p>3 - 8 weeks</p></li>
+                        <li><p><?=__('Hiring time','qit')?></p></li>
+                        <li><p><?=__('3 - 8 weeks','qit')?></p></li>
                     </ul>
-
                     <ul class="row">
-                        <li><p>Recruiting expenses</p></li>
-                        <li><p>$5000+</p></li>
+                        <li><p><?=__('Recruiting expenses','qit')?></p></li>
+                        <li><p><?=__('$5000+','qit')?></p></li>
                     </ul>
-
                     <ul class="row row-before-gap">
-                        <li><p>Retention</p></li>
-                        <li><p>Average</p></li>
+                        <li><p><?=__('Retention','qit')?></p></li>
+                        <li><p><?=__('Average','qit')?></p></li>
                     </ul>
-
-
                     <ul class="row row-gap">
-                        <li class="legend">Pricing</li>
+                        <li class="legend"><?=__('Pricing','qit')?></li>
                     </ul>
-
-
                     <ul class="row row-after-gap">
-                        <li><p>Average hourly rate</p></li>
-                        <li><p>$70</p></li>
+                        <li><p><?=__('Average hourly rate','qit')?></p></li>
+                        <li><p><?=__('$70','qit')?></p></li>
                     </ul>
-
-
                     <ul class="row">
-                        <li><p class="h-100">Payment method</p></li>
-                        <li><p class="h-100">Monthly salary + taxes, backoffice overhead</p></li>
+                        <li><p><?=__('Payment method','qit')?></p></li>
+                        <li><p><?=__('Monthly salary + taxes, backoffice overhead','qit')?></p></li>
                     </ul>
-
-
                     <ul class="row">
-                        <li><p>Annual saving</p></li>
-                        <li><p>At least $10,000</p></li>
+                        <li><p><?=__('Annual saving','qit')?></p></li>
+                        <li><p><?=__('At least $10,000','qit')?></p></li>
                     </ul>
-
-
                     <ul class="row row-before-gap">
-                        <li><p>Additional costs included (office
-                                expenses,
-                                taxes, perks, etc.)</p>
-                        </li>
-
+                        <li><p><?=__('Additional costs included (office expenses, taxes, perks, etc.)','qit')?></p></li>
                         <li><p><?= file_get_contents( $closemark ) ?></p></li>
-
                     </ul>
                     <ul class="row row-gap">
-                        <li class="legend">what you get
+                        <li class="legend"><?=__('what you get','qit')?>
                         </li>
                     </ul>
                     <ul class="row row-after-gap">
-                        <li><p>Focus on your task only</p>
-                        </li>
+                        <li><p><?=__('Focus on your task only','qit')?></p></li>
                         <li><p><?= file_get_contents( $checkmark ) ?></p></li>
                     </ul>
                     <ul class="row">
-                        <li><p>Team scalability</p>
-                        </li>
-                        <li><p>Average</p></li>
+                        <li><p><?=__('Team scalability','qit')?></p></li>
+                        <li><p><?=__('Average','qit')?></p></li>
                     </ul>
                     <ul class="row">
-                        <li><p>Cooperation termination
-                                risks</p>
-                        </li>
-                        <li><p>High (notice period > 3 months)</p></li>
+                        <li><p><?=__('Cooperation termination risks','qit')?></p></li>
+                        <li><p><?=__('High (notice period > 3 months)','qit')?></p></li>
                     </ul>
                     <ul class="row row-before-gap">
-                        <li><p>Security level (Data Protection)</p>
-                        </li>
-                        <li><p>Very safe</p></li>
+                        <li><p><?=__('Security level (Data Protection)','qit')?></p></li>
+                        <li><p><?=__('Very safe','qit')?></p></li>
                     </ul>
                 </div>
-
             </div>
-            </div>
-            <div class="swiper-pagination"></div>
-
-
+        </div>
+        <div class="swiper-pagination d-sm-none d-flex"></div>
     </div>
 </section>

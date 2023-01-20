@@ -504,9 +504,7 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 							},
 							invalidHandler: function( event, validator ) {
 
-								if ( typeof validator.errorList[0] !== 'undefined' ) {
-									app.scrollToError( $( validator.errorList[0].element ) );
-								}
+
 							},
 							onkeyup: function( element, event ) {
 
@@ -1324,36 +1322,7 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 		 *
 		 * @param {jQuery} $el Form, container or input element jQuery object.
 		 */
-		scrollToError: function( $el ) {
-
-			if ( $el.length === 0 ) {
-				return;
-			}
-
-			// Look for a field with an error inside an $el.
-			var $field = $el.find( '.wpforms-field.wpforms-has-error' );
-
-			// Look outside in not found inside.
-			if ( $field.length === 0 ) {
-				$field = $el.closest( '.wpforms-field' );
-			}
-
-			if ( $field.length === 0 ) {
-				return;
-			}
-
-			var offset = $field.offset();
-
-			if ( typeof offset === 'undefined' ) {
-				return;
-			}
-
-			app.animateScrollTop( offset.top - 75, 750 ).done( function() {
-				var $error = $field.find( '.wpforms-error' ).first();
-				if ( typeof $error.focus === 'function' ) {
-					$error.focus();
-				}
-			} );
+		scrollToError: function(  ) {
 		},
 
 		/**
@@ -1410,7 +1379,7 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 					} );
 
 					// Scroll to first/top error on page.
-					app.scrollToError( $page );
+
 				}
 
 				// Move to the next page.
@@ -2387,7 +2356,6 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 	};
 
 	return app;
-
 }( document, window, jQuery ) );
 
 // Initialize.

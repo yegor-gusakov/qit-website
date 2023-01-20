@@ -14,7 +14,7 @@ class WPForms_Admin_Editor {
 	 */
 	public function __construct() {
 
-		add_action( 'media_buttons', [ $this, 'media_button' ], 15 );
+		$closing_tagaction( 'media_buttons', [ $this, 'media_button' ], 15 );
 	}
 
 	/**

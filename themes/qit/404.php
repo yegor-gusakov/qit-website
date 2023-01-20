@@ -2,59 +2,36 @@
 /**
  * The template for displaying 404 pages (not found)
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ * @link    https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package qit
  */
 
 get_header();
+$image = get_template_directory_uri() . '/assets/userfiles/image/404.svg';
 ?>
 
-	<main id="primary" class="site-main">
+<section class="section section__404">
+    <div class="container">
+        <div class="section__404-row row justify-content-center align-items-center">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'qit' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'qit' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'qit' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$qit_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'qit' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$qit_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
-
-<?php
-get_footer();
+            <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center flex-column text-center">
+                <div class="section__404-row-image">
+					<?= file_get_contents( $image ); ?>
+                </div>
+                <div class="section__404-row-title">
+                    <h1><?= __( '404', 'qit' ) ?></h1>
+                </div>
+                <div class="section__404-row-subtitle">
+                    <h2><?= __( 'Page not found', 'qit' ) ?></h2>
+                </div>
+                <div class="section__404-row-text">
+                    <p><?= __( 'The page you were looking for was removed or does not exist. Try going back to the home page. ',
+							'qit' ) ?></p>
+                </div>
+                <a href="<?= get_home_url()?>" class="button btn"><?= __('back to home','qit')?></a>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="/wp-content/themes/qit/assets/js/script/burger.js" id="burger-qit-js" defer=""></script>

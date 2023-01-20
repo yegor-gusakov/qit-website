@@ -1,0 +1,88 @@
+{
+  "name": "ReKKi — last posts from blog",
+  "blocks": [
+    {
+      "block": "header",
+      "options": {
+        "layout": "logo"
+      }
+    },
+    {
+      "block": "heading",
+      "options": {
+        "text": "We have something specials on {blog_title}",
+        "font_family": "Inter, sans-serif",
+        "font_weight": "normal",
+        "font_size": "55px"
+      }
+    },
+    {
+      "block": "rekki",
+      "options": {
+        "layout": "rekki-one",
+        "max": 1,
+        "show_image": 1,
+        "show_date": 2,
+        "excerpt_length": 0,
+        "show_rekki_min_read": 3,
+        "show_rekki_tags": 4,
+        "button_background": "#FEF200",
+        "button_label": "Read more",
+        "block_padding_right": 30,
+        "block_padding_bottom": 30,
+        "button_font_weight": "normal",
+        "button_font_family": "Inter, sans-serif",
+        "button_font_color": "#363636"
+      }
+    },
+    {
+      "block": "separator",
+      "options": {
+        "color": "rgba(54, 54, 54, 0.15)"
+      }
+    },
+    {
+      "block": "heading",
+      "options": {
+        "text": "Also oldest post",
+        "font_family": "Inter, sans-serif",
+        "font_weight": "normal",
+        "font_size": "55px"
+      }
+    },
+    {
+      "block": "rekki",
+      "options": {
+        "layout": "rekki-two",
+        "max": 2,
+        "post_offset": 1,
+        "show_image": 1,
+        "show_date": 2,
+        "excerpt_length": 0,
+        "show_rekki_min_read": 3,
+        "show_rekki_tags": 4,
+        "button_background": "#FEF200",
+        "button_label": "Read more",
+        "block_padding_right": 30,
+        "block_padding_bottom": 30,
+        "button_font_weight": "normal",
+        "button_font_family": "Inter, sans-serif",
+        "button_font_color": "#363636"
+      }
+    },
+    {
+      "block": "separator",
+      "options": {
+        "color": "rgba(54, 54, 54, 0.15)"
+      }
+    },
+    {
+      "block": "footer",
+      "options": {
+        "profile_enabled": 0,
+        "view_enabled": 0,
+        "unsubscribe_enabled": 1
+      }
+    }
+  ]
+}

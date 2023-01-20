@@ -10,11 +10,11 @@
   z-index: 50;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-transition: top 0.25s ease-out;
-  -moz-transition: top 0.25s ease-out;
-  -ms-transition: top 0.25s ease-out;
-  -o-transition: top 0.25s ease-out;
-  transition: top 0.25s ease-out;
+  /*-webkit-transition: top 0.25s ease-out;*/
+  /*-moz-transition: top 0.25s ease-out;*/
+  /*-ms-transition: top 0.25s ease-out;*/
+  /*-o-transition: top 0.25s ease-out;*/
+  /*transition: top 0.25s ease-out;*/
 }
 
 #wpforms-builder .wpforms-toolbar .wpforms-left {
@@ -146,11 +146,11 @@
   top: var(--wpforms-admin-bar-height);
   transform: translateZ(0);
   width: 95px;
-  -webkit-transition: top 0.25s ease-out;
-  -moz-transition: top 0.25s ease-out;
-  -ms-transition: top 0.25s ease-out;
-  -o-transition: top 0.25s ease-out;
-  transition: top 0.25s ease-out;
+  /*-webkit-transition: top 0.25s ease-out;*/
+  /*-moz-transition: top 0.25s ease-out;*/
+  /*-ms-transition: top 0.25s ease-out;*/
+  /*-o-transition: top 0.25s ease-out;*/
+  /*transition: top 0.25s ease-out;*/
 }
 
 .wpforms-panels-toggle button {
@@ -213,11 +213,11 @@
   position: fixed;
   right: 0;
   top: calc( 76px + var( --wpforms-admin-bar-height ));
-  -webkit-transition: top 0.25s ease-out;
-  -moz-transition: top 0.25s ease-out;
-  -ms-transition: top 0.25s ease-out;
-  -o-transition: top 0.25s ease-out;
-  transition: top 0.25s ease-out;
+  /*-webkit-transition: top 0.25s ease-out;*/
+  /*-moz-transition: top 0.25s ease-out;*/
+  /*-ms-transition: top 0.25s ease-out;*/
+  /*-o-transition: top 0.25s ease-out;*/
+  /*transition: top 0.25s ease-out;*/
 }
 
 .wpforms-panel-full-content .wpforms-panel-content,
@@ -240,11 +240,11 @@
   position: fixed;
   top: calc( 76px + var( --wpforms-admin-bar-height ));
   width: 400px;
-  -webkit-transition: top 0.25s ease-out;
-  -moz-transition: top 0.25s ease-out;
-  -ms-transition: top 0.25s ease-out;
-  -o-transition: top 0.25s ease-out;
-  transition: top 0.25s ease-out;
+  /*-webkit-transition: top 0.25s ease-out;*/
+  /*-moz-transition: top 0.25s ease-out;*/
+  /*-ms-transition: top 0.25s ease-out;*/
+  /*-o-transition: top 0.25s ease-out;*/
+  /*transition: top 0.25s ease-out;*/
 }
 
 .wpforms-panel-field {
@@ -350,11 +350,11 @@
   position: absolute;
   right: 0;
   top: calc( 50% - 7px);
-  -webkit-transition: transform 0.25s ease-in;
-  -moz-transition: transform 0.25s ease-in;
-  -ms-transition: transform 0.25s ease-in;
-  -o-transition: transform 0.25s ease-in;
-  transition: transform 0.25s ease-in;
+  /*-webkit-transition: transform 0.25s ease-in;*/
+  /*-moz-transition: transform 0.25s ease-in;*/
+  /*-ms-transition: transform 0.25s ease-in;*/
+  /*-o-transition: transform 0.25s ease-in;*/
+  /*transition: transform 0.25s ease-in;*/
 }
 
 .wpforms-panel-fields-group.unfoldable.opened .wpforms-panel-fields-group-title i {
@@ -513,11 +513,11 @@
   overflow: hidden;
   padding-bottom: 20px;
   position: relative;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -ms-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  /*-webkit-transition: all 0.25s ease-in-out;*/
+  /*-moz-transition: all 0.25s ease-in-out;*/
+  /*-ms-transition: all 0.25s ease-in-out;*/
+  /*-o-transition: all 0.25s ease-in-out;*/
+  /*transition: all 0.25s ease-in-out;*/
 }
 
 .wpforms-panel-content-section-description.out {

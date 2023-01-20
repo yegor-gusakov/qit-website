@@ -1,0 +1,37 @@
+.section {
+  &__heading {
+    padding: 141px 0 48px;
+    margin-bottom: 0;
+    &-row {
+      .return-back {
+        @include fonts(600, 16px, 24px, $color-primary);
+        display: flex;
+        align-items: center;
+        margin-bottom: 64px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          color: rgba($color-primary, .8);
+        }
+
+        svg {
+          margin-right: 9px;
+        }
+      }
+
+      &-title {
+        @include fonts(400, 38px, 44px, $color-primary);
+        margin-bottom: 16px;
+        @include media(xs){
+          @include fonts(400, 30px, 36px, $color-primary);
+
+        }
+      }
+
+      &-text {
+        @include fonts(400, 16px, 22px, $color-primary);
+        margin-bottom: 0;
+      }
+    }
+  }
+}

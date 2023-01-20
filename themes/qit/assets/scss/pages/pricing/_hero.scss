@@ -1,0 +1,77 @@
+.section {
+  &__hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &-row {
+      text-align: start;
+      .section__hero-row {
+        max-width: fit-content;
+        max-height: 28px;
+        margin-bottom: 10px;
+        @include media(xs) {
+          margin: 0 auto 10px;
+
+        }
+      }
+
+      &-title {
+        max-width: fit-content;
+
+        h1 {
+          margin-bottom: 16px;
+
+          @include fonts(400, 55px, 65px, $color-white);
+
+          @include media(xs) {
+            font-size: 44px;
+            line-height: 55px;
+            text-align: center;
+
+          }
+        }
+      }
+
+      &-text {
+        margin-bottom: 16px;
+        @include fonts(200, 18px, 24px, $color-white);
+        max-width: 599px;
+
+        @include media(sm) {
+          @include fonts(200, 16px, 22px, $color-white);
+          max-height: unset;
+        }
+        @include media(xs) {
+          text-align: center;
+
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+
+      &-button {
+        @include media(xs) {
+          text-align: center
+        }
+
+        .button {
+          margin-top: 16px;
+          &:focus {
+            background: $background-yellow;
+            color: $color-primary;
+          }
+
+          &:hover {
+            background: $background-yellow;
+            border: 1px solid $background-yellow;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+  }
+}

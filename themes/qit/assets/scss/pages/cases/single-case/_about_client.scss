@@ -1,0 +1,129 @@
+.section {
+  &__client {
+
+    &-row {
+      .column {
+
+        &-right {
+          .row {
+            height: 100%;
+
+            .col-12 {
+              &:first-of-type {
+                margin-top: 42px;
+                //margin-bottom: 61px;
+                @include media(md) {
+                  margin-top: 48px;
+                  //margin-bottom: 48px;
+                }
+              }
+
+              &:last-of-type {
+                margin-top: 48px;
+                margin-bottom: auto;
+              }
+            }
+
+          }
+        }
+      }
+
+      .row {
+        flex-direction: column;
+
+
+      }
+
+      &:last-of-type {
+        border-bottom: 1px solid rgba($color-primary, 0.15);
+        padding-bottom: 48px;
+
+      }
+
+      &-title {
+        margin-bottom: 16px;
+
+        h3 {
+          @include fonts(600, 30px, 36px, $color-primary);
+          margin-bottom: 0;
+          @include media(xs) {
+            @include fonts(600, 24px, 36px, $color-primary);
+          }
+        }
+      }
+
+      &-text {
+        margin-bottom: 24px;
+        p {
+          @include fonts(400, 16px, 22px, $color-primary);
+          margin-bottom: 16px;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+          a{
+            @include fonts(500, 16px, 22px, $color-primary);
+          }
+        }
+      }
+
+      &-tags {
+        column-gap: 10px;
+        row-gap: 16px;
+
+        @include media(xs) {
+          row-gap: 16px;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &-item {
+          padding: 8px 16px;
+          background: $color-primary;
+          border-radius: 61px;
+          height: fit-content;
+          @include media(xs) {
+
+            width: fit-content;
+          }
+
+          &:first-of-type {
+            border-radius: 61px;
+          }
+
+          &:last-of-type {
+            border-radius: 61px;
+            margin-right: 0;
+          }
+
+          p {
+            margin-bottom: 0;
+          }
+
+          &-name {
+            @include fonts(600, 14px, 20px, $color-white);
+            margin-right: 5px;
+          }
+
+          &-text {
+            @include fonts(400, 14px, 20px, $color-white);
+
+          }
+        }
+      }
+
+      &-technologies {
+        column-gap: 10px;
+        row-gap: 16px;
+        //max-width: 260px;
+
+        @include media(md) {
+          max-width: unset;
+        }
+        @include media(xs) {
+          max-width: 265px;
+
+        }
+      }
+    }
+  }
+}

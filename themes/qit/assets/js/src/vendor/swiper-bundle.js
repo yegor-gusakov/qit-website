@@ -5839,7 +5839,7 @@
     }
 
     if (!isSupported && document.implementation && document.implementation.hasFeature && // always returns true in newer browsers as per the standard.
-    // @see http://dom.spec.whatwg.org/#dom-domimplementation-hasfeature
+    // @see https://dom.spec.whatwg.org/#dom-domimplementation-hasfeature
     document.implementation.hasFeature('', '') !== true) {
       // This is the only way to test support for the `wheel` event in IE9+.
       isSupported = document.implementation.hasFeature('Events.wheel', '3.0');

@@ -8,7 +8,7 @@
  * Secret Key:        83a5bb0e2ad5164690bc7a42ae592cf5
  * Author:            WPForms
  * Author URI:        https://wpforms.com
- * Version:           1.7.4.1
+ * Version:           999
  * Text Domain:       wpforms-lite
  * Domain Path:       assets/languages
  *

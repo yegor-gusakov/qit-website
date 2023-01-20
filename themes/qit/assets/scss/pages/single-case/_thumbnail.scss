@@ -1,0 +1,13 @@
+.section {
+  &__thumbnail {
+    padding: 80px;
+    background: $background-gray;
+    margin-bottom: 48px;
+    @include media(md){
+      padding: 80px 30px;
+      @include media(xs) {
+        padding: 80px 0;
+      }
+      }
+  }
+}

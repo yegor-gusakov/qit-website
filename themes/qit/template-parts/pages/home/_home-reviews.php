@@ -10,12 +10,11 @@ defined( 'ABSPATH' ) || exit;
 $field = get_query_var( 'home_field' );
 $badge = $field['badge'];
 $title = $field['title'];
+$arrow_left  = get_template_directory_uri() . '/assets/userfiles/icons/arrow-left.svg';
+$arrow_right = get_template_directory_uri() . '/assets/userfiles/icons/arrow-right.svg';
 
-
-$arrow_left  = get_stylesheet_directory()
-               . '/assets/userfiles/icons/arrow-left.svg';
-$arrow_right = get_stylesheet_directory()
-               . '/assets/userfiles/icons/arrow-right.svg';
+$arrow2_left  = get_template_directory_uri() . '/assets/userfiles/icons/arrow2left.svg';
+$arrow2_right = get_template_directory_uri() . '/assets/userfiles/icons/arrow2right.svg';
 $taxonomy    = 'qit_review_cat';
 $post_type   = 'qit_reviews';
 $args        = [
@@ -43,97 +42,57 @@ $args2       = [
 $query       = new WP_Query( $args );
 $query2      = new WP_Query( $args2 );
 
-// Цикл
-if ( $query->have_posts() || $query2->have_posts() ) :
-	?>
-    <section class="section section__reviews">
+if ( $query->have_posts() || $query2->have_posts() ) :?>
+    <section class="section section__reviews" id="testimonials" >
         <div class="container">
 			<?php if ( $badge ): ?>
-                <div class="section__reviews-row row justify-content-center p-0">
-                    <h6 class="section__reviews-row-badge  m-0 w-auto text-white text-uppercase"><?= $badge ?></h6>
+                <div class="section__reviews-row  row justify-content-center p-0">
+                    <h6 class="section__reviews-row-badge  m-0 w-auto text-uppercase"><?= $badge ?></h6>
                 </div>
 			<?php endif; ?>
 			<?php if ( $title ): ?>
-                <div class="section__reviews-row row text-center p-0 mb-5">
+                <div class="section__reviews-row row text-center p-0 ">
                     <h2 class="section__reviews-row-title"><?= $title ?></h2>
                 </div>
 			<?php endif; ?>
 			<?php if ( $query->have_posts() ): ?>
-                <!-- Trigger the modal with a button -->
                 <div class="section__reviews-row row pt-0">
-
                     <div class="section__reviews-row-with swiper swiper-with">
                         <div class="swiper-wrapper">
-							<?php
-
-							while ( $query->have_posts() ) :
-								$query->the_post();
-
-								?>
-
-								<?php
-								get_template_part( 'template-parts/parts/reviews/reviews',
-									'with' ); ?>
-							<?php
-							endwhile;
-							// Возвращаем оригинальные данные поста. Сбрасываем $post.
-							wp_reset_postdata();
-							?>
+							<?php while ( $query->have_posts() ) :
+								$query->the_post(); ?>
+                            <?php get_template_part( 'template-parts/parts/reviews/reviews', 'with' ); ?>
+							<?php endwhile; wp_reset_postdata(); ?>
                         </div>
-                        <div class="col-lg-5 d-flex justify-content-center gap-5">
+                        <div class="col-lg-3 d-flex justify-content-between swiper-arrows offset-lg-2 d-none">
                             <div class="swiper-button-prev"><?= file_get_contents( $arrow_left ) ?></div>
-
                             <div class="swiper-button-next"><?= file_get_contents( $arrow_right ) ?></div>
                         </div>
                     </div>
-					<?php
-
-					while ( $query->have_posts() ) :
-						$query->the_post();
-
-						get_template_part( 'template-parts/parts/modals/modal',
-							'review' );
-						?>
-
-
+					<?php while ( $query->have_posts() ) :
+                        $query->the_post();
+						get_template_part( 'template-parts/parts/modals/modal', 'review' ); ?>
 					<?php endwhile; ?>
                 </div>
-
 			<?php endif; ?>
             <div class="section__reviews-row row justify-content-center">
-                <div class="col-12 col-md-5 text-center">
-                    <button class="btn button" data-bs-toggle="modal"
-                            data-bs-target="#globalModalQuote"><?= __( 'GET A QUOTE FOR YOUR PROJECT',
-							'qit' ) ?></button>
-
+                <div class="col-12 col-md-6 text-center">
+                    <button class="btn button globalModalQuote" ><?= __( 'GET A QUOTE FOR YOUR PROJECT', 'qit' ) ?></button>
                 </div>
             </div>
 			<?php if ( $query2->have_posts() ): ?>
                 <div class="section__reviews-row row">
-
                     <div class="section__reviews-row-without swiper swiper-without">
                         <div class="swiper-wrapper">
 							<?php
-
-
-							while ( $query2->have_posts() ) :
-								$query2->the_post();
-								?>
-
-								<?php
-								get_template_part( 'template-parts/parts/reviews/reviews',
-									'without' ); ?>
-							<?php
-							endwhile;
-							// Возвращаем оригинальные данные поста. Сбрасываем $post.
-							wp_reset_postdata();
-							?>
+							while ( $query2->have_posts() ) :$query2->the_post(); ?>
+                            <?php get_template_part( 'template-parts/parts/reviews/reviews', 'without' ); ?>
+							<?php endwhile; wp_reset_postdata(); ?>
                         </div>
-                        <div class="swiper-button-next"><?= file_get_contents( $arrow_right ) ?></div>
-                        <div class="swiper-button-prev"><?= file_get_contents( $arrow_left ) ?></div>
+                        <div class="swiper-button-next"><?= file_get_contents( $arrow2_right ) ?></div>
+                        <div class="swiper-button-prev"><?= file_get_contents( $arrow2_left ) ?></div>
                     </div>
                 </div>
-
 			<?php endif; ?>
         </div>
     </section>

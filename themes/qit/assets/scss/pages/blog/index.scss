@@ -1,0 +1,7 @@
+body.blog,body.single,body.category {
+  @import "hero";
+  @import "posts";
+  @import "post-grid";
+  @import "single-post";
+  @import "popup";
+}

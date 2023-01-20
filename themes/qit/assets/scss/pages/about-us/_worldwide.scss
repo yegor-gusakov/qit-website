@@ -2,43 +2,80 @@
 .section {
   &__worldwide {
     &-row {
-      &-badge {
-        background: $background-primary;
-        border-radius: 6px;
-        font-weight: 600;
-        padding: 6px 10px;
-        font-size: 10px;
-        line-height: 16px;
-        margin-bottom: 10px;
-
+      &:first-of-type {
+        max-width: 76px;
       }
 
-      &-title {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 38px;
-        line-height: 44px;
-        color: $color-black;
-        @include media(xs) {
-          font-size: 30px;
+      &:nth-of-type(2) {
+        width: 100%;
+        max-width: fit-content;
+        margin: 0 auto 48px;
+      }
 
-        }
+      &:nth-of-type(3) {
+        margin-bottom: 48px;
+      }
+
+      .divider {
+        border-bottom: 1px solid rgba($color-primary, .1);
+      }
+
+      &:nth-of-type(4) {
+        margin-bottom: 96px;
+      }
+
+      &:last-of-type {
+        max-width: fit-content;
+        margin: 0 auto;
+
       }
 
       p {
-        font-weight: 300;
-        font-size: 20px;
-        line-height: 26px;
+        @include fonts(300, 20px, 26px, $color-primary);
+        text-align: center;
+      }
 
-        color: $color-black;
+      &-text {
+        @include fonts(300, 20px, 26px, $color-primary);
+        max-width: fit-content;
+        margin: 0 auto 48px;
+        text-align: center;
       }
 
       .list-group {
 
+        display: grid;
+        grid-template-columns: 143px 186px 210px  130px 168px 134px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 25px;
+        grid-row-gap: 32px;
+
+        @include media(lg) {
+          grid-template-columns: 25% 25% 25% 25%;
+          grid-column-gap: 0;
+
+        }
+
+        @include media(md) {
+          grid-template-columns: 33.3% 33.3% 33.3%;
+          grid-template-rows: repeat(4, 1fr);
+          grid-column-gap: 16px;
+          //grid-row-gap: 0px;
+        }
+
         @include media(sm) {
-          overflow-x: scroll;
-          -ms-overflow-style: none; /* Internet Explorer 10+ */
-          scrollbar-width: none; /* Firefox */
+          grid-template-columns: 33.3% 33.3% 33.3%;
+
+          grid-column-gap: 16px;
+          //grid-row-gap: 0px;
+          //width: fit-content;
+          //margin: 0 auto;
+        }
+        @include media(xs) {
+          grid-template-columns: 100%;
+          width: fit-content;
+          margin: 0 auto;
+          //grid-row-gap: 32px;
         }
 
         &::-webkit-scrollbar {
@@ -46,14 +83,192 @@
         }
 
         &-item {
-          padding: 0 28px;
-          border-right: 1px solid rgba($color-primary, .35);
-          @include media(sm) {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0 16px;
+          padding: 0;
+          //margin-right: 29px;
+          width: fit-content;
+          //padding-right: 27px;
 
+          @include media(sm) {
+            padding: 0;
+            margin-bottom: 0;
+          }
+
+          &:nth-of-type(1), &:nth-of-type(7) {
+            //width: 143px;
+            //padding-right: 0;
+
+          }
+
+          &:nth-of-type(2), &:nth-of-type(8) {
+            //width: 186px;
+            //padding-right: 0;
+          }
+
+          &:nth-of-type(3), &:nth-of-type(9) {
+            //width: 210px;
+            //padding-right: 0;
+            //padding-left: 27px;
+          }
+
+          &:nth-of-type(4), &:nth-of-type(10) {
+            //padding-right: 0;
+            //padding-left: 27px;
+            //width: 130px;
+          }
+
+          &:nth-of-type(5), &:nth-of-type(11) {
+            //width: 168px;
+
+          }
+
+          &:nth-of-type(6), &:nth-of-type(12) {
+            //width: 134px;
+
+          }
+
+          &:nth-of-type(1) {
+            grid-area: 1 / 1 / 2 / 2;
+            @include media(xs) {
+              grid-area: 1 / 1 / 2 / 2;
+
+            }
+          }
+
+          &:nth-of-type(2) {
+            grid-area: 1 / 2 / 2 / 3;
+            @include media(xs) {
+              grid-area: 2 / 1 / 3 / 2;
+            }
+          }
+
+          &:nth-of-type(3) {
+            grid-area: 1 / 3 / 2 / 4;
+            @include media(xs) {
+              grid-area: 3 / 1 / 4 / 2;
+            }
+          }
+
+          &:nth-of-type(4) {
+            grid-area: 1 / 4 / 2 / 5;
+            @include media(lg) {
+              grid-area: 1/4/3/5;
+            }
+            @include media(md) {
+              grid-area: 3/1/3/5;
+            }
+            @include media(xs) {
+              grid-area: 4 / 1 / 5 / 2;
+            }
+          }
+
+          &:nth-of-type(5) {
+            grid-area: 1 / 5 / 2 / 6;
+            @include media(lg) {
+              grid-area: 3/1/4/6;
+            }
+            @include media(md) {
+              grid-area: 3/2/4/6;
+            }
+            @include media(xs) {
+              grid-area: 5 / 1 / 6 / 2;
+            }
+          }
+
+          &:nth-of-type(6) {
+            grid-area: 1 / 6 / 2 / 7;
+            @include media(lg) {
+              grid-area: 3/2/4/6;
+            }
+            @include media(md) {
+              grid-area: 3/3/4/6;
+            }
+            @include media(xs) {
+              grid-area: 6/ 1 / 7/ 2;
+            }
+          }
+
+          &:nth-of-type(7) {
+            grid-area: 2 / 1 / 3 / 2;
+            // width: 143px;
+            @include media(xs) {
+              grid-area: 7/ 1 / 8 / 2;
+            }
+          }
+
+          &:nth-of-type(8) {
+            grid-area: 2 / 2 / 3 / 3;
+            @include media(xs) {
+              grid-area: 8 / 1 / 9 / 2;
+            }
+
+          }
+
+          &:nth-of-type(9) {
+            grid-area: 2 / 3 / 3 / 4;
+            @include media(xs) {
+              grid-area: 9 / 1 / 10 / 2;
+            }
+          }
+
+          &:nth-of-type(10) {
+            grid-area: 2 / 4 / 3 / 5;
+            //width: 130px;
+            @include media(lg) {
+              grid-area: 2/4/4/5;
+            }
+            @include media(md) {
+              grid-area: 4/1/4/5;
+            }
+            @include media(xs) {
+              grid-area: 10 / 1 / 11 / 2;
+            }
+          }
+
+          &:nth-of-type(11) {
+            grid-area: 2 / 5 / 3 / 6;
+            //width: 168px;
+            @include media(lg) {
+              grid-area: 3/3/4/6;
+            }
+            @include media(md) {
+              grid-area: 4/2/4/6;
+            }
+            @include media(xs) {
+              grid-area: 11 / 1 / 12 / 2;
+            }
+          }
+
+          &:nth-of-type(12) {
+            grid-area: 2 / 6 / 3 / 7;
+            //width: 134px;
+            @include media(lg) {
+              //grid-area: 4 / 3 / 4 / 4;
+            }
+            @include media(xs) {
+              grid-area: 12 / 1 / 13 / 2;
+            }
+          }
+
+
+          &:nth-child(-n+6) {
+            //margin-bottom: 30px;
+            @include media(xs) {
+              //margin-bottom: 0;
+            }
+          }
+
+
+          p {
+            padding-bottom: 0;
+            margin: 0;
+            @include fonts(400, 20px, 26px, $color-primary);
+            text-align: left;
+            display: flex;
+
+            svg {
+              margin-right: 16px;
+              border-radius: 3px;
+            }
           }
         }
 

@@ -1,0 +1,80 @@
+.section {
+  &__form-contact {
+    padding-top: 1%;
+
+
+    &-row {
+      box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.05);
+      border-radius: 15px;
+      overflow: hidden;
+      height: 100%;
+      max-height: inherit;
+      margin: 0;
+      justify-content: space-between;
+
+      &-left {
+
+        border-radius: 15px;
+        padding: 48px 0 48px 48px;
+        background: $color-white;
+        height: 100%;
+        @include media(md) {
+          padding: 48px;
+        }
+        @include media(xs) {
+          padding: 24px;
+        }
+
+        h4 {
+
+          @include fonts(400, 38px, 45px, $color-primary);
+          margin-bottom: 32px;
+          @include media(md) {
+            text-align: center;
+          }
+          @include media(xs) {
+            text-align: left;
+          }
+
+          strong {
+            font-weight: 600;
+          }
+        }
+      }
+
+      &-right {
+        //height: 100%;
+        padding-left: 48px;
+        padding-right: 0;
+        //max-width: 507px;
+        //margin-left: auto;
+
+        h5 {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 26px;
+          margin-bottom: 15%;
+        }
+
+        .card {
+          &-title {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 36px;
+          }
+
+          &-text {
+            color: rgba($color-primary, .8);
+            font-size: 14px;
+          }
+        }
+
+        img {
+          //max-height: 703px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+

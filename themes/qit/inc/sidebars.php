@@ -1,7 +1,6 @@
 <?php
 add_action( 'widgets_init', 'register_my_widgets' );
 function register_my_widgets(){
-
 	register_sidebar( array(
 		'name'          => __( 'Footer Col 1', 'qit' ),
 		'id'            => 'footer-col-1',
@@ -34,6 +33,15 @@ function register_my_widgets(){
 		'name'          => __( 'Footer Col 4', 'qit' ),
 		'id'            => 'footer-col-4',
 		'description'   => __( 'Footer column 4', 'qit' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Col 5', 'qit' ),
+		'id'            => 'footer-col-5',
+		'description'   => __( 'Footer column 5', 'qit' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',

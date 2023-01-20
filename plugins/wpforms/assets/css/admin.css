@@ -792,10 +792,10 @@ body div.jconfirm .jconfirm-box-container .jconfirm-box .jconfirm-title-c {
 body div.jconfirm .jconfirm-box-container .jconfirm-box .jconfirm-title-c .jconfirm-icon-c {
   font-size: 47px;
   margin: 0;
-  -ms-transform: none !important;
-  transform: none !important;
-  -webkit-transition: none !important;
-  transition: none !important;
+  /*-ms-transform: none !important;*/
+  /*transform: none !important;*/
+  /*-webkit-transition: none !important;*/
+  /*transition: none !important;*/
 }
 
 body div.jconfirm .jconfirm-box-container .jconfirm-box .jconfirm-title-c .jconfirm-icon-c + .jconfirm-title {
@@ -2362,7 +2362,7 @@ body .jconfirm.upgrade-modal .jconfirm-box-container div.jconfirm-box .jconfirm-
 #wpforms-flyout {
   position: fixed;
   z-index: 99999;
-  transition: all 0.2s ease-in-out;
+  /*transition: all 0.2s ease-in-out;*/
   right: 40px;
   bottom: 40px;
   opacity: 1;

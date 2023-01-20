@@ -1,35 +1,278 @@
 .section {
+  &__information {
+    &-row {
+      &:first-of-type {
+        max-width: fit-content;
+      }
+
+      &:nth-of-type(2) {
+        width: 100%;
+        max-width: fit-content;
+        margin: 0 auto 16px;
+
+      }
+
+      &:nth-of-type(3) {
+        max-width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+
+      }
+
+      &-text {
+        @include fonts(300, 20px, 26px, $color-primary);
+        margin: 0;
+      }
+
+    }
+
+  }
+
   &__banner {
     &-yegor {
       background-color: $background-primary;
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: right;
+      background-position: 95%;
+      max-height: 465px;
+      height: 100%;
+      @include media(md) {
+        max-height: unset;
+      }
 
-      h3 {
-        color: $color-white;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 38px;
-        line-height: 46px;
+      &.second {
+        max-height: unset;
+        background-position: unset;
+        background-size: 100% 100%;
+        @include media(md) {
+          background-position: bottom left;
+          background-size: 240% auto;
+        }
         @include media(xs) {
+          background-position: bottom left;
+          background-size: 410% auto;
+        }
 
-          font-weight: 400;
-          font-size: 30px;
-          line-height: 36px;
-          text-align: center;
+        .section__banner-yegor-row {
+          @include media(md) {
+
+            flex-direction: column-reverse;
+          }
+
+          &-text {
+
+            margin-bottom: 32px;
+
+            p {
+
+              @include fonts(300, 16px, 26px, $color-white);
+
+              &:last-child {
+                margin: 0;
+              }
+            }
+          }
+        }
+
+        .card {
+          &-body {
+            a {
+              margin-bottom: 4px;
+              width: fit-content;
+              display: block;
+
+              svg {
+                margin-left: 10px;
+
+                path {
+                  transition: .3s all ease-in-out;
+                  fill: rgba(255, 255, 255, .7);
+                }
+              }
+
+              &:hover {
+                svg {
+                  path {
+                    transition: .3s all ease-in-out;
+
+                    fill: $color-white;
+                  }
+                }
+              }
+            }
+          }
+
+          &-title {
+            @include fonts(600, 16px, 22px, $color-white);
+            margin-bottom: 0;
+            display: flex;
+
+            svg {
+              margin-left: 10px;
+              max-height: 20px;
+              max-width: 20px;
+              width: 100%;
+              height: auto;
+
+              path {
+                transition: .3s all ease-in-out;
+                fill: rgba(255, 255, 255, .7);
+              }
+            }
+          }
+
+        }
+
+        .right {
+          margin: 80px 0;
+
+          @include media(md) {
+            margin: 80px 0;
+            text-align: center;
+          }
+
+          @include media(xs) {
+            margin: 0;
+          }
+
+          .section__banner-yegor-row {
+
+            &:first-child {
+              max-width: fit-content;
+              margin: 0 auto 20px;
+
+            }
+
+            &-title {
+              @include fonts(400, 38px, 46px, $color-white);
+
+              margin: 0;
+              @include media(md) {
+                margin: 0 auto;
+                max-width: 401px;
+              }
+              @include media(xs) {
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 36px;
+                text-align: center;
+              }
+            }
+          }
+        }
+
+        .left {
+          margin: 20px 0 0 0;
+          @include media(sm) {
+            margin-top: 64px;
+          }
+
+
+          img {
+            width: 100%;
+            margin: 0 auto;
+            @include media(md) {
+              max-width: 40%;
+              width: 100%;
+            }
+            @include media(sm) {
+              max-height: 433px;
+              width: 100%;
+              max-width: 277px;
+            }
+          }
+        }
+
+      }
+
+      .container {
+        height: 100%;
+        @include media(xs) {
+          padding-top: 80px;
         }
       }
 
+      &-row {
+        justify-content: space-between;
+        @include media(xs) {
+
+          flex-direction: column;
+        }
+      }
+
+      .left {
+        @include media(md) {
+          text-align: center;
+          margin: 80px 0;
+        }
+        @include media(sm) {
+          //margin: 0;
+        }
+        @include media(xs) {
+          margin: 0;
+        }
+
+        .section__banner-yegor-row {
+          &:first-child {
+            max-width: fit-content;
+            margin: 0 auto 37px;
+          }
+
+          &-title {
+            @include fonts(400, 38px, 46px, $color-white);
+
+            margin: 0;
+            @include media(md) {
+              max-width: 401px;
+            }
+            @include media(xs) {
+              font-weight: 400;
+              font-size: 30px;
+              line-height: 36px;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .right {
+        //margin-top: 20px;
+        @include media(sm) {
+          margin-top: 64px;
+        }
+
+
+        img {
+          max-height: 445px;
+          width: 100%;
+          max-width: 289px;
+          margin: 0 auto;
+          @include media(sm) {
+            max-height: 433px;
+            width: 100%;
+            max-width: 277px;
+          }
+        }
+      }
+
+
       &-comment-img {
-        max-width: 52px;
-        max-height: 52px;
+        padding: 6px;
+        padding-bottom: 0;
+        max-width: 56px;
+        max-height: 56px;
         width: 100%;
         height: 100%;
+        margin-right: 16px;
         overflow: hidden;
+
+        img {
+          margin: 0 auto;
+        }
       }
 
       .card {
+        margin-bottom: 32px;
         @include media(xs) {
 
           text-align: center;
@@ -37,7 +280,7 @@
 
         .row {
 
-          @include media(sm) {
+          @include media(md) {
             justify-content: center;
           }
           @include media(xs) {
@@ -47,41 +290,65 @@
           }
         }
 
+        &-body {
+          a {
+            margin-bottom: 4px;
+            width: fit-content;
+            display: block;
+
+            svg {
+              margin-left: 10px;
+
+              path {
+                transition: .3s all ease-in-out;
+                fill: rgba(255, 255, 255, .7);
+              }
+            }
+
+            &:hover {
+              svg {
+                path {
+                  transition: .3s all ease-in-out;
+
+                  fill: $color-white;
+                }
+              }
+            }
+          }
+        }
+
         &-title {
-          font-style: normal;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 22px;
+          @include fonts(600, 16px, 22px, $color-white);
+          margin-bottom: 4px;
+          display: flex;
+
+          svg {
+            margin-left: 10px;
+            max-height: 20px;
+            max-width: 20px;
+            width: 100%;
+            height: auto;
+
+            path {
+              transition: .3s all ease-in-out;
+              fill: rgba(255, 255, 255, .7);
+            }
+          }
         }
 
         &-body {
           padding: 0;
+          width: fit-content;
         }
 
         &-text {
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 20px;
-
-          color: rgba($color-white, .8);
+          @include fonts(300, 14px, 20px, rgba($color-white, .8));
         }
 
       }
 
       .btn {
         background-color: $background-yellow;
-
-        &:hover {
-          background-color: $background-yellow-2;
-          color: $color-primary;
-        }
-
-        &:focus {
-          background-color: $background-yellow-2;
-          color: $color-primary;
-        }
-
         @include media(xs) {
           display: block;
           margin: 0 auto;
@@ -91,82 +358,100 @@
 
     &-estimate {
       background-color: $background-gray;
+      overflow: hidden;
+
+      .container {
+        padding-top: 64px;
+        padding-bottom: 64px;
+      }
 
       &-row {
-        padding: 65px 0;
-
-        &-text {
-          color: rgba($color-primary, .8);
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 22px;
+        &:first-of-type {
+          max-width: 88px;
+          max-height: 28px;
+          display: block;
+          width: 100%;
+          margin: 0 auto 10px;
         }
 
-        &-badge {
-          background: $background-primary;
-          border-radius: 6px;
-          font-weight: 600;
-          padding: 6px 10px;
-          font-size: 10px;
-          line-height: 16px;
-          margin-bottom: 10px;
+        &:nth-of-type(2) {
+          max-width: 671px;
+          margin: 0 auto 16px;
+        }
 
+        &:nth-of-type(3) {
+          margin-bottom: 32px;
+        }
+
+        &-text {
+          width: 740px;
+          margin: 0 auto;
+          @include fonts(400, 16px, 22px, rgba($color-primary, .8));
         }
 
         &-title {
           font-weight: 400;
-          /* Desktop/H2 */
           font-size: 38px;
           line-height: 44px;
-          color: $color-black;
+          color: $color-primary;
+          margin-bottom: 0;
           @include media(sm) {
             font-size: 30px;
-          }
-        }
-
-        .btn {
-          border: none;
-
-          &:focus {
-            background: $background-yellow-2;
-            color: $color-primary;
-          }
-
-          &:hover {
-            border: none;
           }
         }
       }
     }
 
     &-contact {
-      padding-top: 1%;
+      padding-top: 96px;
+
+
       &-row {
         box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.05);
         border-radius: 15px;
         overflow: hidden;
+        height: 100%;
+        max-height: inherit;
+        margin: 0;
+        justify-content: space-between;
 
         &-left {
-          background: $color-white;
+          align-self: center;
           border-radius: 15px;
+          padding: 48px 16px 48px 48px;
+          background: $color-white;
+          height: 100%;
+          @include media(md) {
+            padding: 48px;
+          }
+          @include media(xs) {
+            padding: 24px;
+          }
 
           h4 {
-            color: $color-primary;
-            font-weight: 400;
-            font-size: 38px;
-            line-height: 45px;
+
+            @include fonts(400 !important, 38px !important, 45px !important, $color-primary !important);
+            margin-bottom: 32px !important;
             @include media(md) {
-              text-align: center;
+              text-align: center !important;
             }
             @include media(xs) {
-              text-align: left;
+              text-align: left !important;
+            }
+
+            strong {
+              font-weight: 600;
             }
           }
         }
 
         &-right {
-          background-color: $background-gray;
+          //height: 100%;
+          padding-left: 32px;
+          padding-right: 0;
+          //max-width: 507px;
+          max-height: 703px;
+          //margin-left: auto;
 
           h5 {
             font-weight: 400;
@@ -187,20 +472,278 @@
               font-size: 14px;
             }
           }
+
+          img {
+            //max-height: 703px;
+            margin-left: auto;
+            object-fit: cover;
+          }
         }
       }
     }
 
     &-reviews {
       background-color: $background-gray;
-      svg {
-        width: 100%;
-        display: block;
-        opacity: .3;
 
-        path {
-          fill: $color-primary !important;
-          stroke: $color-primary !important;
+      .container {
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+
+      &-row {
+        @include media(md) {
+          width: 100%;
+          margin: 0;
+        }
+
+        .review {
+
+
+          @include media(xs) {
+            margin-bottom: 48px;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          a {
+            max-width: fit-content;
+            width: fit-content;
+            display: block;
+            margin: 0 auto;
+          }
+
+
+          svg {
+            max-width: fit-content;
+            //width: 100%;
+            display: block;
+            opacity: .3;
+            filter: brightness(0) saturate(100%) invert(13%) sepia(65%) saturate(8%) hue-rotate(17deg) brightness(105%) contrast(84%);
+            transition: .3s;
+
+            path {
+
+              &:last-of-type {
+                //fill: none;
+                //stroke: #363636;
+              }
+            }
+
+            &:hover {
+              opacity: 1;
+              transition: .3s;
+              filter: unset;
+            }
+          }
+        }
+      }
+    }
+
+    &-want-to-be-part {
+
+      @include media(xs) {
+        height: 70vh;
+      }
+
+      .container {
+
+        @include media(xs) {
+          height: 100%;
+        }
+      }
+
+      .row {
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
+        border: 1px solid rgba($color-primary, 0.15);
+        border-radius: 15px;
+        padding: 80px;
+        width: 100%;
+        margin: 0 auto;
+        @include media(md) {
+          background-size: 50% 100%;
+          background-position: right;
+        }
+        @include media(xs) {
+          padding: 32px 32px 0;
+          height: 100%;
+          background-position: bottom left;
+          background-size: 110% auto;
+        }
+      }
+
+      &-row {
+        &:nth-of-type(1) {
+          //margin-bottom: 32px;
+          background-size: 110%;
+          @include media(md) {
+            background-size: cover;
+          }
+          @include media(sm) {
+            background-size: auto 100%;
+            background-position: 100% 0;
+          }
+          @include media(xs) {
+
+            background-size: 300%;
+            background-position: right bottom;
+          }
+        }
+
+        &-title {
+          @include fonts(400, 38px, 44px, $color-primary);
+          margin: 0;
+          margin-bottom: 32px;
+
+          @include media(md) {
+          }
+          @include media(xs) {
+            text-align: center;
+          }
+        }
+
+        .btn {
+          @include media(xs) {
+            display: block;
+            margin: 0 auto;
+
+          }
+        }
+      }
+    }
+  }
+
+  &__faq {
+    background: $background-gray;
+    margin-bottom: 0;
+    padding: 80px;
+    @include media(md) {
+      padding: 80px 0;
+    }
+
+    &-row {
+
+      &:nth-of-type(2) {
+        margin: 0 auto 48px !important;
+        max-height: unset !important;
+      }
+
+      &:nth-of-type(3) {
+        max-width: unset !important;
+        max-height: unset !important;
+      }
+
+      .column {
+        @include media(md) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &__curious {
+
+    @include media(xs) {
+      //height: 100vh;
+    }
+
+    .container {
+
+      @include media(xs) {
+        height: 100%;
+      }
+    }
+
+
+    &-row {
+      border: 1px solid rgba($color-primary, 0.15);
+      border-radius: 15px;
+      padding: 30px 0 30px 80px;
+      width: 100%;
+      margin: 0 auto;
+      //padding-right: 0;
+      row-gap: 32px;
+      @include media(md) {
+        background-size: 50% 100%;
+        background-position: right;
+        padding: 80px 0 80px 30px;
+        justify-content: center;
+        text-align: center;
+        row-gap: 36px;
+      }
+      @include media(xs) {
+        padding: 80px 0 80px 30px;
+        height: 100%;
+      }
+
+      &:nth-of-type(1) {
+        background-size: 110%;
+        @include media(md) {
+          background-size: cover;
+        }
+        @include media(sm) {
+          background-size: auto 100%;
+          background-position: 100% 0;
+        }
+        @include media(xs) {
+
+          background-size: 300%;
+          background-position: right bottom;
+        }
+      }
+
+      &-title {
+        h3 {
+
+          @include fonts(400, 38px, 44px, $color-primary);
+          margin: 0;
+
+          @include media(xs) {
+            @include fonts(400, 30px, 44px, $color-primary);
+          }
+        }
+
+        margin-bottom: 16px;
+
+        @include media(xs) {
+          text-align: center;
+        }
+      }
+
+      &-text {
+        margin-bottom: 32px;
+
+        p {
+
+          @include fonts(400, 16px, 22px, $color-primary);
+          margin-bottom: 0;
+        }
+
+      }
+
+      .btn {
+        @include media(xs) {
+          display: block;
+          margin: 0 auto;
+
+        }
+      }
+
+      .col-text {
+        margin: 50px 0;
+
+        @include media(md) {
+          margin: 0;
+          padding-right: 0px !important;
+        }
+      }
+
+      .col-image {
+        img {
+          margin-left: auto !important;
         }
       }
     }

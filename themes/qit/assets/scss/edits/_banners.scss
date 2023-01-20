@@ -1,0 +1,26 @@
+.page-template-staff-augmentation, .page-template-hire-dev, .page-template-dedicated, .page-template-web-development {
+  .section {
+    &__information {
+      background: #F5F5F5;
+      padding: 70px;
+      @include media(sm) {
+        padding: 70px 0;
+      }
+
+      &-row {
+        &:nth-of-type(3n) {
+          margin-bottom: 32px;
+        }
+
+        &-text {
+          @include fonts(400, 16px, 22px, $color-primary);
+          @include media(sm) {
+            padding: 0;
+          }
+
+        }
+      }
+    }
+  }
+
+}

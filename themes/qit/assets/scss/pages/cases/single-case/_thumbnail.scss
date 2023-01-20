@@ -1,0 +1,29 @@
+.section {
+  &__thumbnail {
+    padding: 0 !important;
+    background: $background-gray;
+    margin-bottom: 48px;
+
+    @include media(md) {
+      padding: 80px 30px;
+      @include media(xs) {
+        padding: 80px 0;
+      }
+    }
+
+    .container {
+      max-width: unset;
+      padding: 0;
+
+    }
+
+    &-row {
+      margin: 0;
+    }
+
+    .col-12 {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+body.page-template-expertise {
+  @import "hero";
+  @import "technologies";
+  @import "industries";
+  @import "expertise";
+
+  .section__information{
+    margin-bottom: 48px;
+  }
+}

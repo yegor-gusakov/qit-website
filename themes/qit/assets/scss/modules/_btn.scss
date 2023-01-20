@@ -6,47 +6,67 @@
  */
 
 .btn, .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @include fonts(400, 14px,19px, $color-primary);
+  display: inline-block;
   margin: 0;
-  padding: 15px 30px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 14px;
+  padding: 14px 30px;
   border-radius: 100px;
   text-decoration: none;
   border: 1px solid $background-yellow;
   text-transform: uppercase;
-  height: 50px;
-  letter-spacing: -0.02em;
-  transition: all 0.12s linear;
+  height: 48px;
+  max-height: 48px;
+  transition: all .3s ease-in-out;
   text-align: center;
   background-color: $background-yellow;
-  color: $color-primary;
 
-  &:hover {
+  &:hover, &:focus {
     color: rgba($color-primary, .8);
-
     background-color: $background-yellow-2;
-
+    border-color: $background-yellow-2;
   }
 
+  &:focus:not(:hover) {
+    color: $color-primary;
+    background-color: $background-yellow;
+  }
   &.btn-outline {
     border: 1px solid $background-yellow;
     background-color: transparent;
     color: $color-yellow;
   }
+  &.black {
+    color: $color-primary;
 
+    &:hover {
+      background: transparent;
+      color: $color-yellow;
+      border-color: $background-yellow-2;
+    }
 
+    &:focus {
+      background: transparent;
+      color: $color-yellow;
+      border-color: $background-yellow-2
+    }
+
+    &:focus:not(:hover) {
+      color: $color-primary !important;
+      border-color: $background-yellow;
+      background-color: $background-yellow;
+
+    }
+
+  }
   span {
     position: relative;
     top: 2px;
   }
 
-
   svg {
     margin: 0 0 0 8px;
   }
+
+
 
 }

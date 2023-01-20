@@ -1,82 +1,283 @@
 .form {
+  .wpforms-field.wpforms-field-phone.form-contact__user-phone .wpforms-field-large.wpforms-smart-phone-field.wpforms-input-temp-name {
+    padding: 16px !important;
+    padding-right: 50px !important;
+  }
+
   &-contact {
-    &__user-name, &__user-email, &__user-phone, &__user-hear, .wpforms-field.wpforms-field-phone.form-contact__user-phone .iti.iti--allow-dropdown {
-      input, select, .wpforms-field-large.wpforms-field-required.wpforms-smart-phone-field.wpforms-input-temp-name {
-        border: 0 !important;
-        border-bottom: 1px solid rgba($color-primary, 0.15) !important;
-        padding-left: 10px !important;
-        color: rgba($color-primary, 0.6) !important;
-        transition: .3s;
-        border-radius: 0 !important;
+    &__user, .wpforms-field {
+      &-hear {
+        label.wpforms-error {
+          display: none !important;
+        }
+      }
+
+      &-name, &-email, &-phone, &-hear, &-message, &-text, &.form-contact__privacy-policy {
+        position: relative !important;
+        //border: 0 !important;
+        //border-bottom: 1px solid rgba($color-primary, 0.15) !important;
+        margin-bottom: 20px !important;
+        padding: 0 !important;
 
         &::placeholder {
-          color: rgba($color-primary, 0.6) !important;
+
+          color: rgba($color-primary, .6) !important;
+        }
+
+        label.wpforms-error {
+          position: absolute !important;
+          right: 20px !important;
+          top: 0 !important;
+          bottom: 0 !important;
+          margin-top: auto;
+          margin-bottom: auto;
+          display: block !important;
+          height: fit-content;
+        }
+
+        .iti__flag-container {
+          display: none !important;
+        }
+
+        input {
+          padding-right: 50px !important;
+
+          &:not(:placeholder-shown) {
+            border-bottom: 1px solid rgba($color-primary, 1) !important;
+          }
+        }
+
+        input, select {
+          border: 0 !important;
+          border-bottom: 1px solid rgba($color-primary, 0.15) !important;
+
+          &:hover {
+            border-bottom: 1px solid rgba($color-primary, 0.25) !important;
+          }
+
+          &:focus {
+            border-bottom: 1px solid rgba($color-primary, 1) !important;
+          }
+
+          padding: 16px !important;
+          padding-right: 50px !important;
+
+          height: 54px !important;
+          transition: .3s !important;
+          border-radius: 0 !important;
+          width: 100% !important;
+
+          @include fonts(400, 16px, 22px, rgba($color-primary, 1) !important);
+
+          &::placeholder {
+
+
+            color: rgba($color-primary, .6) !important;
+
+          }
 
         }
 
-        &:hover {
-          border-bottom: 1px solid rgba($color-primary, 0.25) !important;;
+        select {
+          cursor: pointer;
+          -moz-appearance: none; /* Firefox */
+          -webkit-appearance: none; /* Safari and Chrome */
+          appearance: none;
+          background-image: url(../../assets/userfiles/icons/Arrow.svg) !important;
+          background-repeat: no-repeat !important;
+          background-position: 95% 50% !important;
+          background-size: 20px 14px !important;
+          border: 0 !important;
+          border-bottom: 1px solid rgba($color-primary, 0.15) !important;
+          @include fonts(400, 16px, 22px, rgba($color-primary, .6) !important);
+
+          &#wpforms-565-field_5 {
+            background-position: 96.5% 50% !important;
+          }
+
+          &:hover {
+            border-bottom: 1px solid rgba($color-primary, 0.25) !important;
+          }
+
+          &:focus {
+            border-bottom: 1px solid rgba($color-primary, 0.25) !important;
+          }
+
+          &.selected {
+            border-bottom: 1px solid rgba($color-primary, 1) !important;
+            @include fonts(400, 16px, 22px, rgba($color-primary, 1) !important);
+
+            option {
+              @include fonts(400, 16px, 22px, rgba($color-primary, 1) !important);
+
+            }
+          }
+
+          option {
+            @include fonts(400, 16px, 22px, rgba($color-primary, .6) !important);
+
+
+          }
         }
 
-        &:focus {
-          border-bottom: 1px solid rgba($color-primary, 1) !important;;
-        }
       }
 
-      .iti__flag-container {
-        display: none;
-      }
+      &-message {
+        cursor: pointer !important;
+        position: relative !important;
 
+        label {
+          color: rgba($color-primary, .6) !important;
+          cursor: pointer !important;
+
+          &:after {
+            content: url(./../../assets/userfiles/icons/clip.svg) !important;
+            position: absolute !important;
+            width: fit-content !important;
+            height: 30px !important;
+            top: 30% !important;
+            right: 0 !important;
+          }
+        }
+
+
+        span {
+          display: none !important;
+        }
+      }
     }
 
     .btn {
+      text-transform: uppercase !important;
       padding: 15px 30px !important;
       gap: 10px !important;
       background: $background-yellow !important;
       border-radius: 59px !important;
       border: none !important;
+      @include fonts(400 !important, 14px !important, 19px !important, $color-primary !important);
+
       @include media(md) {
-        width: 100% !important;
+        margin: 0 auto !important;
+        display: block !important;
       }
-      &:hover {
+      @include media(xs) {
+        //width: 100% !important;
+      }
+
+
+      &:hover, &:focus {
         color: rgba($color-primary, .8) !important;
         background-color: $background-yellow-2 !important;
-
       }
 
-      &:focus {
-        background: $background-yellow-2 !important;
+      &:focus:not(:hover) {
         color: $color-primary !important;
+        background-color: $background-yellow !important;
       }
+    }
+
+    .wpforms-field-file-upload {
+      padding: 0 !important;
+      margin-bottom: 20px !important;
     }
 
     .wpforms-uploader {
-      padding: 10px !important;
+      background: #fff !important;
+      padding: 0 !important;
       border: 0 !important;
-      border-bottom: 1px solid rgba($color-primary, 0.15) !important;
-      color: rgba($color-primary, 0.6) !important;
-      background: transparent!important;
+
       .dz-message {
-        //padding: 0!important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        width: 100% !important;
-        svg{
-          width: 5% !important;
-          height: auto!important;
-          margin-bottom: 0!important;
-        }
+        display: none !important;
       }
     }
 
+    .wpforms-field.form-contact__textarea {
+      margin-bottom: 0 !important;
+      padding: 0 !important;
+      position: relative!important;
+
+      label.wpforms-error {
+        position: absolute !important;
+        right: 20px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: block !important;
+        height: fit-content;
+      }
+
+
+      textarea {
+        transition: all .3s ease-in-out;
+        padding: 16px !important;
+        height: 100% !important;
+        border: 0 !important;
+        border-bottom: 1px solid rgba($color-primary, 0.15) !important;
+        padding-right: 50px !important;
+        border-radius: 0;
+
+        &::-webkit-scrollbar {
+          //display: none !important;
+        }
+
+        &::placeholder {
+
+
+          color: rgba($color-primary, .6) !important;
+
+        }
+
+        &::-webkit-resizer {
+          display: none !important;
+        }
+
+        @include fonts(400, 16px, 22px, rgba($color-primary, 0.6) !important);
+
+        &:hover {
+          border-bottom: 1px solid rgba($color-primary, 0.25) !important;
+        }
+
+        &:not(:placeholder-shown) {
+          border-bottom: 1px solid rgba($color-primary, 1) !important;
+          color: rgba($color-primary, 1) !important;
+
+        }
+
+        &:focus {
+          transition: all .3s ease-in-out;
+          border-bottom: 1px solid rgba($color-primary, 1) !important;
+        }
+      }
+
+      svg {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 24px!important;
+        max-height: 24px!important;
+        cursor: pointer !important;
+        position: absolute !important;
+        top: 17px !important;
+        bottom: 0 !important;
+        right: 20px !important;
+        margin-right: 24px!important;
+      }
+
+    }
+
+    .wpforms-field-container, #wpforms-433-field_73 {
+      margin-bottom: 32px !important;
+    }
+
     &__privacy-policy {
+      padding: 0 !important;
+
       p {
-        color: rgba($color-primary, 0.5) !important;
+        color: rgba($color-primary, 0.5);
+
         font-weight: 400 !important;
         font-size: 12px !important;
-
         line-height: 18px !important;
-
       }
 
       a {
@@ -89,10 +290,144 @@
     }
 
     .wpforms-submit-container {
+      padding-top: 0 !important;
+
+    }
+
+    .submit-container {
       @include media(md) {
         margin: 0 auto;
       }
     }
 
   }
+
+  .wpforms-has-error {
+    border-bottom: 0 !important;
+
+    input {
+      border-bottom: 1px solid #F43535 !important;
+
+      &:hover, &:focus {
+        border-bottom: 1px solid #F43535 !important;
+      }
+    }
+
+    &:hover, &:focus {
+
+      input {
+        border-bottom: 1px solid #F43535 !important;
+      }
+    }
+
+
+  }
+
+  .wpforms-field-checkbox {
+    padding: 0 !important;
+
+    li {
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    input {
+      cursor: pointer;
+      margin: 0 10px 0 0 !important;
+      border: 1px solid rgba($color-primary, 0.3) !important;
+      border-radius: 3px !important;
+      position: absolute !important;
+      z-index: -1 !important;
+      opacity: 0 !important;
+
+      & + label {
+        display: inline-flex !important;
+        align-items: center !important;
+        user-select: none !important;
+
+        &:before {
+          transition: .3s all ease-in-out;
+
+          content: '' !important;
+          display: inline-block !important;
+          width: 16px !important;
+          height: 16px !important;
+          flex-shrink: 0 !important;
+          flex-grow: 0 !important;
+          border: 1px solid rgba($color-primary, 0.15) !important;
+          border-radius: 3px !important;
+          margin-right: 10px !important;
+          background-repeat: no-repeat !important;
+          background-position: center center !important;
+          background-size: 70% 100% !important;
+          margin-bottom: 1px;
+        }
+      }
+
+      &:checked + label::before {
+        transition: .3s all ease-in-out;
+        background-color: $color-primary !important;
+        border-color: $color-primary !important;
+        background-image: url(./../../assets/userfiles/icons/checkbox-checked.svg);
+      }
+
+      &:not(:disabled):not(:checked) + label:hover::before {
+        transition: .3s all ease-in-out;
+        border-color: rgba($color-primary, .15) !important;
+        background-color: transparent !important;
+      }
+
+      &:not(:disabled):active + label::before {
+        background-color: $color-primary !important;
+        border-color: $color-primary !important;
+        background-image: url(./../../assets/userfiles/icons/checkbox-checked.svg);
+      }
+
+
+    }
+
+    label {
+      cursor: pointer;
+      @include fonts(400 !important, 12px !important, 18px !important, $color-primary !important);
+    }
+  }
+
+
+  &-heading {
+    padding: 0 !important;
+    margin-bottom: 32px !important;
+    margin-top: 40px !important;
+
+    &:first-of-type {
+      margin-top: 0 !important;
+    }
+
+    @include media(md) {
+      overflow: unset !important;
+    }
+
+    &-text {
+
+      h2 {
+        @include fonts(400 !important, 38px !important, 44px !important, $color-primary !important);
+        @include media(md) {
+          text-align: center;
+        }
+        @include media(sm) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.form-contact__user-file {
+  .wpforms-error {
+    display: none !important;
+  }
+}
+
+.wpforms-error-container{
+  display: none !important;
+
 }

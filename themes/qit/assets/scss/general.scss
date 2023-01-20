@@ -28,9 +28,16 @@
  */
 @import "modules/btn";
 @import "modules/form";
+@import "modules/formCF7";
 @import "modules/swiper";
 @import "modules/text";
 @import "modules/modals";
+@import "modules/select";
+@import "modules/faq";
+@import "modules/cookie";
+@import "modules/tips";
+@import "modules/notes";
+@import "modules/post-insert";
 
 /**
  * Content
@@ -46,5 +53,9 @@
 /**
  * Pages
  */
-@import "pages/home";
-@import "pages/about-us";
+@import "pages";
+
+/**
+ *Edits
+ */
+@import "edits";

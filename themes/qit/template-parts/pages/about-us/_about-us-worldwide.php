@@ -13,9 +13,9 @@ $title              = $field['title'];
 $countries_repeater = $field['countries_repeater'];
 $worldwide_image    = $field['worldwide_image'];
 $worldwide_text     = $field['worldwide_text'];
+$worldwide_text_2   = $field['worldwide_text_2'];
 ?>
-
-<section class="section__worldwide section" id="timeline">
+<section class="section__worldwide section">
     <div class="container ">
 		<?php if ( $badge ): ?>
             <div class="section__worldwide-row row justify-content-center">
@@ -29,31 +29,40 @@ $worldwide_text     = $field['worldwide_text'];
                 <h2 class="section__worldwide-row-title"><?= $title ?></h2>
             </div>
 		<?php endif ?>
+		<?php if ( $worldwide_text_2 ): ?>
+            <div class="section__worldwide-row row ">
+                <div class="col">
+                    <p class="section__worldwide-row-text"><?= $worldwide_text_2 ?></p>
+                    <div class="divider"></div>
+                </div>
+            </div>
+		<?php endif; ?>
 		<?php if ( $countries_repeater ): ?>
-            <div class="section__worldwide-row">
-                <ul class="list-group list-group-horizontal justify-content-between">
-					<?php foreach ( $countries_repeater as $country ):
-						$country_flag = $country['country_flag'];
-						$country_name = $country['country_name'];
-						?>
-                        <li class="list-group-item border-0 bg-transparent">
-                            <span><?= file_get_contents( $country_flag['url'] ) ?></span><span><?= $country_name ?></span>
-                        </li>
-
-					<?php endforeach ?>
-                </ul>
+            <div class="section__worldwide-row row">
+                <div class="col">
+                    <ul class="list-group list-group-horizontal">
+						<?php foreach ( $countries_repeater as $country ):$country_flag = $country['country_flag'];$country_name = $country['country_name']; ?>
+                            <li class="list-group-item border-0 bg-transparent">
+                                <p><?=file_get_contents( $country_flag['url'] )?><?=$country_name?></p>
+                            </li>
+						<?php endforeach ?>
+                    </ul>
+                </div>
             </div>
 		<?php endif; ?>
 		<?php if ( $worldwide_image ): ?>
-            <img src="<?= $worldwide_image['url'] ?>"
-                 alt="<?= $worldwide_image['alt'] ?>">
+            <div class="section__worldwide-row row ">
+                <div class="col-12">
+                    <img src="<?= $worldwide_image['url'] ?>" alt="<?= $worldwide_image['alt'] ?>">
+                </div>
+            </div>
 		<?php endif; ?>
 		<?php if ( $worldwide_text ): ?>
-        <div class="section__worldwide-row">
-            <div class="col-lg-10 mx-auto text-center">
-                <p><?= $worldwide_text ?></p>
-				<?php endif ?>
+            <div class="section__worldwide-row row">
+                <div class="col">
+                    <p><?= $worldwide_text ?></p>
+                </div>
             </div>
-        </div>
+		<?php endif ?>
     </div>
 </section>

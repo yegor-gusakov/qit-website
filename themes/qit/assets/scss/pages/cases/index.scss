@@ -1,0 +1,8 @@
+body.post-type-archive-qit_cases {
+  @import "hero";
+  @import "cases";
+}
+
+body.qit_cases-template-default {
+  @import "single-case";
+}

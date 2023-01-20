@@ -1,0 +1,34 @@
+body.page-template-pricing {
+  @import "hero";
+  @import "form";
+}
+
+#wpforms-2698-field_25-container {
+  display: none !important;
+}
+
+.section__form-wrapper.section__form-wrapper-fourth {
+  margin-bottom: 0 !important;
+}
+
+.wpforms-field-html.section__information {
+  padding-top: 0;
+  text-align: center;
+
+  .container {
+    padding-top: 48px !important;
+  }
+
+  .section__information-row {
+    display: flex !important;
+    max-height: unset !important;
+    max-width: unset !important;
+    margin: 0 !important;
+    justify-content: center;
+
+    &-title {
+      @include fonts(400 !important, 38px !important, 44px !important, $color-primary !important);
+      margin-bottom: 32px !important;
+    }
+  }
+}

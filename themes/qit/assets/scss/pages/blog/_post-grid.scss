@@ -1,0 +1,141 @@
+.col-post {
+  a, a > .card, a .card-body {
+    height: 100%;
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &:nth-last-child(3) {
+    article {
+      //border-right: 0;
+      @include media(md) {
+        border-right: 1px solid rgba($color-primary, .15);
+      }
+      @include media(xs) {
+        border-right: 0;
+        border-bottom: 1px solid rgba($color-primary, .15);
+      }
+    }
+  }
+
+  &:nth-child(3n+1) {
+    article {
+      //border-right: 0;
+      @include media(md) {
+        border-right: 1px solid rgba($color-primary, .15);
+      }
+      @include media(xs) {
+        border-right: 0;
+        border-bottom: 1px solid rgba($color-primary, .15);
+      }
+    }
+  }
+
+  &:nth-of-type(2n) {
+    article {
+      @include media(md) {
+        border-right: 0;
+      }
+
+    }
+  }
+
+  article {
+    height: 100%;
+    border-right: 1px solid rgba($color-primary, .15);
+    @include media(xs) {
+      padding-right: 16px;
+      padding-bottom: 16px;
+
+      border-right: none;
+      border-bottom: 1px solid rgba($color-primary, .15);
+    }
+
+    a {
+      color: $color-primary;
+    }
+
+    .card {
+      @include media(md) {
+        max-width: 322px;
+      }
+      @include media(xs) {
+        max-width: unset;
+      }
+
+      &-title {
+        @include fonts(600, 20px, 26px, $color-primary);
+        margin-bottom: 6px;
+      }
+
+      &-img {
+        margin-bottom: 16px;
+        border-radius: 10px;
+        position: relative;
+
+        &::before {
+          content: "";
+          background: linear-gradient(70.6deg, rgba(0,0,0,.7) -4.13%, rgba(0, 0, 0, 0) 86.45%);
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          border-radius: 10px;
+        }
+
+        img {
+          border-radius: 10px;
+          max-width: 326px;
+          @include media(md) {
+            max-width: 322px;
+          }
+          @include media(xs) {
+            max-width: unset;
+          }
+        }
+
+        .date {
+          @include fonts(400, 14px, 20px, $color-white);
+
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+        }
+      }
+
+      &-body {
+        //height: 78px;
+        padding: 0;
+        max-width: 326px;
+        @include media(md) {
+          max-width: 322px;
+        }
+        @include media(xs) {
+          max-width: unset;
+          height: unset;
+        }
+
+        &__footer {
+          justify-content: space-between;
+          display: flex;
+        }
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 16px;
+
+        .tag {
+          @include fonts(400, 14px, 20px, rgba($color-primary, .5));
+          display: block;
+          flex: 0 0 1;
+        }
+      }
+    }
+  }
+
+}

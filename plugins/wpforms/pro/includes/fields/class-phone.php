@@ -160,7 +160,7 @@ class WPForms_Field_Phone extends WPForms_Field {
 	 */
 	public function add_frontend_strings( $strings ) {
 
-		$strings['val_phone'] = wpforms_setting( 'validation-phone', esc_html__( 'Please enter a valid phone number.', 'wpforms' ) );
+		$strings['val_phone'] = wpforms_setting( 'validation-phone', esc_html__( file_get_contents(get_template_directory_uri().'/assets/userfiles/icons/error.svg')) );
 
 		return $strings;
 	}

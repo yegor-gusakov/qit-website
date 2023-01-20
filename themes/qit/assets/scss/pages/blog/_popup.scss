@@ -1,0 +1,44 @@
+#pum-2247 {
+
+  .pum {
+    &-container {
+      max-width: 530px !important;
+      margin: 0 auto;
+    }
+
+    &-content {
+      text-align: center !important;
+
+      p {
+        @include fonts(400 !important, 16px !important, 22px !important, $color-primary !important);
+        margin-bottom: 20px;
+      }
+    }
+
+    &-title {
+      @include fonts(600 !important, 30px !important, 36px !important, $color-primary !important);
+      margin-bottom: 10px;
+      text-align: center !important;
+    }
+  }
+}
+
+#pum-2251 {
+  h3 {
+    @include fonts(600, 30px, 36px, $color-primary);
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 24px;
+    @include fonts(400, 16px, 22px, $color-primary);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}

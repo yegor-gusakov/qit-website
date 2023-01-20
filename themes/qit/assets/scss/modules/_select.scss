@@ -1,0 +1,113 @@
+.col-filter {
+  .filter-select {
+    position: relative;
+
+
+    .select-hide {
+      display: none;
+    }
+
+    select {
+      display: none;
+    }
+
+    label {
+      @include fonts(400, 14px, 20px, rgba($color-primary, .5));
+    }
+
+    .select {
+      &-selected {
+        @include fonts(500, 16px, 26px, $color-primary);
+        background: $color-white;
+        transition: all .3s ease-in-out;
+        border: unset;
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 0 36px 0 0;
+        position: relative;
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+
+        @include media(xs) {
+          @include fonts(500, 16px, 22px, $color-primary);
+          padding: 0;
+          width: fit-content;
+        }
+
+        &:after {
+          content: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8 8L15 1' stroke='%23363636' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          margin-left: 5%;
+        }
+
+        svg {
+          margin-left: 5%;
+          min-width: 16px;
+          min-height: 9px;
+        }
+      }
+
+      &-items {
+        position: absolute;
+        background-color: $color-primary;
+        color: rgba($color-white, .8);
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 226px;
+
+        div {
+          @include fonts(400, 14px, 20px, rgba(255, 255, 255, .8));
+          font-size: 14px;
+          cursor: pointer;
+          background: $color-primary;
+          //box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+          border-radius: 10px;
+          padding: 8px 16px;
+          margin: 8px 0;
+          transition: all .3s ease-in-out;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+  }
+
+  @include media(xs) {
+
+    &:nth-last-of-type(-n + 2) {
+      margin-bottom: 0 !important;
+    }
+    &:nth-of-type(2n+1) {
+      margin-left: 0;
+    }
+    &:nth-of-type(2n + 2) {
+      width: fit-content;
+      margin-right: 5%;
+      margin-left: auto;
+    }
+    &:nth-of-type(2n) {
+      //padding-right: 0;
+
+      label {
+        //padding-right: 32px;
+        //padding-left: 20px;
+      }
+
+      .select-selected {
+        //padding-right: 32px;
+        //padding-left: 20px;
+
+
+      }
+    }
+  }
+
+}
+

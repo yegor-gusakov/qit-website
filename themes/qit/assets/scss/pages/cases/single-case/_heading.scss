@@ -1,0 +1,58 @@
+.section {
+  &__heading {
+    padding: 141px 0 48px;
+    margin-bottom: 0;
+    &-row {
+      .return-back {
+        @include fonts(600, 16px, 24px, $color-primary);
+        //margin-bottom: 64px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        max-height: 24px;
+        height: 100%;
+        transition: all .3s ease-in-out;
+        &:hover {
+          color: rgba($color-primary, .8);
+          svg{
+            path{
+              stroke: rgba($color-primary, .8);
+            }
+          }
+        }
+
+        svg {
+          margin-right: 9px;
+          width: 8px;
+          height: 16px;
+          margin-bottom: 1px;
+          &:hover{
+            path{
+              stroke: rgba($color-primary, .8);
+            }
+          }
+          @include media(md) {
+            margin-bottom: 0;
+          }
+          path{
+            transition: all .3s ease-in-out;
+          }
+        }
+      }
+
+      &-title {
+        @include fonts(400, 38px, 44px, $color-primary);
+        margin-bottom: 16px;
+        @include media(xs){
+          @include fonts(400, 30px, 36px, $color-primary);
+
+        }
+      }
+
+      &-text {
+        @include fonts(400, 16px, 22px, $color-primary);
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.section {
+  &__hero {
+    padding-top: 141px;
+    margin-bottom: 48px;
+
+    &-row {
+      .section__hero-row {
+        max-width: fit-content;
+        max-height: 28px;
+        margin: 0 auto 10px;
+        @include media(xs) {
+          margin: 0 auto 10px;
+        }
+      }
+
+
+      &-title {
+        text-align: center;
+
+        h1 {
+          @include fonts(400, 38px, 44px, $color-primary);
+          margin: 0 auto;
+          max-width: fit-content;
+          @include media(md) {
+
+          }
+          @include media(xs) {
+            font-size: 44px;
+            line-height: 55px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

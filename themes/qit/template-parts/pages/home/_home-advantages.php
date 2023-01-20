@@ -15,24 +15,24 @@ $tags_repeater = $field['tags_repeater'];
 ?>
 <section class="section section__advantages">
     <div class="container">
-        <?php if($badge):?>
-        <div class="section__advantages-row row justify-content-center"><h6
-                    class="section__advantages-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
-        </div>
-        <?php endif;?>
-	    <?php if($title):?>
+		<?php if ( $badge ): ?>
+            <div class="section__advantages-row row justify-content-center"><h6
+                        class="section__advantages-row-badge m-0  w-auto text-white text-uppercase"><?= $badge ?></h6>
+            </div>
+		<?php endif; ?>
+		<?php if ( $title ): ?>
 
-        <div class="section__advantages-row row text-center mb-5 mb-sm-5">
-            <h2 class="section__advantages-row-title"><?= $title ?></h2>
-        </div>
-	    <?php endif;?>
+            <div class="section__advantages-row row text-center">
+                <h2 class="section__advantages-row-title"><?= $title ?></h2>
+            </div>
+		<?php endif; ?>
 
-        <?php
+		<?php
 		// Check rows exists.
 		if ( $tags_repeater ):
 
 			?>
-            <div class="section__advantages-row row row-cols-1 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-1 g-4">
+            <div class="section__advantages-row row row-cols-1 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-1 justify-content-md-center justify-content-lg-start">
 
 				<?php
 				// Loop through rows.
@@ -41,14 +41,14 @@ $tags_repeater = $field['tags_repeater'];
 					$tag_text = $tag['text'];
 					$tag_image = $tag['image'];
 					?>
-                    <div class="section__advantages-row-advantage col">
+                    <div class="section__advantages-row-advantage col col-md-5 col-lg-3">
                         <div class="card border-0">
-                            <div class="card-body text-center pt-5">
+                            <div class="card-body text-center">
                                 <h3 class="card-title"><?= $tag_title ?></h3>
                                 <p class="card-text"><?= $tag_text ?></p>
                             </div>
                             <img src="<?= $tag_image['url'] ?>"
-                                 class="card-img-top" alt="...">
+                                 class="card-img-top" alt="<?= $tag_title ?>" width="250" height="250"  >
 
                         </div>
                     </div>

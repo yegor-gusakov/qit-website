@@ -7,20 +7,21 @@ $breakpoints: (
         md: 991px,
         lg: 1200px,
         xl: 1400px,
+        review_min:477px,
 );
 
 /**
  * Body
  */
-$font-body                      :   'Inter', sans-serif;
-$color-h                        :   #1A1818;
-$textSize-body                  :   16px;
-$textLineHeight-body            :   27px;
-$backgroundColor-body           :   #fff;
-$fontWeight-body                :   400;
+$color-h:#363636;
+$font-body: 'Inter', sans-serif;
+$textSize-body: 16px;
+$textLineHeight-body: 27px;
+$backgroundColor-body: #fff;
+$fontWeight-body: 400;
 
-$textSize-body-medium           :   14px;
-$textLineHeight-body-medium     :   22px;
+$textSize-body-medium: 14px;
+$textLineHeight-body-medium: 22px;
 
 /**
  * Container
@@ -28,21 +29,20 @@ $textLineHeight-body-medium     :   22px;
 /**
  * Link
  */
-$color-link                     :   #fff;
+$color-link: #fff;
 
 /**
  * Background
  */
-$background-primary                :   #363636;
-$background-gray:#F1F1F1;
-$background-yellow:#FEF200;
-$background-yellow-2:#EFE400;
-$background-lime:#FCFFE7;
-$background-skin:#F8ECD1;
+$background-primary: #363636;
+$background-gray: #f5f5f5;
+$background-yellow: #FEF200;
+$background-yellow-2: #EFE400;
+$background-lime: #FCFFE7;
+$background-skin: #F8ECD1;
 /**
  * Colors
  */
-$color-primary                :   #363636;
-$color-black:#1A1818;
-$color-white:#fff;
-$color-yellow:#FEF200;
+$color-primary: #363636;
+$color-white: #fff;
+$color-yellow: #FEF200;

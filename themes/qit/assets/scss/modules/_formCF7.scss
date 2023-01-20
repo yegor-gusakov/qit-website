@@ -1,0 +1,331 @@
+.wpcf7-response-output {
+  display: none;
+}
+
+.form {
+
+  &-container {
+    margin-bottom: 32px;
+
+    span.wpcf7-not-valid-tip {
+      position: absolute !important;
+      right: 20px !important;
+      top: 0 !important;
+      bottom: 0 !important;
+      margin-top: auto;
+      margin-bottom: auto;
+      display: block !important;
+      height: fit-content;
+    }
+
+  }
+
+  &-contact {
+    &__user {
+      &-name, &-email, &-phone, &-hear, &-message, &-text, &-company, &.form-contact__privacy-policy, &-text {
+        position: relative;
+        margin-bottom: 20px;
+        padding: 0;
+
+        &::placeholder {
+          color: rgba($color-primary, .6);
+        }
+
+        label.wpforms-error {
+          position: absolute !important;
+          right: 20px !important;
+          top: 0 !important;
+          bottom: 0 !important;
+          margin-top: auto;
+          margin-bottom: auto;
+          display: block !important;
+          height: fit-content;
+        }
+
+
+        input {
+          padding-right: 50px !important;
+
+          &:not(:placeholder-shown) {
+            border-bottom: 1px solid rgba($color-primary, 1) !important;
+          }
+        }
+
+        input, select {
+          border: 0 !important;
+          border-bottom: 1px solid rgba($color-primary, 0.15) !important;
+
+          &:hover {
+            border-bottom: 1px solid rgba($color-primary, 0.25) !important;
+          }
+
+          &:focus {
+            border-bottom: 1px solid rgba($color-primary, 1) !important;
+          }
+
+          padding: 16px !important;
+          padding-right: 50px !important;
+
+          height: 54px !important;
+          transition: .3s !important;
+          border-radius: 0 !important;
+          width: 100% !important;
+
+          @include fonts(400, 16px, 22px, rgba($color-primary, 1) !important);
+
+          &::placeholder {
+
+
+            color: rgba($color-primary, .6) !important;
+
+          }
+
+        }
+
+
+      }
+
+      &-textarea {
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        height: 55px;
+
+        label.wpforms-error {
+          position: absolute !important;
+          right: 20px !important;
+          top: 0 !important;
+          bottom: 0 !important;
+          margin-top: auto;
+          margin-bottom: auto;
+          display: block !important;
+          height: fit-content;
+        }
+
+        span {
+          display: block;
+        }
+
+        textarea {
+          transition: all .3s ease-in-out;
+          padding: 16px !important;
+          height: 100% !important;
+          border: 0 !important;
+          border-bottom: 1px solid rgba($color-primary, 0.15) !important;
+          padding-right: 50px !important;
+          border-radius: 0;
+          width: 100%;
+          display: block;
+
+          &::-webkit-scrollbar {
+            //display: none !important;
+          }
+
+          &::placeholder {
+
+
+            color: rgba($color-primary, .6) !important;
+
+          }
+
+          &::-webkit-resizer {
+            display: none !important;
+          }
+
+          @include fonts(400, 16px, 22px, rgba($color-primary, 0.6) !important);
+
+          &:hover {
+            border-bottom: 1px solid rgba($color-primary, 0.25) !important;
+          }
+
+          &:not(:placeholder-shown) {
+            border-bottom: 1px solid rgba($color-primary, 1) !important;
+            color: rgba($color-primary, 1) !important;
+
+          }
+
+          &:focus {
+            transition: all .3s ease-in-out;
+            border-bottom: 1px solid rgba($color-primary, 1) !important;
+          }
+        }
+
+        svg {
+          width: 100% !important;
+          height: 100% !important;
+          max-width: 24px;
+          max-height: 24px;
+          cursor: pointer !important;
+          position: absolute !important;
+          top: 17px !important;
+          bottom: 0 !important;
+          right: 20px !important;
+        }
+
+      }
+
+      &-checkbox {
+        .wpcf7-list-item {
+          margin: 0;
+
+          &.checked label::before {
+            transition: .3s all ease-in-out;
+            background-color: $color-primary !important;
+            border-color: $color-primary !important;
+            background-image: url(./../../assets/userfiles/icons/checkbox-checked.svg);
+          }
+
+          &:not(:disabled):not(.checked) label:hover::before {
+            transition: .3s all ease-in-out;
+            border-color: rgba($color-primary, .15) !important;
+            background-color: transparent !important;
+          }
+
+          &:not(:disabled):active label::before {
+            background-color: $color-primary !important;
+            border-color: $color-primary !important;
+            background-image: url(./../../assets/userfiles/icons/checkbox-checked.svg);
+          }
+        }
+
+        .wpcf7-checkbox {
+          padding: 0 !important;
+
+          li {
+            display: flex !important;
+            align-items: center !important;
+          }
+
+          label {
+            display: inline-flex !important;
+            align-items: center !important;
+            user-select: none !important;
+            cursor: pointer;
+            @include fonts(400 !important, 12px !important, 18px !important, $color-primary !important);
+
+            &:before {
+              transition: .3s all ease-in-out;
+              content: '' !important;
+              display: inline-block !important;
+              width: 16px !important;
+              height: 16px !important;
+              flex-shrink: 0 !important;
+              flex-grow: 0 !important;
+              border: 1px solid rgba($color-primary, 0.15) !important;
+              border-radius: 3px !important;
+              margin-right: 10px !important;
+              background-repeat: no-repeat !important;
+              background-position: center center !important;
+              background-size: 70% 100% !important;
+              margin-bottom: 1px;
+            }
+
+            input {
+              cursor: pointer;
+              margin: 0 10px 0 0 !important;
+              border: 1px solid rgba($color-primary, 0.3) !important;
+              border-radius: 3px !important;
+              position: absolute !important;
+              z-index: -1 !important;
+              opacity: 0 !important;
+            }
+          }
+
+        }
+      }
+
+      &-file, &-privacy-policy {
+        margin-bottom: 20px;
+
+        p {
+          margin-bottom: 0;
+        }
+
+      }
+
+    }
+
+    &-title {
+      margin-bottom: 32px;
+
+      h2 {
+        @include fonts(400, 38px, 44px, $color-primary);
+
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+.codedropz-upload-handler, .dnd-upload-status.complete .dnd-progress-bar {
+  display: none !important;
+}
+
+.dnd-progress-bar {
+  height: 3px !important;
+  background: rgba($color-primary, .3) !important;
+  transition: all .3s ease-in-out;
+
+  span {
+    font-size: 0
+  }
+}
+
+.dnd-upload {
+  &-status {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: default;
+  }
+
+  &-details {
+    position: relative;
+
+    .remove-file {
+      top: 0 !important;
+    }
+
+    .name {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0 !important;
+
+      em {
+        @include fonts(400 !important, 12px !important, 27px !important, #888 !important);
+        font-style: normal;
+      }
+
+      span {
+        @include fonts(400 !important, 14px !important, 27px !important, $color-primary !important);
+      }
+    }
+  }
+}
+
+
+.wpcf7-form.init {
+  .wpcf7-not-valid-tip {
+    display: none !important;
+  }
+}
+
+.dnd-upload-status .dnd-upload-details .dnd-progress-bar span {
+  background: rgba($color-primary, 1) !important;
+}
+
+.has-error-msg {
+  @include fonts(400, 16px, 22px, #F43535);
+  width: 100%;
+  text-align: center !important;
+  font-style: inherit !important;
+  background: #FEE1E1 !important;
+  border-radius: 6px !important;
+  padding: 8px 24px;
+  margin-top: 4px;
+}

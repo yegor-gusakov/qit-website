@@ -1,0 +1,17 @@
+body.page-template-web-development {
+
+  @import "advantages";
+  @import "cards";
+  @import "comparisons";
+  @import "hero";
+  @import "model";
+  @import "perks";
+  @import "portfolio";
+  @import "reviews";
+  @import "technologies";
+}
+body.page-id-2793{
+  .section__advantages-row-advantage:nth-child(2) img{
+    margin: 0;
+  }
+}

@@ -259,6 +259,7 @@ class WPForms_Entries_Table extends WP_List_Table {
 
 				// Check for special columns, like Entry ID.
 				if ( self::COLUMN_ENTRY_ID === $id ) {
+
 					$columns['entry_id'] = esc_html__( 'Entry ID', 'wpforms' );
 					continue;
 				}

@@ -421,14 +421,6 @@ class WPForms_Frontend {
 		do_action( 'wpforms_frontend_confirmation_message_before', $confirmation, $form_data, $fields, $entry_id );
 
 		$class .= $this->confirmation_message_scroll ? ' wpforms-confirmation-scroll' : '';
-
-		printf(
-			'<div class="%s" id="wpforms-confirmation-%d">%s</div>',
-			$class,
-			absint( $form_data['id'] ),
-			$confirmation_message
-		);
-
 		/**
 		 * Fires once after the confirmation message.
 		 *
@@ -1144,7 +1136,7 @@ class WPForms_Frontend {
 			);
 
 			printf(
-				'<img src="%s" class="wpforms-submit-spinner" style="display: none;" width="26" height="26" alt="">',
+                '<lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_4d2kzehv.json"  background="transparent"  speed="1"  style="width: 26px; height: 26px; display: none"  loop  autoplay class="wpforms-submit-spinner lottie-player"></lottie-player>',
 				esc_url( $src )
 			);
 		}
@@ -1674,8 +1666,8 @@ class WPForms_Frontend {
 
 		// Define base strings.
 		$strings = [
-			'val_required'               => wpforms_setting( 'validation-required', esc_html__( 'This field is required.', 'wpforms-lite' ) ),
-			'val_email'                  => wpforms_setting( 'validation-email', esc_html__( 'Please enter a valid email address.', 'wpforms-lite' ) ),
+			'val_required'               => wpforms_setting( 'validation-required', esc_html__( file_get_contents(get_template_directory_uri().'/assets/userfiles/icons/error.svg')) ),
+			'val_email'                  => wpforms_setting( 'validation-email', esc_html__( file_get_contents(get_template_directory_uri().'/assets/userfiles/icons/error.svg')) ),
 			'val_email_suggestion'       => wpforms_setting(
 				'validation-email-suggestion',
 				sprintf( /* translators: %s - suggested email address. */
@@ -1685,7 +1677,7 @@ class WPForms_Frontend {
 			),
 			'val_email_suggestion_title' => esc_attr__( 'Click to accept this suggestion.', 'wpforms-lite' ),
 			'val_email_restricted'       => wpforms_setting( 'validation-email-restricted', esc_html__( 'This email address is not allowed.', 'wpforms-lite' ) ),
-			'val_number'                 => wpforms_setting( 'validation-number', esc_html__( 'Please enter a valid number.', 'wpforms-lite' ) ),
+			'val_number'                 => wpforms_setting( 'validation-number', esc_html__( file_get_contents(get_template_directory_uri().'/assets/userfiles/icons/error.svg')) ),
 			'val_number_positive'        => wpforms_setting( 'validation-number-positive', esc_html__( 'Please enter a valid positive number.', 'wpforms-lite' ) ),
 			'val_confirm'                => wpforms_setting( 'validation-confirm', esc_html__( 'Field values do not match.', 'wpforms-lite' ) ),
 			'val_checklimit'             => wpforms_setting( 'validation-check-limit', esc_html__( 'You have exceeded the number of allowed selections: {#}.', 'wpforms-lite' ) ),

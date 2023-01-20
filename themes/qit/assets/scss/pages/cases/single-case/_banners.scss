@@ -1,0 +1,309 @@
+.section {
+  &__flawed {
+    padding: 80px 0;
+    background-color: $color-primary;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include media(md) {
+
+      background-size: 100% 50%;
+      background-position: center;
+    }
+
+    &-row {
+      @include media(md) {
+        row-gap: 32px;
+      }
+
+      &-title {
+
+        margin-bottom: 16px;
+
+        h3 {
+
+          @include fonts(600, 30px, 36px, $color-white);
+          margin-bottom: 0;
+
+          @include media(xs) {
+            @include fonts(600, 24px, 36px, $color-white);
+            margin-bottom: 0;
+          }
+        }
+
+      }
+
+      &-text {
+        p {
+          @include fonts(400, 16px, 22px, $color-white);
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &-heading {
+
+        @include fonts(600, 20px, 26px, $color-white);
+        margin-top: 66px;
+      }
+
+      &-list {
+        &-short {
+          margin-bottom: 8px;
+          display: flex;
+          align-items: center;
+
+          svg {
+            display: block;
+            max-width: 4px;
+            max-height: 4px;
+            width: 100%;
+            height: 100%;
+            margin-right: 8px;
+
+            circle {
+              fill: $color-white;
+            }
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          p {
+            @include fonts(400, 16px, 22px, $color-white);
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+  }
+
+  &__phrase {
+    .container {
+      padding: 48px;
+      border: 1px solid rgba($color-primary, .15);
+      border-right: 0;
+      border-left: 0;
+      @include media(xs) {
+
+        padding: 48px 16px;
+      }
+    }
+
+    &-row {
+      &-text {
+        margin-bottom: 24px;
+
+        p {
+          @include fonts(300, 30px, 36px, $color-primary);
+
+          margin-bottom: 0;
+          @include media(xs) {
+
+            @include fonts(300, 24px, 36px, $color-primary);
+          }
+
+
+        }
+      }
+
+      &-heading {
+        h5 {
+          @include fonts(400, 16px, 22px, rgba($color-primary, .8));
+          margin-bottom: 0;
+
+        }
+      }
+    }
+  }
+
+  &__outcome {
+    .column-image {
+      height: 100%;
+      position: sticky;
+      top: 96px;
+    }
+
+    &-row {
+      @include media(md) {
+        row-gap: 48px;
+      }
+
+      .column {
+        &-image {
+          @include media(md) {
+            order: 3;
+          }
+        }
+      }
+
+      &-title {
+        margin-bottom: 16px;
+
+        h3 {
+          @include fonts(600, 30px, 36px, $color-primary);
+
+          margin-bottom: 0;
+        }
+      }
+
+      &-text {
+        margin-bottom: 24px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        p {
+          @include fonts(400, 16px, 22px, $color-primary);
+          margin-bottom: 0;
+        }
+      }
+
+      &-outcome {
+        margin-bottom: 16px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &-heading {
+          @include fonts(600, 20px, 26px, $color-primary);
+          margin-bottom: 16px;
+        }
+
+        &-list {
+          &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+
+            svg {
+              display: block;
+
+              max-width: 4px;
+
+              max-height: 4px;
+              width: 100%;
+              height: 100%;
+              margin-right: 8px;
+
+              circle {
+                fill: $color-primary;
+              }
+            }
+
+            p {
+              @include fonts(400, 16px, 22px, $color-primary);
+              margin-bottom: 0;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+  &__curious {
+
+    @include media(xs) {
+      //height: 100vh;
+    }
+
+    .container {
+
+      @include media(xs) {
+        height: 100%;
+      }
+    }
+
+
+    &-row {
+      border: 1px solid rgba($color-primary, 0.15);
+      border-radius: 15px;
+      padding: 30px 0 30px 80px;
+      width: 100%;
+      margin: 0 auto;
+      //padding-right: 0;
+      row-gap: 32px;
+      @include media(md) {
+        background-size: 50% 100%;
+        background-position: right;
+        padding: 80px 30px;
+        justify-content: center;
+        text-align: center;
+        row-gap: 36px;
+      }
+      @include media(xs) {
+        padding: 80px 30px;
+        height: 100%;
+      }
+
+      &:nth-of-type(1) {
+        background-size: 110%;
+        @include media(md) {
+          background-size: cover;
+        }
+        @include media(sm) {
+          background-size: auto 100%;
+          background-position: 100% 0;
+        }
+        @include media(xs) {
+
+          background-size: 300%;
+          background-position: right bottom;
+        }
+      }
+
+      &-title {
+        h3 {
+
+          @include fonts(400, 38px, 44px, $color-primary);
+          margin: 0;
+
+          @include media(xs) {
+            @include fonts(400, 30px, 44px, $color-primary);
+          }
+        }
+
+        margin-bottom: 16px;
+
+        @include media(xs) {
+          text-align: center;
+        }
+      }
+
+      &-text {
+        margin-bottom: 32px;
+
+        p {
+
+          @include fonts(400, 16px, 22px, $color-primary);
+          margin-bottom: 0;
+        }
+
+      }
+
+      .btn {
+        @include media(xs) {
+          display: block;
+          margin: 0 auto;
+
+        }
+      }
+
+      .col-text {
+        margin: 50px 0;
+
+        @include media(md) {
+          margin: 0;
+
+        }
+      }
+    }
+  }
+}

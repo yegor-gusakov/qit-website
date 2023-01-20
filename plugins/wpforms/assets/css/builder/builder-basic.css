@@ -282,9 +282,9 @@ button {
 
 a,
 button {
-  transition-duration: 0.05s;
-  transition-property: border, background, color;
-  transition-timing-function: ease-in;
+  /*transition-duration: 0.05s;*/
+  /*transition-property: border, background, color;*/
+  /*transition-timing-function: ease-in;*/
 }
 
 a:focus,
@@ -576,11 +576,11 @@ input[type=radio] {
   width: 16px;
   appearance: none;
   -webkit-appearance: none;
-  -webkit-transition: border-color 0.05s ease-out;
-  -moz-transition: border-color 0.05s ease-out;
-  -ms-transition: border-color 0.05s ease-out;
-  -o-transition: border-color 0.05s ease-out;
-  transition: border-color 0.05s ease-out;
+  /*-webkit-transition: border-color 0.05s ease-out;*/
+  /*-moz-transition: border-color 0.05s ease-out;*/
+  /*-ms-transition: border-color 0.05s ease-out;*/
+  /*-o-transition: border-color 0.05s ease-out;*/
+  /*transition: border-color 0.05s ease-out;*/
 }
 
 input[type=checkbox]:checked::before,
@@ -679,11 +679,11 @@ select:focus {
   vertical-align: middle;
   white-space: nowrap;
   box-shadow: none;
-  -webkit-transition: all 0.05s ease-in;
-  -moz-transition: all 0.05s ease-in;
-  -ms-transition: all 0.05s ease-in;
-  -o-transition: all 0.05s ease-in;
-  transition: all 0.05s ease-in;
+  /*-webkit-transition: all 0.05s ease-in;*/
+  /*-moz-transition: all 0.05s ease-in;*/
+  /*-ms-transition: all 0.05s ease-in;*/
+  /*-o-transition: all 0.05s ease-in;*/
+  /*transition: all 0.05s ease-in;*/
 }
 
 .wpforms-admin-page .wpforms-btn.inactive {

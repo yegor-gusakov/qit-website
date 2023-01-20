@@ -1,75 +1,686 @@
-.modal {
+.modal-videoReview {
+  padding-right: 0;
+
+  .modal-dialog {
+
+    width: 90%;
+    height: 100%;
+    max-width: 1200px;
+    max-height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    @include media(sm) {
+      //width: unset;
+      //height: unset;
+      //max-width: unset;
+      //max-height: unset;
+    }
+  }
+
+  .modal-content {
+    height: 100%;
+    max-height: 675px;
+    @include media(lg) {
+      height: 45vw;
+
+    }
+    @include media(md) {
+      height: 51vw;
+
+    }
+  }
+
+  iframe {
+    height: 100%;
+    @include media(sm) {
+      //height: 350px;
+    }
+  }
+}
+
+.modal, .pum {
   iframe {
     width: 100%;
   }
 
-  &__quote {
+  &__quote, &-content {
     .container-fluid {
-      //padding: 0;
       @include media(sm) {
-        padding-left:  0;
-        padding-right:  0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @include media(xs) {
+        height: 90% !important;
       }
     }
 
-    .modal-close {
-      fill: $color-white;
-      @include media(md) {
-        fill: $color-black;
-
-      }
-    }
-
-    .modal-body {
-      //padding: 0;
-
-      @include media(sm) {
-        //padding: 16px;
-
+    .modal {
+      &-close {
+        fill: $color-white;
+        @include media(md) {
+          fill: $color-primary;
+        }
       }
 
-      h4 {
-        font-weight: 400;
-        font-size: 38px;
-        line-height: 45px;
-
-        color: $color-black;
+      &-img {
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
       }
 
-    }
-
-    .modal-img {
-      //padding: 0;
-
-      @include media(sm) {
-        //padding: 12px;
-
+      &-header {
+        z-index: 999;
+        right: 32px;
+        top: 32px;
+        position: absolute;
+        @include media(xs) {
+          padding: 0;
+          display: none;
+        }
       }
 
-      img {
-        object-fit: cover;
+      &-body > button {
+        @include media(xs) {
+          margin-left: auto;
+          top: 24px;
+          right: 18px;
+          position: absolute;
+          display: block;
+        }
       }
-    }
 
-    .modal-header {
-      z-index: 999;
-      right: 5%;
-      position: absolute;
-    }
+      &-form {
+        height: 100%;
+        //overflow-y: scroll;
 
-    .modal-form {
-
-      @include media(sm) {
-        padding-left:  0;
-        padding-right:  0;
-      }
-        .wpforms-submit-container {
         @include media(sm) {
-          text-align: center;
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        &-heading {
+          @include fonts(400 !important, 38px !important, 45px !important, $color-primary !important);
+          margin-bottom: 32px !important;
+
+          @include media(xs) {
+            @include fonts(400 !important, 30px !important, 36px !important, $color-primary !important);
+
+            padding-top: 60px !important;
+          }
+        }
+
+        .wpforms-submit-container {
+          @include media(sm) {
+            text-align: center;
+          }
+        }
+
+        .wpcf7 {
+          overflow-y: scroll;
+          height: 80%;
+
+          form {
+            @include media(md) {
+              //height: 70vh;
+              //overflow-y: scroll;
+            }
+            @include media(sm) {
+              //height: 65vh;
+
+            }
+            @include media(xs) {
+              //height: 50vh;
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__price {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    outline: 0 !important;
+
+    .modal-fullscreen {
+      width: 100vw !important;
+      max-width: none !important;
+      height: 100% !important;
+      margin: 0 !important;
+    }
+
+    .container-fluid {
+      @include media(sm) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .modal {
+      &-dialog {
+        overflow: hidden !important;
+      }
+
+      &-close {
+        fill: $color-primary;
+        @include media(md) {
+          fill: $color-primary;
 
         }
       }
 
+      &-body {
+        overflow-y: auto !important;
+
+
+        @include media_min(xs) {
+
+          .col-md-7 {
+            width: 58.33333333% !important;
+          }
+          .col-md-5 {
+            width: 41.66666667% !important;
+          }
+        }
+        @include media_min(md) {
+
+          .col-lg-6 {
+            width: 50% !important;
+          }
+        }
+        @include media(xs) {
+          padding: 16px 0 !important;
+
+          .col-12 {
+            width: 100% !important;
+          }
+        }
+
+
+        .wpforms-submit.btn.button.modal-form-price {
+          width: fit-content !important;
+
+          @include media(xs) {
+
+            margin: 0 auto !important;
+            display: block !important;
+          }
+        }
+      }
+
+      &-header {
+        z-index: 9999;
+        right: 32px;
+        top: 32px;
+        position: absolute !important;
+
+        @include media(xs) {
+          padding: 0 !important;
+          display: block;
+        }
+
+        button.modal-close.border-0.bg-transparent{
+          @include media(xs) {
+            padding: 0 !important;
+
+          }
+        }
+      }
+
+      &-body > button {
+        @include media(xs) {
+          margin-left: auto !important;
+          top: 24px !important;
+          position: absolute !important;
+          display: block !important;
+          right: 18px !important;
+        }
+      }
+
+      &-content {
+        background-color: #fff !important;
+        z-index: 1100 !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+      }
+
+      &-form {
+        @include media(md) {
+          padding: 0 !important;
+        }
+        @include media(sm) {
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 20px !important;
+
+        }
+
+        .wpforms-submit-container {
+          @include media(sm) {
+            text-align: center;
+          }
+        }
+
+
+        #accordionSubtotal {
+          padding: 24px 24px 0 !important;
+          background: $background-gray !important;
+          @include media(xs) {
+            padding: 0 !important;
+            margin-bottom: 20px !important;
+            border-top: 1px solid rgba(54, 54, 54, 0.15) !important;
+            border-bottom: 1px solid rgba(54, 54, 54, 0.15) !important;
+
+          }
+
+          .accordion-body {
+            //margin: 24px 0!important;
+          }
+
+          .accordion-collapse {
+
+            @include media(xs) {
+              //padding: 24px 0 !important;
+              padding: 0 32px !important;
+
+            }
+          }
+
+          .accordion-collapse.collapsing {
+            height: 0;
+            overflow: hidden !important;
+            transition: all .3s ease-in-out !important;
+            padding: 0 32px !important;
+          }
+
+          h2 {
+            margin: 0 !important;
+            display: block !important;
+            height: fit-content !important;
+            @include media(xs) {
+              padding: 0px;
+              background-color: $background-gray !important;
+            }
+
+            button {
+              @include fonts(600 !important, 20px !important, 26px !important, $color-primary !important);
+
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              transition: .3s all ease-in-out;
+              @include media(xs) {
+                padding: 24px;
+              }
+
+              &[aria-expanded="true"] {
+                transition: .3s all ease-in-out;
+
+                svg {
+                  transition: .3s all ease-in-out;
+
+                  transform: rotate(180deg);
+                }
+              }
+
+              svg {
+                transition: .3s all ease-in-out;
+
+                width: 14px;
+                height: 9px;
+              }
+
+              &:after {
+                content: unset;
+              }
+            }
+          }
+        }
+
+        .modal-form-price {
+
+          @include media(md) {
+            padding: 0 24px !important;
+          }
+          @include media(xs) {
+
+            padding: 0 24px !important;
+          }
+
+          &:first-of-type {
+            //padding-top: 20px !important;
+          }
+        }
+
+        .form-contact__user {
+          //&-name, &-text, &-email, . {
+          //padding: 0 24px !important;
+          //}
+        }
+      }
+
+
+      .accordion {
+        &-header {
+          z-index: 1100;
+          display: block;
+        }
+      }
+
+      &-subtotal {
+        background-color: $background-gray !important;
+        border-left: 1px solid rgba(54, 54, 54, 0.15) !important;
+        padding: 80px 0 !important;
+        flex-direction: column;
+
+        @include media(md) {
+          padding: 24px 0 !important;
+        }
+        @include media(xs) {
+          padding: 0 !important;
+          background-color: $background-gray !important;
+          border-left: unset !important;
+        }
+
+        &-list {
+          display: flex !important;
+          column-gap: 10px !important;
+          @include media(xs) {
+            margin-top: 20px !important;
+            overflow-x: scroll !important;
+
+          }
+
+          li {
+            background-color: rgba(54, 54, 54, 0.1) !important;
+            border-radius: 72px !important;
+            @include fonts(400, 16px, 22px, $color-primary);
+          }
+        }
+
+        .specialists, .industry, .duration {
+          padding: 24px 48px !important;
+          border-bottom: 1px solid rgba($color-primary, 0.1);
+          @include media(md) {
+            padding: 24px !important;
+          }
+          @include media(xs) {
+            padding-left: 0 !important;
+
+          }
+
+          h4 {
+            @include fonts(600, 20px, 26px, $color-primary);
+            margin-bottom: 20px;
+
+            @include media(xs) {
+              @include fonts(600, 14px, 20px, $color-primary);
+              margin-bottom: 0;
+
+            }
+
+          }
+        }
+
+        &__terms {
+          padding: 24px !important;
+          max-width: 426px;
+          margin: auto auto 0 !important;
+          background: $color-white !important;
+          border-radius: 15px !important;
+          @include media(md) {
+            margin: auto 24px 0 !important;
+          }
+          @include media(xs) {
+            order: 3;
+            background: #F5F5F5 !important;
+            margin-top: 32px !important;
+          }
+
+          p {
+            @include fonts(400 !important, 16px !important, 22px !important, $color-primary !important);
+            text-align: center;
+            margin: 0;
+            @include media(xs) {
+              @include fonts(400 !important, 14px !important, 22px !important, $color-primary !important);
+            }
+
+            a {
+              @include fonts(600 !important, 16px !important, 22px !important, $color-primary !important);
+              transition: all .3s ease-in-out !important;
+
+              @include media(xs) {
+                @include fonts(600 !important, 14px !important, 22px !important, $color-primary !important);
+              }
+
+              &:hover {
+                color: rgba($color-primary, .8);
+              }
+            }
+          }
+        }
+
+        &__duration {
+          border-bottom: 0 !important;
+        }
+      }
+
+
     }
   }
+
+  &__thank-you {
+
+    .modal {
+      &-dialog {
+        width: 100%;
+        max-width: 570px;
+        @include media(xs) {
+          max-width: unset;
+          width: unset;
+
+        }
+      }
+
+      &-close {
+        //padding-left: 6px !important;
+        //padding-right: 6px !important;
+        fill: $color-primary;
+      }
+
+      &-content {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.05);
+        border-radius: 15px;
+      }
+
+      &-header {
+        z-index: 999;
+        right: 32px;
+        top: 32px;
+        padding: 16px;
+        position: absolute;
+        display: block;
+        @include media(xs) {
+          right: 24px;
+          top: 24px;
+        }
+      }
+
+      &-body {
+        @include media(xs) {
+          text-align: center;
+        }
+
+        .col {
+          padding: 48px;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          @include media(xs) {
+            padding: 24px;
+          }
+
+          svg {
+            margin-bottom: 24px;
+          }
+
+          h4 {
+            margin-bottom: 10px;
+          }
+
+          p {
+            margin: 0;
+          }
+
+        }
+      }
+
+
+    }
+  }
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field-html .modal-subtotal ul {
+  margin: 0 !important;
+  @include media(xs) {
+    overflow-x: scroll !important;
+
+  }
+
+  li {
+    list-style: none !important;
+    background-color: rgba(54, 54, 54, 0.1) !important;
+    border-radius: 72px !important;
+    width: fit-content !important;
+    padding: 7px 16px !important;
+    margin: 0 !important;
+    height: 38px !important;
+    @include media(xs) {
+      margin-top: 20px !important;
+    }
+
+    p {
+      @include fonts(400 !important, 16px !important, 22px !important, $color-primary !important);
+      display: flex;
+      height: 100%;
+      align-items: center;
+
+      .specialist {
+        margin-right: 7px;
+      }
+
+      .count {
+        @include fonts(600 !important, 14px !important, 20px !important, $color-primary !important);
+      }
+    }
+  }
+}
+
+body.page-template-pricing .section__form-row .modal-form-heading {
+
+  @include fonts(400 !important, 38px !important, 44px !important, $color-primary !important);
+
+  margin-bottom: 32px;
+  @include media(md) {
+    padding: 24px 24px 0 !important;
+  }
+  @include media(xs) {
+    @include fonts(400 !important, 30px !important, 36px !important, $color-primary !important);
+
+    text-align: center;
+    padding: 60px 24px 0 !important;
+  }
+}
+
+body.page-template-pricing div .section__form-row .button-toggle-modal {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+div.wpforms-container-full .wpforms-form div button.modal-close {
+  padding: 1px 6px !important;
+}
+
+.theme-1423 {
+  svg, img {
+    margin-bottom: 24px;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 27px;
+  }
+}
+
+.pum {
+  &-container {
+    //left: 0!important;
+    //right: 0!important;
+  }
+
+  &-theme-global-popup {
+    .pum-close {
+      @include media(sm) {
+        right: 16px !important;
+      }
+
+      &:before {
+        color: $color-white;
+        @include media(md) {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &-content {
+    height: 100% !important;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.pum-theme-rekki {
+
+  .pum-container {
+    width: 100% !important;
+    max-width: 570px !important;
+    margin: 0 auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 48px !important;
+    height: auto !important;
+    @include media(sm) {
+      padding: 24px !important;
+      width: 95% !important;
+
+    }
+  }
+
+  .pum-close {
+    @include media(sm) {
+
+      top: 24px !important;
+      right: 24px !important;
+    }
+  }
+
 }
