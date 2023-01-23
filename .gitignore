@@ -1,2 +1,4 @@
 /themes/qit/node_modules/
 /uploads
+/themes/qit/package-lock.json
+/themes/qit/.idea/
