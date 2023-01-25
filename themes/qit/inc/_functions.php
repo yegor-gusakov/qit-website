@@ -995,12 +995,11 @@ function vb_ajax_pager( $query = null, $paged = 1 ) {
 		  . '/assets/userfiles/icons/arrow-left.svg';
 
 	$paginate = paginate_links( [
-		'base'    => '%_%',
+		'base' => str_replace( 999, '%#%', get_pagenum_link( 999 ) ),
+		'format' => '?paged=%#%',
+		'current' => max( 1, get_query_var('paged') ),
 		'type'    => 'array',
 		'total'   => $query->max_num_pages,
-		'format'  => '#page=%#%',
-		'current' => max( 1, $paged ),
-
 		'show_all'  => false,
 		'end_size'  => 1,
 		'mid_size'  => 4,
@@ -1011,7 +1010,7 @@ function vb_ajax_pager( $query = null, $paged = 1 ) {
 
 	if ( $query->max_num_pages > 1 ) : ?>
         <div class="col-lg-12 section__blog-row__pagination">
-            <nav class="pagination">
+            <nav class="pagination-links">
 				<?php foreach ( $paginate as $page ) : ?>
                     <li><?php echo $page; ?></li>
 				<?php endforeach; ?>

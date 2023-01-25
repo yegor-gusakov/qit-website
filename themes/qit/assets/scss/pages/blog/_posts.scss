@@ -121,8 +121,13 @@
         margin: 0 auto;
         display: flex;
 
-        .pagination {
+        .pagination,
+        .pagination-links{
+          display: flex;
           justify-content: center;
+          list-style: none;
+          margin: 0;
+          padding: 0;
           width: 100%;
           align-items: center;
         }
