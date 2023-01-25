@@ -982,7 +982,7 @@ add_shortcode( 'ajax_filter_posts', 'vb_filter_posts_sc' );
 /**
  * Pagination
  */
-function vb_ajax_pager( $query = null, $paged = 1 ) {
+function vb_ajax_pager( $query = null ) {
 
 	if ( ! $query ) {
 		return;
@@ -995,8 +995,8 @@ function vb_ajax_pager( $query = null, $paged = 1 ) {
 		  . '/assets/userfiles/icons/arrow-left.svg';
 
 	$paginate = paginate_links( [
-		'base' => str_replace( 999, '%#%', get_pagenum_link( 999 ) ),
-		'format' => '?paged=%#%',
+		'base' => get_pagenum_link(1) . '%_%',
+		'format' => 'page/%#%',
 		'current' => max( 1, get_query_var('paged') ),
 		'type'    => 'array',
 		'total'   => $query->max_num_pages,
@@ -1007,6 +1007,7 @@ function vb_ajax_pager( $query = null, $paged = 1 ) {
 		'prev_text' => file_get_contents( $prev_arrow ),
 		'next_text' => file_get_contents( $next_arrow ),
 	] );
+
 
 	if ( $query->max_num_pages > 1 ) : ?>
         <div class="col-lg-12 section__blog-row__pagination">
