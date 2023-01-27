@@ -192,11 +192,11 @@ add_filter( 'wp_nav_menu', 'submenu_class' );
 add_filter( 'wp_nav_menu_items', 'add_button_last_item_menu', 10, 2 );
 function add_button_last_item_menu( $items, $args ) {
 	if ( $args->theme_location == 'main_menu'
-	     || $args->theme_location == 'main_mobile_menu'
+		|| $args->theme_location == 'main_mobile_menu'
 	) {
 		$items .= '<li><button class="btn mx-auto button d-block d-lg-none globalModalQuote"
                         type="button">'
-		          . __( 'contact us' ) . '</button></li>';
+			. __( 'contact us' ) . '</button></li>';
 	}
 
 	return $items;
@@ -260,34 +260,34 @@ function wpvkp_social_buttons( $content ) {
 		 **/
 
 		$twitterURL  = 'https://twitter.com/intent/tweet?text=' . $sb_title
-		               . '&amp;url=' . $sb_url . '&amp;via=wpvkp';
+			. '&amp;url=' . $sb_url . '&amp;via=wpvkp';
 		$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='
-		               . $sb_url;
+			. $sb_url;
 		$linkedInURL = 'https://www.linkedin.com/shareArticle?mini=true&url='
-		               . $sb_url . '&amp;title=' . $sb_title;
+			. $sb_url . '&amp;title=' . $sb_title;
 		/**
 		 * Social Icons
 		 */
 		$twitterIcon  = get_stylesheet_directory()
-		                . '/assets/userfiles/icons-share/twitter.svg';
+			. '/assets/userfiles/icons-share/twitter.svg';
 		$facebookIcon = get_stylesheet_directory()
-		                . '/assets/userfiles/icons-share/facebook.svg';
+			. '/assets/userfiles/icons-share/facebook.svg';
 		$linkedInIcon = get_stylesheet_directory()
-		                . '/assets/userfiles/icons-share/linkedin.svg';
+			. '/assets/userfiles/icons-share/linkedin.svg';
 
 		// Add sharing button at the end of page/page content
 		$content .= '<div class="social-box align-items-md-center justify-content-center justify-content-sm-start">';
 		$content .= '<a class="col-2 sbtn s-linkedin" href="' . $linkedInURL
-		            . '" target="_blank" rel="nofollow">'
-		            . file_get_contents( $linkedInIcon ) . '</a>';
+			. '" target="_blank" rel="nofollow">'
+			. file_get_contents( $linkedInIcon ) . '</a>';
 
 
 		$content .= '<a class="col-1 sbtn s-twitter" href="' . $twitterURL
-		            . '" target="_blank" rel="nofollow">'
-		            . file_get_contents( $twitterIcon ) . '</a>';
+			. '" target="_blank" rel="nofollow">'
+			. file_get_contents( $twitterIcon ) . '</a>';
 		$content .= '<a class="col-1 sbtn s-facebook" href="' . $facebookURL
-		            . '" target="_blank" rel="nofollow">'
-		            . file_get_contents( $facebookIcon ) . '</a>';
+			. '" target="_blank" rel="nofollow">'
+			. file_get_contents( $facebookIcon ) . '</a>';
 
 		$content .= '</div>';
 
@@ -312,7 +312,7 @@ function qit_loadmore_ajax_handler() {
 	$params                   = json_decode( stripslashes( $_POST['query'] ),
 		true ); // query_posts() takes care of the necessary sanitization
 	$params['paged']          = $_POST['page']
-	                            + 1; // we need next page to be loaded
+		+ 1; // we need next page to be loaded
 	$params['post_status']    = 'publish';
 	$params['post_type']      = 'qit_cases';
 	$params['posts_per_page'] = 6;
@@ -496,7 +496,7 @@ function qit_loadmore_position_ajax_handler() {
 	$params                = json_decode( stripslashes( $_POST['query'] ),
 		true ); // query_posts() takes care of the necessary sanitization
 	$params['paged']       = $_POST['page']
-	                         + 1; // we need next page to be loaded
+		+ 1; // we need next page to be loaded
 	$params['post_status'] = 'publish';
 	$params['post_type']   = 'qit_open_position';
 
@@ -716,11 +716,11 @@ function insert_table_of_contents( $content ) {
 
 	// piece together the table of contents
 	$table_of_contents = $start_col . $start_nav . $link_list
-	                     . $end_nav . $end_col;
+		. $end_nav . $end_col;
 	$content_wrapper   = '<div class="'
-	                     . ( is_page_template( 'templates/sidebar.php' )
+		. ( is_page_template( 'templates/sidebar.php' )
 			? 'col-lg-9 col-md-6' : 'col-lg-8 col-md-6' ) . ' col-content" >'
-	                     . $content . '</div>';
+		. $content . '</div>';
 	// if $fixed_location is true and
 	// $comment_found is false
 	// insert the table of contents at a fixed location
@@ -982,24 +982,25 @@ add_shortcode( 'ajax_filter_posts', 'vb_filter_posts_sc' );
 /**
  * Pagination
  */
-function vb_ajax_pager( $query = null ) {
+function vb_ajax_pager( $query = null, $paged = 1 ) {
 
 	if ( ! $query ) {
 		return;
 	}
 	$next_arrow
 		= get_stylesheet_directory()
-		  . '/assets/userfiles/icons/arrow-right.svg';
+		. '/assets/userfiles/icons/arrow-right.svg';
 	$prev_arrow
 		= get_stylesheet_directory()
-		  . '/assets/userfiles/icons/arrow-left.svg';
+		. '/assets/userfiles/icons/arrow-left.svg';
 
 	$paginate = paginate_links( [
-		'base' => get_pagenum_link(1) . '%_%',
-		'format' => 'page/%#%',
-		'current' => max( 1, get_query_var('paged') ),
+		'base'    => '%_%',
 		'type'    => 'array',
 		'total'   => $query->max_num_pages,
+		'format'  => '#page=%#%',
+		'current' => max( 1, $paged ),
+
 		'show_all'  => false,
 		'end_size'  => 1,
 		'mid_size'  => 4,
@@ -1008,10 +1009,9 @@ function vb_ajax_pager( $query = null ) {
 		'next_text' => file_get_contents( $next_arrow ),
 	] );
 
-
 	if ( $query->max_num_pages > 1 ) : ?>
         <div class="col-lg-12 section__blog-row__pagination">
-            <nav class="pagination-links">
+            <nav class="pagination">
 				<?php foreach ( $paginate as $page ) : ?>
                     <li><?php echo $page; ?></li>
 				<?php endforeach; ?>
@@ -1031,7 +1031,7 @@ function redirect_cpt_singular_posts() {
 			'qit_FAQ',
 			'qit_blog_ads'
 		] )
-	     || is_page( [ 'vacancy', 'vacancy/^[1-9][0-9]?$|^100$' ] )
+		|| is_page( [ 'vacancy', 'vacancy/^[1-9][0-9]?$|^100$' ] )
 	) {
 		global $wp_query;
 		$wp_query->set_404();

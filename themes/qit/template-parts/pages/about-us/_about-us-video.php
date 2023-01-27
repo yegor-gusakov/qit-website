@@ -39,9 +39,9 @@ $icon_play        = get_template_directory_uri()
 ?>
 <section class="section__video section position-relative">
     <div class="container-fluid px-0 h-100">
-        <div class="section__video-row row justify-content-center h-100 position-relative">
-            <div class="col-12 col-sm-12  p-0"data-bs-target="#about-company" >
-                <img src="<?= $preview['url'] ?>" alt="<?= $preview['alt']?>" >
+        <div class="section__video-row row justify-content-center h-100 position-relative" data-bs-target="#about-company">
+            <div class="col-12 col-sm-12  p-0">
+                <img src="<?= $preview['url'] ?>" alt="<?= $preview['alt']?>">
             </div>
 			<?= file_get_contents($icon_play)?>
         </div>

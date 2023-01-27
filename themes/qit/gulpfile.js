@@ -14,7 +14,7 @@ const   gulp            = require('gulp'),
  */
 gulp.task('serve', function() {
     browserSync.init({
-        proxy: "http://localhost:8888/qit",
+        proxy: "qitt.loc",
         notify: false
     });
     gulp.watch(
@@ -24,6 +24,7 @@ gulp.task('serve', function() {
 
     gulp.watch(
         [
+            './assets/js/testimonials.js',
             'assets/js/src/**/*.js',
             'assets/js/script/**/*.js',
             'assets/js/pages/**/*.js'
@@ -66,6 +67,7 @@ gulp.task('css', function() {
 gulp.task('js', function() {
     return gulp.src(
         [
+            './assets/js/testimonials.js',
             './assets/js/src/vendor/*.js',
             './assets/js/script/*.js',
             './assets/js/pages/*.js'

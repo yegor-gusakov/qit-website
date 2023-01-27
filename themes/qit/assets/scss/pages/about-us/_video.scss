@@ -10,21 +10,18 @@
 
     &-row {
       background-size: 100% 100%;
+      cursor: pointer;
+
+      svg {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
       .col-12 {
         position: relative;
-
-        &:hover {
-          cursor: pointer;
-        }
-
-        svg {
-          position: absolute;
-          display: block;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
       }
 
       img {

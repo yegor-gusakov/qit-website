@@ -60,6 +60,18 @@
       .case {
         margin-bottom: 30px;
 
+
+        &.case-nda {
+          .card-technologies {
+            flex-direction: row-reverse;
+
+            .technology-react {
+              display: flex;
+              order: 1;
+            }
+          }
+        }
+
         &:nth-last-child(-n+2) {
           margin-bottom: 0;
           @include media(xs) {
@@ -77,6 +89,40 @@
 
         @include media(xs) {
           padding: 0 8px;
+        }
+
+        .card-technologies {
+          column-gap: 16px;
+          row-gap: 16px;
+
+          @include media(md) {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+          }
+
+          .technology {
+            //max-width: 24px;
+            max-height: 24px;
+            //margin: 0 8px;
+            height: 24px;
+            //width: 24px;
+
+
+            svg {
+              display: block;
+              width: initial;
+              height: 100%;
+              fill: rgba($color-primary, .6);
+            }
+
+            &:last-child {
+              //margin: 0 0 0 8px;
+            }
+
+            @include media(md) {
+              //margin: 0 8px;
+            }
+          }
         }
 
         .card {
@@ -113,42 +159,6 @@
                 margin-bottom: 20px;
                 flex-direction: column;
               }
-
-              .card-technologies {
-                column-gap: 16px;
-                row-gap: 16px;
-
-                @include media(md) {
-                  flex-wrap: wrap;
-                  justify-content: flex-end;
-                }
-
-                .technology {
-                  //max-width: 24px;
-                  max-height: 24px;
-                  //margin: 0 8px;
-                  height: 24px;
-                  //width: 24px;
-
-
-                  svg {
-                    display: block;
-                    width: initial;
-                    height: 100%;
-                    fill: rgba($color-primary, .6);
-
-                  }
-
-                  &:last-child {
-                    //margin: 0 0 0 8px;
-                  }
-
-                  @include media(md) {
-                    //margin: 0 8px;
-                  }
-                }
-              }
-
             }
           }
 

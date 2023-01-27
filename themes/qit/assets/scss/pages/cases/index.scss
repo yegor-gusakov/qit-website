@@ -5,4 +5,17 @@ body.post-type-archive-qit_cases {
 
 body.qit_cases-template-default {
   @import "single-case";
+
+  &.postid-1692 {
+    .section__client-row-technologies {
+      flex-direction: row-reverse;
+      li {
+        display: flex;
+      }
+
+      .technology-react {
+        order: 1;
+      }
+    }
+  }
 }
